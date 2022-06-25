@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif; 
+}
+
+
+:root {
+    --secondary: #692A90;
+    --white: #ffffff;
+    --black: #000000;
+    --lighterSecondary: #8C44AE;
+    --defaultPadding: 20px;
+    --ash: #c4c4c4;
+}
+
+/* Global styles */
+a, a:active, a:hover, a:visited,a:focus{
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--defaultPadding);
+    box-shadow: 10px 0 5px -2px var(--ash);
+}
+
+header h1#brandName {
+    color: var(--secondary);
+    font-size: 30px;
+    letter-spacing: .1px;
+    font-weight: bold;
+}
+
+
+header a {
+    border: 1px solid var(--secondary);
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: var(--defaultPadding);
+}
+
+main section {
+    margin-top: 50px;
+}
+
+main section p#introText{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
