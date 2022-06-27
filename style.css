@@ -57,14 +57,120 @@ header a {
 
 main {
     padding: var(--defaultPadding);
+    background-image: url(./assets/mobileBackground.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: auto;
+    height: auto;
 }
 
-main section {
+main section#firstSection {
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-main section p#introText{
+
+main section#firstSection p#introText{
     text-align: center;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 120px;
+}
+
+main section#secondSection {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+}
+main section#secondSection div#slider {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    position: relative;
+    padding: var(--defaultPadding);
+    margin: 20px auto;
+    justify-content: center;
+    margin-bottom: 350px;
+    box-shadow: 10px 0 5px -2px var(--ash);
+}
+main section#secondSection div#slider img.sliderImage {
+    width: 150px;
+    height: 300px;
+    position: absolute;
+    top: 30px;
+}
+main section#secondSection div#slider img.sliderImage.activeImage {
+    
+    width: 160px;
+    height: 350px;
+    z-index: 1;
+    top: -1px;
+}
+main section#secondSection div#slider img.sliderImage:nth-child(2) {
+    transform: translateX(50px);
+}
+main section#secondSection div#slider img.sliderImage:nth-child(3) {
+   transform: translateX(-50px); 
+}
+
+main section#secondSection div#dotsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+main section#secondSection div#dotsContainer div.dots {
+    border-radius: 50px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--white);
+    box-shadow: 10px 0 5px -2px var(--ash);
+}
+main section#secondSection div#dotsContainer div.dots.activeDot {
+    background-color: var(--secondary);
+}
+
+@keyframes rotateImage {
+    0% {
+        width: 150px;
+        height: 300px;
+        transform: translateX(50px);
+    }
+    50%{
+        width: 155px;
+        height: 325px;
+        transform: translateX(25px);
+    }
+    100%{
+        width: 160px;
+        height: 350px;
+        width: 160px;
+        height: 350px;
+        z-index: 1;
+        top: -1px;
+        transform: translateX(0px);
+    }
+}
+
+
+footer {
+    height: 500px;
+    width: 100%;
+    background-color: var(--secondary);
+}
+
+
+
+@media screen and (min-width: 419px) {
+    main {
+        padding: var(--defaultPadding);
+        background-image: url(./assets/desktopBackground.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: auto;
+        width: auto;
+    }
 }
