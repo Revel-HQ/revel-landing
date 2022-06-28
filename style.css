@@ -155,6 +155,43 @@ main section#secondSection div#dotsContainer div.dots.activeDot {
     }
 }
 
+main section#thirdSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+main section#thirdSection div#faqsContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+main section#thirdSection div#faqsContainer div.faqsItem{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: var(--white);
+    border-right: 1px solid var(--secondary);
+    height: 63px;
+    padding: 20px;
+    width: auto;
+}
+main section#thirdSection div#faqsContainer div.faqsItem p{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+main section#thirdSection div#faqsContainer div.faqsItem.active {
+    background-color: var(--secondary);
+    color: var(--white);
+}
+
+
+
 
 footer {
     height: 500px;
