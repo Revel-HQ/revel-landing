@@ -27,6 +27,9 @@ body {
 a, a:active, a:hover, a:visited,a:focus{
     text-decoration: none;
 }
+span.lighterSelectedText {
+    color: var(--lighterSecondary);
+}
 
 header {
     display: flex;
@@ -64,6 +67,7 @@ main {
     height: auto;
 }
 
+/* First Section */
 main section#firstSection {
     margin-top: 50px;
     display: flex;
@@ -79,6 +83,7 @@ main section#firstSection p#introText{
     margin-bottom: 120px;
 }
 
+/* Second Section */
 main section#secondSection {
     display: flex;
     margin-top: 50px;
@@ -94,26 +99,18 @@ main section#secondSection div#slider {
     margin: 20px auto;
     justify-content: center;
     margin-bottom: 350px;
-    box-shadow: 10px 0 5px -2px var(--ash);
 }
 main section#secondSection div#slider img.sliderImage {
-    width: 150px;
+    width: 200px;
     height: 300px;
     position: absolute;
     top: 30px;
 }
 main section#secondSection div#slider img.sliderImage.activeImage {
-    
-    width: 160px;
+    width: 220px;
     height: 350px;
     z-index: 1;
     top: -1px;
-}
-main section#secondSection div#slider img.sliderImage:nth-child(2) {
-    transform: translateX(50px);
-}
-main section#secondSection div#slider img.sliderImage:nth-child(3) {
-   transform: translateX(-50px); 
 }
 
 main section#secondSection div#dotsContainer {
@@ -155,6 +152,7 @@ main section#secondSection div#dotsContainer div.dots.activeDot {
     }
 }
 
+/* Third Section */
 main section#thirdSection {
     display: flex;
     flex-direction: column;
@@ -191,7 +189,87 @@ main section#thirdSection div#faqsContainer div.faqsItem.active {
 }
 
 
+/* Fourth Section */
+main section#fourthSection {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+main section#fourthSection div.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: var(--defaultPadding)
+}
+main section#fourthSection div.contentContainer h2.contentHeading {
+    font-size: 1.6em;
+    font-weight: bold;
+}
 
+main section#fourthSection div.contentContainer h2.contentHeading span.lighterSelectedText {
+    color: var(--lighterSecondary);
+}
+
+main section#fourthSection div.contentContainer div.videoContent {
+    background-color: var(--white);
+    height: 400px;
+    width: 100%;
+    border-radius: 15px;
+
+}
+
+main section#fourthSection div.contentContainer p.contentFirstParagraph, p.contentSecondParagraph {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+main section#fourthSection div.contentContainer div#contentImageGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+main section#fourthSection div.contentContainer > img {
+    width: auto;
+    height: 60px;
+}
+
+main section#fourthSection div.contentContainer div#contentImageGroup img:nth-child(2) {
+    width: auto;
+    height: 40px;
+}
+
+/* fifth Section */ 
+main section#fifthSection {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    padding: var(--defaultPadding);
+}
+
+main section#fifthSection h3 {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+main section#fifthSection a#ctaBtn {
+    color: var(--white);
+    background-color: var(--secondary);
+    box-shadow: 0 0 7px 5px var(--lighterSecondary);
+    width: auto;
+    height: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 footer {
     height: 500px;
