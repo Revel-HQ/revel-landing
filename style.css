@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
 
 * {
     padding: 0;
@@ -22,6 +22,7 @@ body {
     --lighterSecondary: #8C44AE;
     --defaultPadding: 20px;
     --ash: #c4c4c4;
+    --pink: #BE8DD6;
 }
 
 /* Global styles */
@@ -225,7 +226,7 @@ main section#fourthSection div.contentContainer div.videoContent {
 
 main section#fourthSection div.contentContainer p.contentFirstParagraph, p.contentSecondParagraph {
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 500;
 }
 
 main section#fourthSection div.contentContainer div#contentImageGroup {
@@ -323,7 +324,7 @@ footer div#s-footer-group div#s-footer-group-f h2{
 }
 footer div#s-footer-group div#s-footer-group-f p{
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 400;
 }
 footer div#s-footer-group div#s-footer-group-f div#socials{
     display: flex;
@@ -341,7 +342,51 @@ footer div#s-footer-group div#s-footer-group-s {
 footer div#s-footer-group div#s-footer-group-s a{
     color: var(--white);
     text-align: right;
-    font-weight: bold;
+    font-weight: 500;
+    font-size: 15px;
+}
+footer div#t-footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+footer div#t-footer-group img {
+    width: 60px;
+    height: auto;
+}
+footer div#t-footer-group div h3{
+    font-size: 20px;
+    font-weight: 400;
+}
+footer div#t-footer-group div p{
+    font-size: 15px;
+    font-weight: 300;
+}
+footer div#t-footer-group form{
+    display: flex;
+}
+footer div#t-footer-group form input{
+    border: none;
+    width: 60%;
+    padding: 10px;
+    height: 50px;
+    border-radius: 8px 0px 0px 8px;
+    outline: none;
+    background: var(--white);
+    font-size: 15px;
+}
+footer div#t-footer-group form input::placeholder {
+    color: var(--ash)
+}
+footer div#t-footer-group form button{
+    border: none;
+    width: 40%;
+    padding: 10px;
+    border-radius: 0px 8px 8px 0px;
+    outline: none;
+    background: var(--pink);
+    text-transform: uppercase;
+    color: var(--white);
     font-size: 15px;
 }
 
