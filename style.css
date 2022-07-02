@@ -10,7 +10,8 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Source Sans Pro', sans-serif; 
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box; 
 }
 
 
@@ -273,12 +274,79 @@ main section#fifthSection a#ctaBtn {
 }
 
 footer {
-    height: 400px;
-    width: 100%;
+    height: auto;
+    width: auto;
     background-color: var(--secondary);
     padding: var(--defaultPadding);
     color: var(--white);
+    padding-top: 40px;
 }
+
+footer div#f-footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+footer div#f-footer-group h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+footer div#f-footer-group p {
+    font-size: 14px;
+    font-weight: 300;
+}
+footer div#f-footer-group button{
+    width: 30%;
+    height: 40px;
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 15px;
+    border-radius: 8px;
+}
+footer div#s-footer-group{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+footer div#s-footer-group div#s-footer-group-f{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+footer div#s-footer-group div#s-footer-group-f h2{
+    font-size: 30px;
+    font-weight: bold;
+}
+footer div#s-footer-group div#s-footer-group-f p{
+    font-size: 15px;
+    font-weight: 300;
+}
+footer div#s-footer-group div#s-footer-group-f div#socials{
+    display: flex;
+    gap: 10px;
+}
+footer div#s-footer-group div#s-footer-group-f div#socials a img{
+    width: 20px;
+    height: auto;
+}
+footer div#s-footer-group div#s-footer-group-s {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+footer div#s-footer-group div#s-footer-group-s a{
+    color: var(--white);
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+
 
 
 
