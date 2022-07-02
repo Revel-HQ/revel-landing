@@ -64,7 +64,7 @@ main {
     padding: var(--defaultPadding);
     background-image: url(./assets/mobileBackground.png);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     width: auto;
     height: auto;
 }
