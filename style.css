@@ -64,7 +64,7 @@ main {
     padding: var(--defaultPadding);
     background-image: url(./assets/mobileBackground.png);
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: 50% 5%;
     width: auto;
     height: auto;
 }
@@ -219,9 +219,18 @@ main section#fourthSection div.contentContainer h2.contentHeading span.lighterSe
 main section#fourthSection div.contentContainer div.videoContent {
     background-color: var(--white);
     height: 400px;
-    width: 100%;
+    width: 220px;
     border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+main section#fourthSection div.contentContainer div.videoContent video {
+    width: auto;
+    height: 420px;
+    border-radius: 15px;
 }
 
 main section#fourthSection div.contentContainer p.contentFirstParagraph, p.contentSecondParagraph {
@@ -400,7 +409,7 @@ footer div#t-footer-group form button{
         padding: var(--defaultPadding);
         background-image: url(./assets/desktopBackground.png);
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: 50% 5%;
         height: auto;
         width: auto;
     }
