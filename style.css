@@ -23,6 +23,7 @@ body {
     --defaultPadding: 20px;
     --ash: #c4c4c4;
     --pink: #BE8DD6;
+    --inputBackground: #F8F9FF;
 }
 
 /* Global styles */
@@ -71,7 +72,7 @@ main {
 
 /* First Section */
 main section#firstSection {
-    margin-top: 180px;
+    margin-top: 150px;
     margin-bottom: 200px;
     display: flex;
     flex-direction: column;
@@ -84,6 +85,7 @@ main section#firstSection p#introText{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 120px;
+    padding: var(--defaultPadding);
 }
 
 main section#firstSection img {
@@ -406,6 +408,132 @@ footer div#t-footer-group form button{
     font-size: 15px;
 }
 
+/* subscribe page styles */
+div#sub-container {
+    display: flex;
+    flex-direction: column;
+}
+
+div#sub-container aside {
+    display: none;
+}
+
+div#sub-container section#contentContainer {
+    padding: var(--defaultPadding);
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+}
+
+div#sub-container section#contentContainer div#headContainer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+div#sub-container section#contentContainer div#headContainer button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+div#sub-container section#contentContainer div#headContainer button img {
+    height: auto;
+    width: 7px;
+    padding-top: 7px;
+}
+
+div#sub-container section#contentContainer div#headContainer h3 {
+    font-weight: 550;
+    font-size: 18px;
+}
+
+
+
+div#sub-container section#contentContainer div#formContainer form {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+}
+
+div#sub-container section#contentContainer div#formContainer div.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+div#sub-container section#contentContainer div#formContainer form div.formGroup label {
+    font-weight: 520;
+    letter-spacing: .03rem;
+}
+
+div#sub-container section#contentContainer div#formContainer form div.formGroup input {
+    border: none;
+    height: 60px;
+    background-color: var(--inputBackground);
+    border-radius: 10px;
+    padding-left: 30px;
+    font-size: 15px;
+    outline: none;
+}
+
+div#sub-container section#contentContainer div#formContainer form  button {
+    align-self: flex-end;
+    margin-top: 90px;
+    border: none;
+    background: none;
+    color: var(--white);
+    background-color: var(--secondary);
+    height: 50px;
+    width: 130px;
+    border-radius: 8px;
+}
+
+div#sub-container div#successContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: var(--defaultPadding);
+    gap: 60px;
+    display: none;
+}
+
+div#sub-container div#successContainer img {
+    width: auto;
+    height: 200px;
+}
+
+div#sub-container div#successContainer div#welcomeText {
+    text-align: center;
+}
+
+div#sub-container div#successContainer div#welcomeText h2 {
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+div#sub-container div#successContainer div#welcomeText p {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+div#sub-container div#successContainer a {
+    background-color: var(--secondary);
+    color: var(--white);
+    height: 60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 100px;
+}
 
 
 
@@ -413,10 +541,39 @@ footer div#t-footer-group form button{
 
 @media screen and (min-width: 419px) {
     main {
-        padding: var(--defaultPadding);
         background-image: url(./assets/desktopBackground.png);
         background-repeat: no-repeat;
-        background-position: 50% 5%;
+        background-position: 10% 1%;
+        height: auto;
+        width: auto;
+    }
+}
+@media screen and (min-width: 600px) {
+    /* First Section */
+main section#firstSection {
+    margin-top: 180px;
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+main section#firstSection p#introText{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 120px;
+}
+
+main section#firstSection img {
+    width: auto;
+    height: 90px;
+}
+    main {
+        background-image: url(./assets/desktopBackground.png);
+        background-repeat: no-repeat;
+        background-position: 10% 1%;
         height: auto;
         width: auto;
     }
