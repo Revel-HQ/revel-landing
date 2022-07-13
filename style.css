@@ -91,13 +91,13 @@ main section#firstSection p#introText {
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  margin-bottom: 120px;
+  margin-bottom: 70px;
   padding: var(--defaultPadding);
 }
 
 main section#firstSection img {
   width: auto;
-  height: 90px;
+  height: 100px;
 }
 
 /* Second Section */
@@ -118,7 +118,7 @@ main section#secondSection div#slider {
   margin-bottom: 350px;
   transform-style: preserve-3d;
 }
-main section#secondSection div#ImagesContainer {
+main section#secondSection div#imagesContainer {
   display: none;
 }
 main section#secondSection div#slider img.sliderImage {
@@ -189,6 +189,12 @@ main section#thirdSection div#faqsContainer {
   flex-direction: column;
   gap: 40px;
 }
+
+main section#thirdSection img#faqImgTxt{
+  width: auto;
+  height: 30px
+}
+
 main section#thirdSection div#faqsContainer div.faqsItem {
   display: flex;
   align-items: center;
