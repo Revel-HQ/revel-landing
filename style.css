@@ -190,9 +190,9 @@ main section#thirdSection div#faqsContainer {
   gap: 40px;
 }
 
-main section#thirdSection img#faqImgTxt{
+main section#thirdSection img#faqImgTxt {
   width: auto;
-  height: 30px
+  height: 30px;
 }
 
 main section#thirdSection div#faqsContainer div.faqsItem {
@@ -640,19 +640,19 @@ div#sub-container div#successContainer a {
     flex-direction: row;
     align-items: flex-start;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 80px;
     gap: 70px;
   }
-  main section#thirdSection img#faqImgTxt{
+  main section#thirdSection img#faqImgTxt {
     width: auto;
-    height: 50px
+    height: 50px;
   }
 
   main section#thirdSection div#faqsContainer {
     display: flex;
     flex-direction: row;
     gap: 60px;
-   justify-content: flex-end;
+    justify-content: flex-end;
     flex-wrap: wrap;
     width: 50%;
   }
@@ -668,7 +668,6 @@ div#sub-container div#successContainer a {
     align-self: flex-end;
   }
 
-
   main section#thirdSection div#faqsContainer div.faqsItem p {
     font-weight: 550;
     font-size: 15px;
@@ -677,6 +676,401 @@ div#sub-container div#successContainer a {
   main section#thirdSection div#faqsContainer div.faqsItem.active {
     background-color: var(--secondary);
     color: var(--white);
-    transition: all .5s ease;
+    transition: all 0.5s ease;
+  }
+  /* Fourth Section */
+  main section#fourthSection {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 50px;
+  }
+  main section#fourthSection div.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--defaultPadding);
+    position: relative;
+    margin-bottom: 200px;
+  }
+  main section#fourthSection div.contentContainer:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--defaultPadding);
+    position: relative;
+    margin-bottom: 100px;
+  }
+  main section#fourthSection div.contentContainer h2.contentHeading {
+    font-size: 2.4em;
+    font-weight: 550;
+    width: 50%;
+  }
+
+  main
+    section#fourthSection
+    div.contentContainer
+    h2.contentHeading
+    span.lighterSelectedText {
+    color: var(--lighterSecondary);
+  }
+
+  main section#fourthSection div.contentContainer div.videoContent {
+    background-color: var(--white);
+    height: 430px;
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 0;
+  }
+  main
+    section#fourthSection
+    div.contentContainer:nth-child(2)
+    div.videoContent {
+    background-color: var(--white);
+    height: 430px;
+    width: 250px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+  }
+
+  main section#fourthSection div.contentContainer div.videoContent video {
+    width: auto;
+    height: 420px;
+    border-radius: 15px;
+  }
+
+  main section#fourthSection div.contentContainer p.contentFirstParagraph,
+  p.contentSecondParagraph {
+    font-size: 21px;
+    font-weight: 550;
+    width: 50%;
+  }
+
+  main section#fourthSection div.contentContainer div#contentImageGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main section#fourthSection div.contentContainer > img {
+    width: auto;
+    height: 60px;
+  }
+
+  main
+    section#fourthSection
+    div.contentContainer
+    div#contentImageGroup
+    img:nth-child(2) {
+    width: auto;
+    height: 40px;
+  }
+  /* fifth Section */
+  main section#fifthSection {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-align: center;
+    padding: var(--defaultPadding);
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  main section#fifthSection h3 {
+    font-weight: 550;
+    font-size: 1.6em;
+    width: 50%;
+  }
+
+  main section#fifthSection a#ctaBtn {
+    color: var(--white);
+    background-color: var(--secondary);
+    box-shadow: 0 0 7px 5px var(--lighterSecondary);
+    width: 270px;
+    height: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* footer */
+  footer {
+    height: auto;
+    width: auto;
+    background-color: var(--secondary);
+    padding: var(--defaultPadding);
+    color: var(--white);
+    padding-top: 40px;
+    position: relative;
+  }
+
+  footer div#f-footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 90px;
+  }
+  footer div#f-footer-group h2 {
+    font-size: 60px;
+    font-weight: bold;
+  }
+  footer div#f-footer-group p {
+    font-size: 26px;
+    font-weight: 400;
+    width: 50%;
+  }
+  footer div#f-footer-group button {
+    width: 14%;
+    height: 52px;
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 400;
+  }
+  footer div#s-footer-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+  footer div#s-footer-group div#s-footer-group-f {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer div#s-footer-group div#s-footer-group-f h2 {
+    font-size: 38px;
+    font-weight: 550;
+  }
+  footer div#s-footer-group div#s-footer-group-f p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  footer div#s-footer-group div#s-footer-group-f div#socials {
+    display: flex;
+    gap: 20px;
+  }
+  footer div#s-footer-group div#s-footer-group-f div#socials a img {
+    width: 32px;
+    height: auto;
+  }
+  footer div#s-footer-group div#s-footer-group-s {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+  }
+  footer div#s-footer-group div#s-footer-group-s a {
+    color: var(--white);
+    text-align: right;
+    font-weight: 500;
+    font-size: 18px;
+  }
+  footer div#t-footer-group {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    position: absolute;
+    top: 250px;
+    right: 30px;
+  }
+  footer div#t-footer-group img {
+    width: 74px;
+    height: auto;
+  }
+  footer div#t-footer-group div h3 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 60px;
+  }
+  footer div#t-footer-group div p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  footer div#t-footer-group form {
+    display: flex;
+  }
+  footer div#t-footer-group form input {
+    border: none;
+    width: 60%;
+    padding: 10px;
+    height: 56px;
+    border-radius: 6px 0px 0px 6px;
+    outline: none;
+    background: var(--white);
+    font-size: 18px;
+  }
+  footer div#t-footer-group form input::placeholder {
+    color: var(--ash);
+  }
+  footer div#t-footer-group form button {
+    border: none;
+    width: 40%;
+    padding: 10px;
+    border-radius: 0px 6px 6px 0px;
+    outline: none;
+    background: var(--pink);
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 18px;
+  }
+  /* subscribe page styles */
+  div#sub-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  div#sub-container aside {
+    display: none;
+  }
+
+  div#sub-container section#contentContainer {
+    padding: var(--defaultPadding);
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  div#sub-container section#contentContainer div#headContainer {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  div#sub-container section#contentContainer div#headContainer button {
+    outline: none;
+    background: none;
+    border: none;
+  }
+
+  div#sub-container section#contentContainer div#headContainer button img {
+    height: auto;
+    width: 7px;
+    padding-top: 7px;
+  }
+
+  div#sub-container section#contentContainer div#headContainer h3 {
+    font-weight: 550;
+    font-size: 18px;
+  }
+
+  div#sub-container section#contentContainer div#formContainer form {
+    display: flex;
+    height: 500px;
+    flex-direction: column;
+  }
+
+  div#sub-container section#contentContainer div#formContainer div.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  div#sub-container
+    section#contentContainer
+    div#formContainer
+    form
+    div.formGroup
+    label {
+    font-weight: 520;
+    letter-spacing: 0.03rem;
+  }
+
+  div#sub-container
+    section#contentContainer
+    div#formContainer
+    form
+    div.formGroup
+    input {
+    border: none;
+    height: 60px;
+    background-color: var(--inputBackground);
+    border-radius: 10px;
+    padding-left: 30px;
+    font-size: 15px;
+    outline: none;
+  }
+
+  div#sub-container section#contentContainer div#formContainer form button {
+    align-self: flex-end;
+    margin-top: 90px;
+    border: none;
+    background: none;
+    color: var(--white);
+    background-color: var(--secondary);
+    height: 50px;
+    width: 130px;
+    border-radius: 8px;
+  }
+
+  div#sub-container div#successContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    padding: var(--defaultPadding);
+    gap: 60px;
+    display: none;
+  }
+
+  div#sub-container div#successContainer img {
+    width: auto;
+    height: 200px;
+  }
+
+  div#sub-container div#successContainer div#welcomeText {
+    text-align: center;
+  }
+
+  div#sub-container div#successContainer div#welcomeText h2 {
+    font-weight: 550;
+    font-size: 25px;
+    line-height: 40px;
+  }
+
+  div#sub-container div#successContainer div#welcomeText p {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
+  div#sub-container div#successContainer a {
+    background-color: var(--secondary);
+    color: var(--white);
+    height: 60px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 100px;
   }
 }
