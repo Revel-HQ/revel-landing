@@ -39,7 +39,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: var(--defaultPadding);
-    box-shadow: 10px 0 5px -2px var(--ash);
+    box-shadow: 10px 0 35px -2px var(--ash);
 }
 
 header h1#brandName {
