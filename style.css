@@ -1,580 +1,676 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
 }
-
 
 body {
-    padding: 0;
-    margin: 0;
-    font-family: 'Source Sans Pro', sans-serif;
-    box-sizing: border-box; 
+  padding: 0;
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
 }
 
-
 :root {
-    --secondary: #692A90;
-    --white: #ffffff;
-    --black: #000000;
-    --lighterSecondary: #8C44AE;
-    --defaultPadding: 20px;
-    --ash: #c4c4c4;
-    --pink: #BE8DD6;
-    --inputBackground: #F8F9FF;
+  --secondary: #692a90;
+  --white: #ffffff;
+  --black: #000000;
+  --lighterSecondary: #8c44ae;
+  --defaultPadding: 20px;
+  --ash: #c4c4c4;
+  --pink: #be8dd6;
+  --inputBackground: #f8f9ff;
 }
 
 /* Global styles */
-a, a:active, a:hover, a:visited,a:focus{
-    text-decoration: none;
+a,
+a:active,
+a:hover,
+a:visited,
+a:focus {
+  text-decoration: none;
 }
 span.lighterSelectedText {
-    color: var(--lighterSecondary);
+  color: var(--lighterSecondary);
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--defaultPadding);
-    box-shadow: 10px 0 35px -2px var(--ash);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--defaultPadding);
+  box-shadow: 10px 0 5px -2px var(--ash);
+  width: 100%;
+  background-color: var(--white);
+  z-index: 1;
 }
 
 header h1#brandName {
-    color: var(--secondary);
-    font-size: 30px;
-    letter-spacing: .1px;
-    font-weight: bold;
+  color: var(--secondary);
+  font-size: 30px;
+  letter-spacing: 0.1px;
+  font-weight: bold;
 }
 
-
 header a {
-    border: 1px solid var(--secondary);
-    border-radius: 5px;
-    width: 70px;
-    height: 30px;
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 1px solid var(--secondary);
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 main {
-    padding: var(--defaultPadding);
-    background-image: url(./assets/mobileBackground.png);
-    background-repeat: no-repeat;
-    background-position: 50% 8%;
-    width: auto;
-    height: auto;
+  padding: var(--defaultPadding);
+  background-image: url(./assets/mobileBackground.png);
+  background-repeat: no-repeat;
+  background-position: 50% 8%;
+  width: auto;
+  height: auto;
 }
 
 /* First Section */
 main section#firstSection {
-    margin-top: 150px;
-    margin-bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 150px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-
-main section#firstSection p#introText{
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 120px;
-    padding: var(--defaultPadding);
+main section#firstSection p#introText {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 120px;
+  padding: var(--defaultPadding);
 }
 
 main section#firstSection img {
-    width: auto;
-    height: 90px;
+  width: auto;
+  height: 90px;
 }
 
 /* Second Section */
 main section#secondSection {
-    display: flex;
-    margin-top: 50px;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  flex-direction: column;
 }
 main section#secondSection div#slider {
-    display: flex;
-    margin-top: 50px;
-    align-items: center;
-    position: relative;
-    padding: var(--defaultPadding);
-    margin: 20px auto;
-    justify-content: center;
-    margin-bottom: 350px;
-    transform-style: preserve-3d;
+  display: flex;
+  margin-top: 50px;
+  align-items: center;
+  position: relative;
+  padding: var(--defaultPadding);
+  margin: 20px auto;
+  justify-content: center;
+  margin-bottom: 350px;
+  transform-style: preserve-3d;
+}
+main section#secondSection div#ImagesContainer {
+  display: none;
 }
 main section#secondSection div#slider img.sliderImage {
-    width: 200px;
-    height: 300px;
-    position: absolute;
-    top: 30px;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  top: 30px;
 }
 main section#secondSection div#slider img.sliderImage.activeImage {
-    width: 220px;
-    height: 350px;
-    z-index: 1;
-    top: -1px;
+  width: 220px;
+  height: 350px;
+  z-index: 1;
+  top: -1px;
 }
 
 main section#secondSection div#dotsContainer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
 }
 main section#secondSection div#dotsContainer div.dots {
-    border-radius: 50px;
-    width: 12px;
-    height: 12px;
-    background-color: var(--white);
-    box-shadow: 10px 0 5px -2px var(--ash);
+  border-radius: 50px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--white);
+  box-shadow: 10px 0 5px -2px var(--ash);
 }
 main section#secondSection div#dotsContainer div.dots.activeDot {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 }
 
 @keyframes rotateImage {
-    0% {
-        width: 150px;
-        height: 300px;
-        transform: translateX(50px);
-    }
-    50%{
-        width: 155px;
-        height: 325px;
-        transform: translateX(25px);
-    }
-    100%{
-        width: 160px;
-        height: 350px;
-        width: 160px;
-        height: 350px;
-        z-index: 1;
-        top: -1px;
-        transform: translateX(0px);
-    }
+  0% {
+    width: 150px;
+    height: 300px;
+    transform: translateX(50px);
+  }
+  50% {
+    width: 155px;
+    height: 325px;
+    transform: translateX(25px);
+  }
+  100% {
+    width: 160px;
+    height: 350px;
+    width: 160px;
+    height: 350px;
+    z-index: 1;
+    top: -1px;
+    transform: translateX(0px);
+  }
 }
 
 /* Third Section */
 main section#thirdSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  gap: 20px;
 }
 
-main section#thirdSection div#faqsContainer{
+main section#thirdSection div#faqsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+main section#thirdSection div#faqsContainer div.faqsItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--white);
+  border-right: 1px solid var(--secondary);
+  height: 63px;
+  padding: 20px;
+  width: auto;
+}
+main section#thirdSection div#faqsContainer div.faqsItem p {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+main section#thirdSection div#faqsContainer div.faqsItem.active {
+  background-color: var(--secondary);
+  color: var(--white);
+}
+
+/* Fourth Section */
+main section#fourthSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+main section#fourthSection div.contentContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: var(--defaultPadding);
+}
+main section#fourthSection div.contentContainer h2.contentHeading {
+  font-size: 1.6em;
+  font-weight: bold;
+}
+
+main
+  section#fourthSection
+  div.contentContainer
+  h2.contentHeading
+  span.lighterSelectedText {
+  color: var(--lighterSecondary);
+}
+
+main section#fourthSection div.contentContainer div.videoContent {
+  background-color: var(--white);
+  height: 400px;
+  width: 220px;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section#fourthSection div.contentContainer div.videoContent video {
+  width: auto;
+  height: 420px;
+  border-radius: 15px;
+}
+
+main section#fourthSection div.contentContainer p.contentFirstParagraph,
+p.contentSecondParagraph {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+main section#fourthSection div.contentContainer div#contentImageGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+main section#fourthSection div.contentContainer > img {
+  width: auto;
+  height: 60px;
+}
+
+main
+  section#fourthSection
+  div.contentContainer
+  div#contentImageGroup
+  img:nth-child(2) {
+  width: auto;
+  height: 40px;
+}
+
+/* fifth Section */
+main section#fifthSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  text-align: center;
+  padding: var(--defaultPadding);
+  margin-bottom: 50px;
+}
+
+main section#fifthSection h3 {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+main section#fifthSection a#ctaBtn {
+  color: var(--white);
+  background-color: var(--secondary);
+  box-shadow: 0 0 7px 5px var(--lighterSecondary);
+  width: auto;
+  height: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  height: auto;
+  width: auto;
+  background-color: var(--secondary);
+  padding: var(--defaultPadding);
+  color: var(--white);
+  padding-top: 40px;
+}
+
+footer div#f-footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+footer div#f-footer-group h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+footer div#f-footer-group p {
+  font-size: 14px;
+  font-weight: 300;
+}
+footer div#f-footer-group button {
+  width: 30%;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  border: 1px solid var(--white);
+  color: var(--white);
+  font-size: 15px;
+  border-radius: 8px;
+}
+footer div#s-footer-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+footer div#s-footer-group div#s-footer-group-f {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer div#s-footer-group div#s-footer-group-f h2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+footer div#s-footer-group div#s-footer-group-f p {
+  font-size: 15px;
+  font-weight: 400;
+}
+footer div#s-footer-group div#s-footer-group-f div#socials {
+  display: flex;
+  gap: 10px;
+}
+footer div#s-footer-group div#s-footer-group-f div#socials a img {
+  width: 20px;
+  height: auto;
+}
+footer div#s-footer-group div#s-footer-group-s {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer div#s-footer-group div#s-footer-group-s a {
+  color: var(--white);
+  text-align: right;
+  font-weight: 500;
+  font-size: 15px;
+}
+footer div#t-footer-group {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+footer div#t-footer-group img {
+  width: 60px;
+  height: auto;
+}
+footer div#t-footer-group div h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+footer div#t-footer-group div p {
+  font-size: 15px;
+  font-weight: 300;
+}
+footer div#t-footer-group form {
+  display: flex;
+}
+footer div#t-footer-group form input {
+  border: none;
+  width: 60%;
+  padding: 10px;
+  height: 50px;
+  border-radius: 8px 0px 0px 8px;
+  outline: none;
+  background: var(--white);
+  font-size: 15px;
+}
+footer div#t-footer-group form input::placeholder {
+  color: var(--ash);
+}
+footer div#t-footer-group form button {
+  border: none;
+  width: 40%;
+  padding: 10px;
+  border-radius: 0px 8px 8px 0px;
+  outline: none;
+  background: var(--pink);
+  text-transform: uppercase;
+  color: var(--white);
+  font-size: 15px;
+}
+
+/* subscribe page styles */
+div#sub-container {
+  display: flex;
+  flex-direction: column;
+}
+
+div#sub-container aside {
+  display: none;
+}
+
+div#sub-container section#contentContainer {
+  padding: var(--defaultPadding);
+  display: flex;
+  gap: 40px;
+  flex-direction: column;
+}
+
+div#sub-container section#contentContainer div#headContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+div#sub-container section#contentContainer div#headContainer button {
+  outline: none;
+  background: none;
+  border: none;
+}
+
+div#sub-container section#contentContainer div#headContainer button img {
+  height: auto;
+  width: 7px;
+  padding-top: 7px;
+}
+
+div#sub-container section#contentContainer div#headContainer h3 {
+  font-weight: 550;
+  font-size: 18px;
+}
+
+div#sub-container section#contentContainer div#formContainer form {
+  display: flex;
+  height: 500px;
+  flex-direction: column;
+}
+
+div#sub-container section#contentContainer div#formContainer div.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+div#sub-container
+  section#contentContainer
+  div#formContainer
+  form
+  div.formGroup
+  label {
+  font-weight: 520;
+  letter-spacing: 0.03rem;
+}
+
+div#sub-container
+  section#contentContainer
+  div#formContainer
+  form
+  div.formGroup
+  input {
+  border: none;
+  height: 60px;
+  background-color: var(--inputBackground);
+  border-radius: 10px;
+  padding-left: 30px;
+  font-size: 15px;
+  outline: none;
+}
+
+div#sub-container section#contentContainer div#formContainer form button {
+  align-self: flex-end;
+  margin-top: 90px;
+  border: none;
+  background: none;
+  color: var(--white);
+  background-color: var(--secondary);
+  height: 50px;
+  width: 130px;
+  border-radius: 8px;
+}
+
+div#sub-container div#successContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding: var(--defaultPadding);
+  gap: 60px;
+  display: none;
+}
+
+div#sub-container div#successContainer img {
+  width: auto;
+  height: 200px;
+}
+
+div#sub-container div#successContainer div#welcomeText {
+  text-align: center;
+}
+
+div#sub-container div#successContainer div#welcomeText h2 {
+  font-weight: 550;
+  font-size: 25px;
+  line-height: 40px;
+}
+
+div#sub-container div#successContainer div#welcomeText p {
+  font-weight: 500;
+  font-size: 20px;
+}
+
+div#sub-container div#successContainer a {
+  background-color: var(--secondary);
+  color: var(--white);
+  height: 60px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 419px) {
+  main {
+    background-image: url(./assets/desktopBackground.png);
+    background-repeat: no-repeat;
+    background-position: 10% 1%;
+    height: auto;
+    width: auto;
+  }
+}
+@media screen and (min-width: 600px) {
+  /* First Section */
+  main section#firstSection {
+    margin-top: 140px;
+    margin-bottom: 200px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-}
-main section#thirdSection div#faqsContainer div.faqsItem{
+    align-items: center;
+  }
+
+  main section#firstSection p#introText {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 550;
+    margin-bottom: 120px;
+  }
+
+  main section#firstSection img {
+    width: auto;
+    height: 170px;
+  }
+  main {
+    background-image: url(./assets/desktopBackground.png);
+    background-repeat: no-repeat;
+    background-position: 10% 1%;
+    height: auto;
+    width: auto;
+  }
+  /* Second Section */
+  main section#secondSection {
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+    flex-direction: column;
+  }
+  main section#secondSection div#slider {
+    display: none;
+  }
+  main section#secondSection div#imagesContainer {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: var(--defaultPadding);
+    margin: 50px auto;
+    justify-content: space-around;
+  }
+  main section#secondSection div#imagesContainer img.deskImage {
+    width: auto;
+    height: 550px;
+  }
+  main section#secondSection div#imagesContainer img.deskImage.largeImage {
+    width: auto;
+    height: 700px;
+  }
+
+  main section#secondSection div#dotsContainer {
+    display: none;
+  }
+  /* Third Section */
+  main section#thirdSection {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    gap: 70px;
+  }
+  main section#thirdSection img#faqImgTxt{
+    width: auto;
+    height: 50px
+  }
+
+  main section#thirdSection div#faqsContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+   justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+  main section#thirdSection div#faqsContainer div.faqsItem {
     display: flex;
     align-items: center;
     gap: 20px;
     background-color: var(--white);
     border-right: 1px solid var(--secondary);
-    height: 63px;
+    height: 70px;
     padding: 20px;
     width: auto;
-}
-main section#thirdSection div#faqsContainer div.faqsItem p{
-    font-weight: bold;
-    font-size: 15px;
-}
-
-main section#thirdSection div#faqsContainer div.faqsItem.active {
-    background-color: var(--secondary);
-    color: var(--white);
-}
-
-
-/* Fourth Section */
-main section#fourthSection {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-bottom: 50px;
-}
-main section#fourthSection div.contentContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: var(--defaultPadding)
-}
-main section#fourthSection div.contentContainer h2.contentHeading {
-    font-size: 1.6em;
-    font-weight: bold;
-}
-
-main section#fourthSection div.contentContainer h2.contentHeading span.lighterSelectedText {
-    color: var(--lighterSecondary);
-}
-
-main section#fourthSection div.contentContainer div.videoContent {
-    background-color: var(--white);
-    height: 400px;
-    width: 220px;
-    border-radius: 15px;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main section#fourthSection div.contentContainer div.videoContent video {
-    width: auto;
-    height: 420px;
-    border-radius: 15px;
-}
-
-main section#fourthSection div.contentContainer p.contentFirstParagraph, p.contentSecondParagraph {
-    font-size: 15px;
-    font-weight: 500;
-}
-
-main section#fourthSection div.contentContainer div#contentImageGroup {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-main section#fourthSection div.contentContainer > img {
-    width: auto;
-    height: 60px;
-}
-
-main section#fourthSection div.contentContainer div#contentImageGroup img:nth-child(2) {
-    width: auto;
-    height: 40px;
-}
-
-/* fifth Section */ 
-main section#fifthSection {
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    text-align: center;
-    padding: var(--defaultPadding);
-    margin-bottom: 50px;
-}
-
-main section#fifthSection h3 {
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-main section#fifthSection a#ctaBtn {
-    color: var(--white);
-    background-color: var(--secondary);
-    box-shadow: 0 0 7px 5px var(--lighterSecondary);
-    width: auto;
-    height: 50px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border-radius: 13px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-footer {
-    height: auto;
-    width: auto;
-    background-color: var(--secondary);
-    padding: var(--defaultPadding);
-    color: var(--white);
-    padding-top: 40px;
-}
-
-footer div#f-footer-group {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    margin-bottom: 50px;
-}
-footer div#f-footer-group h2 {
-    font-size: 30px;
-    font-weight: bold;
-}
-footer div#f-footer-group p {
-    font-size: 14px;
-    font-weight: 300;
-}
-footer div#f-footer-group button{
-    width: 30%;
-    height: 40px;
-    background: none;
-    outline: none;
-    border: none;
-    border: 1px solid var(--white);
-    color: var(--white);
-    font-size: 15px;
-    border-radius: 8px;
-}
-footer div#s-footer-group{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-footer div#s-footer-group div#s-footer-group-f{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-footer div#s-footer-group div#s-footer-group-f h2{
-    font-size: 30px;
-    font-weight: bold;
-}
-footer div#s-footer-group div#s-footer-group-f p{
-    font-size: 15px;
-    font-weight: 400;
-}
-footer div#s-footer-group div#s-footer-group-f div#socials{
-    display: flex;
-    gap: 10px;
-}
-footer div#s-footer-group div#s-footer-group-f div#socials a img{
-    width: 20px;
-    height: auto;
-}
-footer div#s-footer-group div#s-footer-group-s {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-footer div#s-footer-group div#s-footer-group-s a{
-    color: var(--white);
-    text-align: right;
-    font-weight: 500;
-    font-size: 15px;
-}
-footer div#t-footer-group {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-footer div#t-footer-group img {
-    width: 60px;
-    height: auto;
-}
-footer div#t-footer-group div h3{
-    font-size: 20px;
-    font-weight: 400;
-}
-footer div#t-footer-group div p{
-    font-size: 15px;
-    font-weight: 300;
-}
-footer div#t-footer-group form{
-    display: flex;
-}
-footer div#t-footer-group form input{
-    border: none;
-    width: 60%;
-    padding: 10px;
-    height: 50px;
-    border-radius: 8px 0px 0px 8px;
-    outline: none;
-    background: var(--white);
-    font-size: 15px;
-}
-footer div#t-footer-group form input::placeholder {
-    color: var(--ash)
-}
-footer div#t-footer-group form button{
-    border: none;
-    width: 40%;
-    padding: 10px;
-    border-radius: 0px 8px 8px 0px;
-    outline: none;
-    background: var(--pink);
-    text-transform: uppercase;
-    color: var(--white);
-    font-size: 15px;
-}
-
-/* subscribe page styles */
-div#sub-container {
-    display: flex;
-    flex-direction: column;
-}
-
-div#sub-container aside {
-    display: none;
-}
-
-div#sub-container section#contentContainer {
-    padding: var(--defaultPadding);
-    display: flex;
-    gap: 40px;
-    flex-direction: column;
-}
-
-div#sub-container section#contentContainer div#headContainer {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-div#sub-container section#contentContainer div#headContainer button {
-    outline: none;
-    background: none;
-    border: none;
-}
-
-div#sub-container section#contentContainer div#headContainer button img {
-    height: auto;
-    width: 7px;
-    padding-top: 7px;
-}
-
-div#sub-container section#contentContainer div#headContainer h3 {
-    font-weight: 550;
-    font-size: 18px;
-}
-
-
-
-div#sub-container section#contentContainer div#formContainer form {
-    display: flex;
-    height: 500px;
-    flex-direction: column;
-}
-
-div#sub-container section#contentContainer div#formContainer div.formGroup {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-div#sub-container section#contentContainer div#formContainer form div.formGroup label {
-    font-weight: 520;
-    letter-spacing: .03rem;
-}
-
-div#sub-container section#contentContainer div#formContainer form div.formGroup input {
-    border: none;
-    height: 60px;
-    background-color: var(--inputBackground);
-    border-radius: 10px;
-    padding-left: 30px;
-    font-size: 15px;
-    outline: none;
-}
-
-div#sub-container section#contentContainer div#formContainer form  button {
     align-self: flex-end;
-    margin-top: 90px;
-    border: none;
-    background: none;
-    color: var(--white);
-    background-color: var(--secondary);
-    height: 50px;
-    width: 130px;
-    border-radius: 8px;
-}
+  }
 
-div#sub-container div#successContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    padding: var(--defaultPadding);
-    gap: 60px;
-    display: none;
-}
 
-div#sub-container div#successContainer img {
-    width: auto;
-    height: 200px;
-}
-
-div#sub-container div#successContainer div#welcomeText {
-    text-align: center;
-}
-
-div#sub-container div#successContainer div#welcomeText h2 {
+  main section#thirdSection div#faqsContainer div.faqsItem p {
     font-weight: 550;
-    font-size: 25px;
-    line-height: 40px;
-}
+    font-size: 15px;
+  }
 
-div#sub-container div#successContainer div#welcomeText p {
-    font-weight: 500;
-    font-size: 20px;
-}
-
-div#sub-container div#successContainer a {
+  main section#thirdSection div#faqsContainer div.faqsItem.active {
     background-color: var(--secondary);
     color: var(--white);
-    height: 60px;
-    width: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 8px;
-    font-weight: 500;
-    font-size: 18px;
-    margin-top: 100px;
-}
-
-
-
-
-
-@media screen and (min-width: 419px) {
-    main {
-        background-image: url(./assets/desktopBackground.png);
-        background-repeat: no-repeat;
-        background-position: 10% 1%;
-        height: auto;
-        width: auto;
-    }
-}
-@media screen and (min-width: 600px) {
-    /* First Section */
-main section#firstSection {
-    margin-top: 180px;
-    margin-bottom: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-main section#firstSection p#introText{
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 120px;
-}
-
-main section#firstSection img {
-    width: auto;
-    height: 90px;
-}
-    main {
-        background-image: url(./assets/desktopBackground.png);
-        background-repeat: no-repeat;
-        background-position: 10% 1%;
-        height: auto;
-        width: auto;
-    }
+    transition: all .5s ease;
+  }
 }
