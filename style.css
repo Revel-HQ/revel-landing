@@ -45,7 +45,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--defaultPadding);
-  box-shadow: 10px 0 5px -2px var(--ash);
+  box-shadow: 1px 0 5px -2px var(--ash);
   width: 100%;
   background-color: var(--white);
   z-index: 1;
@@ -204,7 +204,7 @@ main section#thirdSection div#faqsContainer div.faqsItem {
   height: 63px;
   padding: 20px;
   width: auto;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   cursor: pointer;
 }
 main section#thirdSection div#faqsContainer div.faqsItem p {
@@ -213,20 +213,20 @@ main section#thirdSection div#faqsContainer div.faqsItem p {
 }
 
 main section#thirdSection div#faqsContainer div.faqsItem.active {
-  transition: .5s;
+  transition: 0.5s;
   background-color: var(--secondary);
   color: var(--white);
 }
 main section#thirdSection div#faqsContainer div.faqsItem svg path {
-  transition: .5s;
+  transition: 0.5s;
   transform-box: fill-box;
 }
 .rotatePath {
   -webkit-transform: rotate(-15deg);
-    -moz-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    -o-transform: rotate(-15deg);
-  transition: .5s;
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transition: 0.5s;
   transform-origin: center center;
   transform: rotate(-15deg);
   fill: white;
@@ -264,8 +264,8 @@ main
 
 main section#fourthSection div.contentContainer div.videoContent {
   background-color: var(--white);
-  height: 400px;
-  width: 220px;
+  height: 600px;
+  width: auto;
   border-radius: 15px;
   padding: 20px;
   display: flex;
@@ -275,7 +275,7 @@ main section#fourthSection div.contentContainer div.videoContent {
 
 main section#fourthSection div.contentContainer div.videoContent video {
   width: auto;
-  height: 420px;
+  height: 570px;
   border-radius: 15px;
 }
 
@@ -658,7 +658,7 @@ div#sub-container div#successContainer a {
     flex-direction: row;
     align-items: flex-start;
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
     gap: 70px;
   }
   main section#thirdSection img#faqImgTxt {
@@ -735,35 +735,35 @@ div#sub-container div#successContainer a {
 
   main section#fourthSection div.contentContainer div.videoContent {
     background-color: var(--white);
-    height: 430px;
-    width: 250px;
+    height: 650px;
+    width: auto;
     border-radius: 15px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 0;
+    right: 60px;
   }
   main
     section#fourthSection
     div.contentContainer:nth-child(2)
     div.videoContent {
     background-color: var(--white);
-    height: 430px;
-    width: 250px;
+    height:650px;
+    width: 380px;
     border-radius: 15px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 0;
+    left: 60px;
   }
 
   main section#fourthSection div.contentContainer div.videoContent video {
     width: auto;
-    height: 420px;
+    height: 620px;
     border-radius: 15px;
   }
 
@@ -991,7 +991,6 @@ div#sub-container div#successContainer a {
     z-index: 1;
     margin: 0 auto;
     margin-top: 400px;
-
   }
 
   div#sub-container aside div#asideQoute p {
@@ -1271,22 +1270,22 @@ div#sub-container div#successContainer a {
 
   main section#fourthSection div.contentContainer div.videoContent {
     background-color: var(--white);
-    height: 430px;
-    width: 250px;
+    height: 650px;
+    width: auto;
     border-radius: 15px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 0;
+    right: 60px;
   }
   main
     section#fourthSection
     div.contentContainer:nth-child(2)
     div.videoContent {
     background-color: var(--white);
-    height: 430px;
+    height: 650px;
     width: 250px;
     border-radius: 15px;
     padding: 20px;
@@ -1294,12 +1293,12 @@ div#sub-container div#successContainer a {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 0;
+    left: 60px;
   }
 
   main section#fourthSection div.contentContainer div.videoContent video {
     width: auto;
-    height: 420px;
+    height: 620px;
     border-radius: 15px;
   }
 
@@ -1527,7 +1526,6 @@ div#sub-container div#successContainer a {
     z-index: 1;
     margin: 0 auto;
     margin-top: 400px;
-
   }
 
   div#sub-container aside div#asideQoute p {
@@ -1662,5 +1660,17 @@ div#sub-container div#successContainer a {
     font-weight: 500;
     font-size: 18px;
     margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  header {
+    width: 1440px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
