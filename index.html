@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="./app.js"></script>
     <title>Revel</title>
   </head>
   <body>
@@ -56,7 +57,7 @@
       <section id="thirdSection">
         <img id="faqImgTxt" src="./assets/faq.png" alt="faq" />
         <div id="faqsContainer">
-          <div class="faqsItem" onclick="showFaqs(0)">
+          <div class="faqsItem" >
             <svg
               width="16"
               height="16"
@@ -76,7 +77,7 @@
 
             <p>How is Revel better than every other job platform out there?</p>
           </div>
-          <div class="faqsItem" onclick="showFaqs(1)">
+          <div class="faqsItem" >
             <svg
               width="16"
               height="16"
@@ -94,7 +95,7 @@
 
             <p>Who is Revel for?</p>
           </div>
-          <div class="faqsItem" onclick="showFaqs(2)">
+          <div class="faqsItem" >
             <svg
               width="16"
               height="16"
@@ -115,7 +116,7 @@
           </div>
         </div>
       </section>
-      <div id="faqAnswers"></div>
+      <div class="faqAnswers"></div>
       <section id="fourthSection">
         <div class="contentContainer">
           
@@ -126,7 +127,7 @@
               platform
             </h2>
             <div class="videoContent">
-              <video loop controls>
+              <video width="auto" height="620" loop controls>
                 <source src="./assets/Elliot_Revel.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -153,7 +154,7 @@
               <span class="lighterSelectedText">Pearl</span>
             </h2>
             <div class="videoContent">
-              <video loop controls>
+              <video width="auto" height="620"  loop controls>
                 <source src="./assets/Pearl_revel.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
@@ -227,6 +228,6 @@
         </form>
       </div>
     </footer>
-    <script src="./app.js"></script>
+    
   </body>
 </html>
