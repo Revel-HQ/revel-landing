@@ -149,7 +149,7 @@ main div.faqAnswers.showFaq::after {
 
 /* First Section */
 main section#firstSection {
-  margin-top: 150px;
+  margin-top: 220px;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
@@ -184,23 +184,31 @@ main section#secondSection div#slider {
   padding: var(--defaultPadding);
   margin: 20px auto;
   justify-content: center;
-  margin-bottom: 350px;
+  margin-bottom: 500px;
   transform-style: preserve-3d;
 }
 main section#secondSection div#imagesContainer {
   display: none;
 }
 main section#secondSection div#slider img.sliderImage {
-  width: 200px;
-  height: 300px;
+  width: 250px;
+  height: 500px;
   position: absolute;
-  top: 30px;
+  top: 0;
+}
+main section#secondSection div#slider img.sliderImage:nth-child(2) {
+ 
+  left: -34px;
+}
+main section#secondSection div#slider img.sliderImage:nth-child(3) {
+
+  right: -34px;
 }
 main section#secondSection div#slider img.sliderImage.activeImage {
-  width: 220px;
-  height: 350px;
+  width: 330px;
+  height: 590px;
   z-index: 1;
-  top: -1px;
+  top: -50px;
 }
 
 main section#secondSection div#dotsContainer {
@@ -215,6 +223,7 @@ main section#secondSection div#dotsContainer div.dots {
   height: 12px;
   background-color: var(--white);
   box-shadow: 10px 0 5px -2px var(--ash);
+  margin-bottom: 80px;
 }
 main section#secondSection div#dotsContainer div.dots.activeDot {
   background-color: var(--secondary);
@@ -249,7 +258,7 @@ main section#thirdSection {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
   gap: 20px;
 }
 
@@ -306,7 +315,7 @@ main section#fourthSection {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 main section#fourthSection div.contentContainer {
   display: flex;
@@ -380,7 +389,7 @@ main section#fifthSection {
   gap: 50px;
   text-align: center;
   padding: var(--defaultPadding);
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 main section#fifthSection h3 {
