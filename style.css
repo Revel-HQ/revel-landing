@@ -70,8 +70,8 @@ header h1#brandName {
 header a {
   border: 1px solid var(--secondary);
   border-radius: 5px;
-  width: 90px;
-  height: 50px;
+  width:  100px;
+  height: 40px;
   color: var(--secondary);
   display: flex;
   align-items: center;
@@ -94,8 +94,8 @@ main div.faqAnswers {
 
 main div.faqAnswers.showFaq {
   background-color: var(--white);
-  width: 90%;
-  height: 300px;
+  width: 95%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,16 +106,19 @@ main div.faqAnswers.showFaq {
   position: relative;
   gap: 30px;
   transition: .5s;
-  padding: 80px;
+  padding: 30px;
 }
 
 main div.faqAnswers.showFaq p {
-  font-size: 20px;
-  font-weight: 550;
+  font-size: 17px;
+  font-weight: 400;
   text-align: center;
+  transition: .5s;
 }
 main div.faqAnswers.showFaq p.colored {
-  color: var(--secondary)
+  color: var(--secondary);
+  font-weight: 550;
+  text-transform: uppercase;
 }
 
 

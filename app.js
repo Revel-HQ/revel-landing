@@ -49,49 +49,50 @@ var faqsItem = document.querySelectorAll(".faqsItem");
 
 faqsItem.forEach((faqItem, i) => {
   faqItem.addEventListener("click", () => {
+    var faqsItemActive = document.querySelector(".faqsItem.active");
+
+    console.log(faqsItemActive);
     faqsItem.forEach((faqEl) => {
       const pathEl = faqEl.children[0].children[0];
       faqEl.classList.remove("active");
       pathEl.classList.remove("rotatePath");
     });
-    showFaqs(i)
+
     const path = faqItem.children[0].children[0];
 
     faqItem.classList.add("active");
     path.classList.add("rotatePath");
-    return () => {
-      faqItem.classList.remove("active");
+    showFaqs(faqsItem);
 
-      path.classList.remove("rotatePath");
-    };
+    // remove active class from active element on second click
+    if (faqsItemActive === null) return;
+    var pathElActive = faqsItemActive.children[0].children[0];
+    faqsItemActive.classList.remove("active");
+    pathElActive.classList.remove("rotatePath");
+    showFaqs(faqsItem);
   });
 });
 
-function showFaqs(i) {
-  var faqAnswerEl = document.querySelectorAll(".faqAnswers")
-  var paraTwo = faqAnswerEl[0].children[1].classList.add("colored")
-  console.log(i)
-  // faqAnswerEl.classList.add("showFaq")
-  // paraTwo.classList.add("colored")
-  switch (i) {
-    case 0: 
-    faqAnswerEl[1].classList.remove("showFaq")
-    faqAnswerEl[2].classList.remove("showFaq")
-      faqAnswerEl[0].classList.add("showFaq")
-      paraTwo
-      break;
-    case 1: 
-    faqAnswerEl[0].classList.remove("showFaq")
-    faqAnswerEl[2].classList.remove("showFaq")
-      faqAnswerEl[1].classList.add("showFaq")
-      break;
-    case 2: 
-    faqAnswerEl[0].classList.remove("showFaq")
-    faqAnswerEl[1].classList.remove("showFaq")
-      faqAnswerEl[2].classList.add("showFaq")
-      break;
-    default:
-      faqAnswerEl[i].classList.remove("showFaq")
+function showFaqs(faqsItem) {
+  var faqAnswerEl = document.querySelectorAll(".faqAnswers");
+  var paraTwo = faqAnswerEl[0].children[1].classList.add("colored");
 
+  if (faqsItem[0].classList.contains("active")) {
+    faqAnswerEl[1].classList.remove("showFaq");
+    faqAnswerEl[2].classList.remove("showFaq");
+    faqAnswerEl[0].classList.add("showFaq");
+    paraTwo;
+  } else if (faqsItem[1].classList.contains("active")) {
+    faqAnswerEl[0].classList.remove("showFaq");
+    faqAnswerEl[2].classList.remove("showFaq");
+    faqAnswerEl[1].classList.add("showFaq");
+  } else if (faqsItem[2].classList.contains("active")) {
+    faqAnswerEl[0].classList.remove("showFaq");
+    faqAnswerEl[1].classList.remove("showFaq");
+    faqAnswerEl[2].classList.add("showFaq");
+  } else {
+    faqAnswerEl[0].classList.remove("showFaq");
+    faqAnswerEl[1].classList.remove("showFaq");
+    faqAnswerEl[2].classList.remove("showFaq");
   }
 }
