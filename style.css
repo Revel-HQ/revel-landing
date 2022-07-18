@@ -88,6 +88,10 @@ main {
   height: auto;
 }
 
+main div.faqAnswers {
+  display: none;
+}
+
 main div.faqAnswers.showFaq {
   background-color: var(--white);
   width: 90%;

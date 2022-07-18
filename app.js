@@ -68,40 +68,30 @@ faqsItem.forEach((faqItem, i) => {
 });
 
 function showFaqs(i) {
-  var faqAnswerEl = document.querySelector(".faqAnswers")
+  var faqAnswerEl = document.querySelectorAll(".faqAnswers")
+  var paraTwo = faqAnswerEl[0].children[1].classList.add("colored")
   console.log(i)
-  faqAnswerEl.classList.add("showFaq")
- 
+  // faqAnswerEl.classList.add("showFaq")
+  // paraTwo.classList.add("colored")
   switch (i) {
-    case 0:
-      var paraOne = document.createElement("p")
-      var paraTwo = document.createElement("p")
-      var paraThree = document.createElement("p")
-      var textOne = document.createTextNode("Revel's use of short-form videos as the primary means of displaying skill makes it easier for both white and blue collar job seekers to showcase what they can do. This also works for people looking to recruit talent in either sector.")
-      var textTwo = document.createTextNode("Also")
-      var textThree = document.createTextNode("Applying for any job on Revel is as easy asswiping right on the job post. This would instantly send your portfolio to the employer for review.")
-      paraOne.appendChild(textOne)
-      paraTwo.appendChild(textTwo)
-      paraTwo.classList.add("colored")
-      paraThree.appendChild(textThree)
-      faqAnswerEl.appendChild(paraOne)
-      faqAnswerEl.appendChild(paraTwo)
-      faqAnswerEl.appendChild(paraThree)
+    case 0: 
+    faqAnswerEl[1].classList.remove("showFaq")
+    faqAnswerEl[2].classList.remove("showFaq")
+      faqAnswerEl[0].classList.add("showFaq")
+      paraTwo
       break;
-    case 1:
-      var paraFour = document.createElement("p")
-      var textFour = document.createTextNode("Revel is unique in the sense that it is equally effective for both white and blue collar jobs. So a makeup artist can look for lucrative job offers as easily as a HR manager on our app. Such homogeny cannot be found on any other job platform out there.")
-      paraFour.appendChild(textFour)
-      faqAnswerEl.appendChild(paraFour)
+    case 1: 
+    faqAnswerEl[0].classList.remove("showFaq")
+    faqAnswerEl[2].classList.remove("showFaq")
+      faqAnswerEl[1].classList.add("showFaq")
       break;
-    case 1:
-      var paraFive = document.createElement("p")
-      var textFive = document.createTextNode("Revel is currently in development and will be released on android and iOS platforms by the end of 2022. If you want to get notified the moment we launch, please sign up and join our waiting list.")
-      paraFive.appendChild(textFive)
-      faqAnswerEl.appendChild(paraFive)
+    case 2: 
+    faqAnswerEl[0].classList.remove("showFaq")
+    faqAnswerEl[1].classList.remove("showFaq")
+      faqAnswerEl[2].classList.add("showFaq")
       break;
-    
     default:
-      faqAnswerEl.classList.remove("showFaq")
+      faqAnswerEl[i].classList.remove("showFaq")
+
   }
 }
