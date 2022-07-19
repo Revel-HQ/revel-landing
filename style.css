@@ -184,8 +184,8 @@ main section#secondSection div#slider {
   padding: var(--defaultPadding);
   margin: 20px auto;
   justify-content: center;
+  width: 100%;
   margin-bottom: 500px;
-  transform-style: preserve-3d;
 }
 main section#secondSection div#imagesContainer {
   display: none;
@@ -193,21 +193,12 @@ main section#secondSection div#imagesContainer {
 main section#secondSection div#slider img.sliderImage {
   width: 250px;
   height: 500px;
-  position: absolute;
-  top: 0;
 }
-main section#secondSection div#slider img.sliderImage:nth-child(2) {
- 
-  left: -34px;
-}
-main section#secondSection div#slider img.sliderImage:nth-child(3) {
 
-  right: -34px;
-}
 main section#secondSection div#slider img.sliderImage.activeImage {
   width: 330px;
   height: 590px;
-  top: -50px;
+  z-index: 1;
 }
 
 main section#secondSection div#dotsContainer {
