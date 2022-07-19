@@ -1,6 +1,12 @@
 
 var sliderImages = document.querySelectorAll(".sliderImage")
 
+sliderImages.forEach(sliderImage => {
+  sliderImage.addEventListener("click", ()=> {
+    console.log(sliderImage.getBoundingClientRect())
+  })
+})
+
 // video loop function
 window.addEventListener("load", videoScroll);
 window.addEventListener("scroll", videoScroll);

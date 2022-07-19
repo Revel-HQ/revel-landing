@@ -207,7 +207,6 @@ main section#secondSection div#slider img.sliderImage:nth-child(3) {
 main section#secondSection div#slider img.sliderImage.activeImage {
   width: 330px;
   height: 590px;
-  z-index: 1;
   top: -50px;
 }
 
