@@ -1,11 +1,44 @@
+var sliderImages = document.querySelectorAll(".sliderImage");
+function paginateImage() {
+  var activeImage = document.querySelector(".sliderImage.activeImage");
+  sliderImages.forEach((sliderImage, i) => {
+    sliderImage.addEventListener("click", () => {
+      activeImage.classList.remove("activeImage");
+      sliderImage.classList.add("activeImage");
+      paginateDot(sliderImages);
+      console.log(i, sliderImages.length);
+      if (i < sliderImages.length) {
+        activeImage.classList.remove("activeImage");
+        sliderImage.classList.add("activeImage");
+        paginateDot(sliderImages);
+      }
+    });
+    sliderImage.addEventListener("touchstart", () => {
+      activeImage.classList.remove("activeImage");
+      sliderImage.classList.add("activeImage");
+      paginateDot(sliderImages);
+      console.log(i, sliderImages.length);
+      if (i < sliderImages.length) {
+        activeImage.classList.remove("activeImage");
+        sliderImage.classList.add("activeImage");
+        paginateDot(sliderImages);
+      }
+    });
+    sliderImage.addEventListener("touchend", () => {
+      activeImage.classList.remove("activeImage");
+      sliderImage.classList.add("activeImage");
+      paginateDot(sliderImages);
+      console.log(i, sliderImages.length);
+      if (i < sliderImages.length) {
+        activeImage.classList.remove("activeImage");
+        sliderImage.classList.add("activeImage");
+        paginateDot(sliderImages);
+      }
+    });
+  });
+}
 
-var sliderImages = document.querySelectorAll(".sliderImage")
-
-sliderImages.forEach(sliderImage => {
-  sliderImage.addEventListener("click", ()=> {
-    console.log(sliderImage.getBoundingClientRect())
-  })
-})
+paginateImage();
 
 // video loop function
 window.addEventListener("load", videoScroll);
@@ -81,3 +114,19 @@ function showFaqs(faqsItem) {
     faqAnswerEl[2].classList.remove("showFaq");
   }
 }
+
+function paginateDot(sliderImages) {
+  var dots = document.querySelectorAll(".dots");
+
+  for (var i = 0; i < sliderImages.length; i++) {
+    if (sliderImages[i].classList.contains("activeImage")) {
+      dots[i].classList.add("activeDot");
+      console.log("e dey o");
+    } else {
+      dots[i].classList.remove("activeDot");
+      console.log("e no dey ooo");
+    }
+  }
+}
+
+paginateDot(sliderImages);

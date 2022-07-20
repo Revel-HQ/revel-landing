@@ -70,7 +70,7 @@ header h1#brandName {
 header a {
   border: 1px solid var(--secondary);
   border-radius: 5px;
-  width:  100px;
+  width: 100px;
   height: 40px;
   color: var(--secondary);
   display: flex;
@@ -105,7 +105,7 @@ main div.faqAnswers.showFaq {
   margin-bottom: 200px;
   position: relative;
   gap: 30px;
-  transition: .5s;
+  transition: 0.5s;
   padding: 30px;
 }
 
@@ -113,14 +113,13 @@ main div.faqAnswers.showFaq p {
   font-size: 17px;
   font-weight: 400;
   text-align: center;
-  transition: .5s;
+  transition: 0.5s;
 }
 main div.faqAnswers.showFaq p.colored {
   color: var(--secondary);
   font-weight: 550;
   text-transform: uppercase;
 }
-
 
 main div.faqAnswers.showFaq::before {
   content: "";
@@ -179,26 +178,27 @@ main section#secondSection {
 main section#secondSection div#slider {
   display: flex;
   margin-top: 50px;
-  align-items: center;
   position: relative;
   padding: var(--defaultPadding);
   margin: 20px auto;
-  justify-content: center;
   width: 100%;
-  margin-bottom: 500px;
+  margin-bottom: 600px;
 }
 main section#secondSection div#imagesContainer {
   display: none;
 }
 main section#secondSection div#slider img.sliderImage {
-  width: 250px;
-  height: 500px;
+  width: 330px;
+  height: 590px;
+  position: absolute;
+  left: 1px;
+  right: 0px;
+  opacity: 0;
 }
 
 main section#secondSection div#slider img.sliderImage.activeImage {
-  width: 330px;
-  height: 590px;
-  z-index: 1;
+  opacity: 1;
+  transition: 0.5s;
 }
 
 main section#secondSection div#dotsContainer {
@@ -209,7 +209,7 @@ main section#secondSection div#dotsContainer {
 }
 main section#secondSection div#dotsContainer div.dots {
   border-radius: 50px;
-  width: 12px;
+  width: 18px;
   height: 12px;
   background-color: var(--white);
   box-shadow: 10px 0 5px -2px var(--ash);
@@ -217,6 +217,7 @@ main section#secondSection div#dotsContainer div.dots {
 }
 main section#secondSection div#dotsContainer div.dots.activeDot {
   background-color: var(--secondary);
+  width: 22px;
 }
 
 @keyframes rotateImage {
@@ -1715,22 +1716,28 @@ div#sub-container div#successContainer a {
 }
 
 @media screen and (min-width: 1440px) {
-  main {
+  main section#firstSection,
+  section#secondSection,
+  section#thirdSection,
+  section#fourthSection {
     width: 1440px;
     margin: 0 auto;
+  }
+  main div.faqAnswers.showFaq {
+    width: 50%;
   }
   header {
     align-items: center;
   }
-  header div{
+  header div {
     width: 1440px;
     margin: 0 auto;
   }
   footer {
     width: 100%;
   }
-  footer section{
-  width: 1440px;
+  footer section {
+    width: 1440px;
     margin: 0 auto;
     position: relative;
   }
