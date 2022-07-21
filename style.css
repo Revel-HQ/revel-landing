@@ -182,23 +182,23 @@ main section#secondSection div#slider {
   padding: var(--defaultPadding);
   margin: 20px auto;
   width: 100%;
-  margin-bottom: 550px;
+  margin-bottom: 580px;
 }
 main section#secondSection div#imagesContainer {
   display: none;
 }
 main section#secondSection div#slider img.sliderImage {
-  width: 350px;
-  height: 610px;
+  width: 360px;
+  height: 640px;
   position: absolute;
-  left: -25px;
-  right: 0px;
+  left: 1px;
+  right: 0;
   opacity: 0;
 }
 
 main section#secondSection div#slider img.sliderImage.activeImage {
   opacity: 1;
-  transition: 0.9s;
+  transition: 1.3s;
 }
 
 main section#secondSection div#dotsContainer {
@@ -216,6 +216,7 @@ main section#secondSection div#dotsContainer div.dots {
   margin-bottom: 80px;
 }
 main section#secondSection div#dotsContainer div.dots.activeDot {
+  transition: 1s;
   background-color: var(--secondary);
   width: 22px;
 }
