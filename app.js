@@ -1,44 +1,55 @@
-var sliderImages = document.querySelectorAll(".sliderImage");
-function paginateImage() {
-  var activeImage = document.querySelector(".sliderImage.activeImage");
-  sliderImages.forEach((sliderImage, i) => {
-    sliderImage.addEventListener("click", () => {
-      activeImage.classList.remove("activeImage");
-      sliderImage.classList.add("activeImage");
-      paginateDot(sliderImages);
-      console.log(i, sliderImages.length);
-      if (i < sliderImages.length) {
-        activeImage.classList.remove("activeImage");
-        sliderImage.classList.add("activeImage");
-        paginateDot(sliderImages);
-      }
-    });
-    sliderImage.addEventListener("touchstart", () => {
-      activeImage.classList.remove("activeImage");
-      sliderImage.classList.add("activeImage");
-      paginateDot(sliderImages);
-      console.log(i, sliderImages.length);
-      if (i < sliderImages.length) {
-        activeImage.classList.remove("activeImage");
-        sliderImage.classList.add("activeImage");
-        paginateDot(sliderImages);
-      }
-    });
-    sliderImage.addEventListener("touchend", () => {
-      activeImage.classList.remove("activeImage");
-      sliderImage.classList.add("activeImage");
-      paginateDot(sliderImages);
-      console.log(i, sliderImages.length);
-      if (i < sliderImages.length) {
-        activeImage.classList.remove("activeImage");
-        sliderImage.classList.add("activeImage");
-        paginateDot(sliderImages);
-      }
-    });
-  });
-}
+/*
+a. get images
+b. set initial value to 0;
 
-paginateImage();
+
+*/ 
+
+(function(document){
+
+  var sliderImages = document.querySelectorAll(".sliderImage");
+  var initialValue = 0, className= "activeImage";
+  sliderImages[initialValue].classList.add(className);
+  for (var i = 0; i < sliderImages.length; i++) {
+    sliderImages[i].addEventListener("click", ()=> {
+      
+      console.log(initialValue)
+      if (initialValue === 0) {
+        initialValue++
+        sliderImages[initialValue-1].classList.remove(className)
+        sliderImages[initialValue].classList.add(className)
+        paginateDot(sliderImages)
+        initialValue++
+      } else if (initialValue === 2) {
+        sliderImages[initialValue-1].classList.remove(className)
+        sliderImages[initialValue].classList.add(className)
+        paginateDot(sliderImages)
+        initialValue++
+      } else if (initialValue === 3) {
+        sliderImages[initialValue - 1].classList.remove(className)
+        initialValue = initialValue - 3
+        sliderImages[initialValue].classList.add(className)
+        paginateDot(sliderImages)
+      } else {
+        return null
+      }
+    })
+  }
+  
+  function paginateDot(sliderImages) {
+    var dots = document.querySelectorAll(".dots");
+  
+    for (var i = 0; i < sliderImages.length; i++) {
+      if (sliderImages[i].classList.contains("activeImage")) {
+        dots[i].classList.add("activeDot");
+      } else {
+        dots[i].classList.remove("activeDot");
+      }
+    }
+  }
+  
+  paginateDot(sliderImages);
+})(document)
 
 // video loop function
 window.addEventListener("load", videoScroll);
@@ -114,19 +125,3 @@ function showFaqs(faqsItem) {
     faqAnswerEl[2].classList.remove("showFaq");
   }
 }
-
-function paginateDot(sliderImages) {
-  var dots = document.querySelectorAll(".dots");
-
-  for (var i = 0; i < sliderImages.length; i++) {
-    if (sliderImages[i].classList.contains("activeImage")) {
-      dots[i].classList.add("activeDot");
-      console.log("e dey o");
-    } else {
-      dots[i].classList.remove("activeDot");
-      console.log("e no dey ooo");
-    }
-  }
-}
-
-paginateDot(sliderImages);
