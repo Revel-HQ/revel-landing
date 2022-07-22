@@ -1,44 +1,42 @@
-/*
-a. get images
-b. set initial value to 0;
 
-
-*/ 
-
-(function(document){
-
-  var sliderImages = document.querySelectorAll(".sliderImage");
-  var initialValue = 0, className= "activeImage";
-  sliderImages[initialValue].classList.add(className);
-  for (var i = 0; i < sliderImages.length; i++) {
-    sliderImages[i].addEventListener("click", ()=> {
-      
-      console.log(initialValue)
-      if (initialValue === 0) {
-        initialValue++
-        sliderImages[initialValue-1].classList.remove(className)
-        sliderImages[initialValue].classList.add(className)
-        paginateDot(sliderImages)
-        initialValue++
-      } else if (initialValue === 2) {
-        sliderImages[initialValue-1].classList.remove(className)
-        sliderImages[initialValue].classList.add(className)
-        paginateDot(sliderImages)
-        initialValue++
-      } else if (initialValue === 3) {
-        sliderImages[initialValue - 1].classList.remove(className)
-        initialValue = initialValue - 3
-        sliderImages[initialValue].classList.add(className)
-        paginateDot(sliderImages)
-      } else {
-        return null
-      }
-    })
+// for the image sliders
+(function (document) {
+  var startingX, movingX;
+  var slider = document.querySelector("#slider");
+  slider.addEventListener("touchstart", (e) => touchstart(e));
+  slider.addEventListener("touchend", (e) => touchend(e));
+  slider.addEventListener("touchmove", (e) => touchmove(e));
+  function touchstart(evt) {
+    startingX = evt.touches[0].clientX;
   }
-  
+  function touchmove(evt) {
+    movingX = evt.touches[0].clientX;
+  }
+  function touchend() {
+    if (startingX + 100 < movingX) {
+      if (initialValue === 0) return;
+      sliderImages[initialValue].classList.remove(className);
+      initialValue--;
+      sliderImages[initialValue].classList.add(className);
+      paginateDot(sliderImages);
+      console.log(initialValue, sliderImages.length);
+    } else if (startingX - 100 > movingX) {
+      if (initialValue >= sliderImages.length - 1) return;
+      initialValue++;
+      sliderImages[initialValue - 1].classList.remove(className);
+      sliderImages[initialValue].classList.add(className);
+      paginateDot(sliderImages);
+      console.log(initialValue, sliderImages.length);
+    }
+  }
+  var sliderImages = document.querySelectorAll(".sliderImage");
+  var initialValue = 0,
+    className = "activeImage";
+  sliderImages[initialValue].classList.add(className);
+
   function paginateDot(sliderImages) {
     var dots = document.querySelectorAll(".dots");
-  
+
     for (var i = 0; i < sliderImages.length; i++) {
       if (sliderImages[i].classList.contains("activeImage")) {
         dots[i].classList.add("activeDot");
@@ -47,9 +45,9 @@ b. set initial value to 0;
       }
     }
   }
-  
+
   paginateDot(sliderImages);
-})(document)
+})(document);
 
 // video loop function
 window.addEventListener("load", videoScroll);

@@ -6,15 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
+
     <link
       href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" href="./favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+    <link rel="icon" href="./favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
     <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="style.css" />
     <title>Subscribe</title>
@@ -22,45 +36,54 @@
   <body>
     <div id="sub-container">
       <aside>
-        <img id="asideIcon" src="./assets/transparentIcon.png" alt="transparent icon">
-        <img id="asideImg" src="./assets/circlesWP.png" alt="circles with photo">
+        <img
+          id="asideIcon"
+          src="./assets/transparentIcon.png"
+          alt="transparent icon"
+        />
+        <img
+          id="asideImg"
+          src="./assets/circlesWP.png"
+          alt="circles with photo"
+        />
         <div id="asideQoute">
           <h3>Oluchi Mande</h3>
-          <p>“Using Revel to get new gigs has been such
-            a great experience, It’s definitely gonna
-            remain my go to job platform” </p>
+          <p>
+            “Using Revel to get new gigs has been such a great experience, It’s
+            definitely gonna remain my go to job platform”
+          </p>
         </div>
       </aside>
-      <section id="contentContainer">
+      
+      <div id="successContainer">
         <div id="headContainer">
-          <button>
+          <a href="./index.html">
             <img src="./assets/back.png" alt="back icon" />
-          </button>
-          <h3>Join the waiting list</h3>
+          </a>
+          <h3>Speak to us</h3>
         </div>
-        <div id="formContainer">
-          <form>
-            <div class="formGroup">
-              <label for="email">Email address</label>
-              <input placeholder="name@mail.com" type="email" />
-            </div>
-            <div class="formGroup">
-              <label for="password">Password</label>
-              <input placeholder="Teacher" type="text" />
-            </div>
-            <button disabled>I'm done</button>
-          </form>
-        </div>
-    </section>
-    <div id="successContainer">
-        <img src="./assets/welcomeImg.png" alt="welcome image">
+        <img src="./assets/welcomeImg.png" alt="welcome image" />
         <div id="welcomeText">
-            <h2>Welcome on board!!!</h2>
-            <p>You’ll be notified as soon as our public beta is out in 
-                the wild</p>
+          <p>
+            For any enquiries, you can reach us through the contact information
+            listed below
+          </p>
         </div>
-        <a href="./index.html">Back to Home</button>
-    </div>
+        <div id="contact-container">
+          <div class="contact-details-container">
+            <img src="./assets/phone.png" alt="phone icon" class="icon" />
+            <p class="contact-details">+234 817 972 1534</p>
+          </div>
+          <div class="contact-details-container">
+            <img src="./assets/message.png" alt="phone icon" class="icon" />
+            <p class="contact-details">admin@revelhq.co</p>
+          </div>
+          <div class="contact-details-container">
+            <img src="./assets/twitterDark.png" alt="phone icon" class="icon" />
+            <p class="contact-details">@revel_hq</p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>
