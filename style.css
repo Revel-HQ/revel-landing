@@ -24,6 +24,7 @@ body {
   --ash: #c4c4c4;
   --pink: #be8dd6;
   --inputBackground: #f8f9ff;
+  --lightPink: #F3D8FF
 }
 
 /* Global styles */
@@ -39,6 +40,22 @@ span.lighterSelectedText {
 }
 span.secondarySelectedText {
   color: var(--secondary);
+  position: relative;
+}
+
+span.secondarySelectedText::before {
+  content: "";
+  display: block;
+  width: 97%;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom: 0;
+  z-index: -1;
+  background-color: var(--lightPink);
 }
 
 header {
@@ -414,12 +431,12 @@ footer div#f-footer-group p {
   font-size: 14px;
   font-weight: 300;
 }
-footer div#f-footer-group button {
+footer div#f-footer-group a {
   width: 30%;
   height: 40px;
-  background: none;
-  outline: none;
-  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--white);
   color: var(--white);
   font-size: 15px;
@@ -517,14 +534,6 @@ div#sub-container aside {
   display: none;
 }
 
-div#sub-container section#contentContainer {
-  padding: var(--defaultPadding);
-  display: flex;
-  gap: 40px;
-  flex-direction: column;
-  display: none;
-}
-
 div#sub-container div#successContainer div#headContainer {
   display: flex;
   gap: 20px;
@@ -547,54 +556,56 @@ div#sub-container div#successContainer div#headContainer h3 {
   font-size: 18px;
 }
 
-div#sub-container section#contentContainer div#formContainer form {
-  display: flex;
-  height: 500px;
-  flex-direction: column;
-}
-
-div#sub-container section#contentContainer div#formContainer div.formGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 30px;
-}
-
-div#sub-container
-  section#contentContainer
-  div#formContainer
-  form
-  div.formGroup
-  label {
-  font-weight: 520;
-  letter-spacing: 0.03rem;
-}
-
 div#sub-container div#successContainer {
   display: flex;
   flex-direction: column;
   padding: var(--defaultPadding);
+  gap: 40px;
 }
 
 div#sub-container div#successContainer img {
   width: auto;
   height: 200px;
+  align-self: center;
 }
 
 div#sub-container div#successContainer div#welcomeText {
   text-align: center;
-}
-
-div#sub-container div#successContainer div#welcomeText h2 {
-  font-weight: 550;
-  font-size: 25px;
-  line-height: 40px;
+  align-self: center;
 }
 
 div#sub-container div#successContainer div#welcomeText p {
   font-weight: 500;
-  font-size: 20px;
+  font-size: 23px;
+  padding: 20px;
 }
+
+div#sub-container div#successContainer div#contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+div#sub-container div#successContainer div#contact-container div.contact-details-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+div#sub-container div#successContainer div#contact-container div.contact-details-container img {
+  width: 32px;
+  height: 28px;
+}
+div#sub-container div#successContainer div#contact-container div.contact-details-container a {
+  width: auto;
+  height: 40px;
+  border: 1px solid var(--black);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+}
+
 
 
 @media screen and (min-width: 419px) {
@@ -877,12 +888,12 @@ div#sub-container div#successContainer div#welcomeText p {
     font-weight: 400;
     width: 50%;
   }
-  footer div#f-footer-group button {
+  footer div#f-footer-group a {
     width: 14%;
     height: 52px;
-    background: none;
-    outline: none;
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid var(--white);
     color: var(--white);
     font-size: 18px;
@@ -1364,12 +1375,12 @@ div#sub-container div#successContainer div#welcomeText p {
     font-weight: 400;
     width: 50%;
   }
-  footer div#f-footer-group button {
+  footer div#f-footer-group a {
     width: 14%;
     height: 52px;
-    background: none;
-    outline: none;
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 1px solid var(--white);
     color: var(--white);
     font-size: 18px;

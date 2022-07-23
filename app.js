@@ -19,14 +19,12 @@
       initialValue--;
       sliderImages[initialValue].classList.add(className);
       paginateDot(sliderImages);
-      console.log(initialValue, sliderImages.length);
     } else if (startingX - 100 > movingX) {
       if (initialValue >= sliderImages.length - 1) return;
       initialValue++;
       sliderImages[initialValue - 1].classList.remove(className);
       sliderImages[initialValue].classList.add(className);
       paginateDot(sliderImages);
-      console.log(initialValue, sliderImages.length);
     }
   }
   var sliderImages = document.querySelectorAll(".sliderImage");
