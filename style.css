@@ -41,6 +41,7 @@ span.lighterSelectedText {
 span.secondarySelectedText {
   color: var(--secondary);
   position: relative;
+  font-weight: bold;
 }
 
 span.secondarySelectedText::before {
@@ -49,8 +50,8 @@ span.secondarySelectedText::before {
   width: 97%;
   height: 30px;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: -50%;
+  right: -50%;
   margin-left: auto;
   margin-right: auto;
   bottom: 0;
@@ -71,6 +72,8 @@ header {
   background-color: var(--inputBackground);
   z-index: 1;
 }
+
+
 
 header div {
   display: flex;
@@ -181,9 +184,10 @@ main section#firstSection {
 main section#firstSection h1#introText {
   text-align: center;
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 550;
   margin-bottom: 70px;
   padding: var(--defaultPadding);
+  line-height: 50px;
 }
 
 main section#firstSection img {
@@ -197,6 +201,7 @@ main section#secondSection {
   margin-top: 50px;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 200px;
 }
 main section#secondSection div#slider {
   display: flex;
@@ -205,17 +210,17 @@ main section#secondSection div#slider {
   padding: var(--defaultPadding);
   margin: 20px auto;
   width: 100%;
-  margin-bottom: 750px;
+  margin-bottom: 680px;
 }
 main section#secondSection div#imagesContainer {
   display: none;
 }
 main section#secondSection div#slider img.sliderImage {
-  width: 450px;
-  height: 750px;
+  width: 350px;
+  height: 630px;
   position: absolute;
   left: -50%;
-  right: -42%;
+  right: -50%;
   margin-left: auto;
   margin-right: auto;
   opacity: 0;
@@ -224,7 +229,7 @@ main section#secondSection div#slider img.sliderImage {
 
 main section#secondSection div#slider img.sliderImage.activeImage {
   opacity: 1;
-  transition: 1.3s;
+  transition: 0.3s;
 }
 
 main section#secondSection div#dotsContainer {
@@ -235,7 +240,7 @@ main section#secondSection div#dotsContainer {
 }
 main section#secondSection div#dotsContainer div.dots {
   border-radius: 50px;
-  width: 18px;
+  width: 22px;
   height: 8px;
   background-color: var(--white);
   margin-bottom: 80px;
@@ -243,7 +248,7 @@ main section#secondSection div#dotsContainer div.dots {
 main section#secondSection div#dotsContainer div.dots.activeDot {
   transition: 1s;
   background-color: var(--secondary);
-  width: 22px;
+  width: 26px;
 }
 
 /* Third Section */
@@ -253,7 +258,7 @@ main section#thirdSection {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 200px;
   gap: 20px;
   padding: var(--defaultPadding);
 }
@@ -311,7 +316,7 @@ main section#fourthSection {
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin-bottom: 70px;
+  margin-bottom: 200px;
 }
 main section#fourthSection div.contentContainer {
   display: flex;
@@ -340,10 +345,11 @@ main section#fourthSection div.contentContainer div.videoContent {
   height: 600px;
   width: auto;
   border-radius: 15px;
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 100px;
 }
 
 main section#fourthSection div.contentContainer div.videoContent video {
@@ -385,7 +391,7 @@ main section#fifthSection {
   gap: 50px;
   text-align: center;
   padding: var(--defaultPadding);
-  margin-bottom: 80px;
+  margin-bottom: 200px;
 }
 
 main section#fifthSection h3 {
@@ -458,11 +464,6 @@ main section#sixthSection div#formContainer form select {
   font-size: 20px;
   padding-bottom: 20px;
 }
-
-main section#sixthSection div#formContainer form select option.holder {
-  color: var(--ash)
-}
-
 main section#sixthSection div#formContainer form button {
   border: none;
   outline: none;
@@ -477,18 +478,24 @@ main section#sixthSection div#formContainer form button {
   text-transform: uppercase;
 }
 
+main section#sixthSection div#formContainer form select option.holder {
+  color: var(--ash);
+}
+
 main section#sixthSection div#formContainer form button.formComplete {
   border: 1px solid var(--secondary);
   color: var(--secondary);
 }
 
-main section#sixthSection div#formContainer form input:focus, main section#sixthSection div#formContainer form select:focus {
+main section#sixthSection div#formContainer form input:focus,
+main section#sixthSection div#formContainer form select:focus {
   border-bottom: 1px solid var(--secondary);
-  transition: .8s;
+  transition: 0.8s;
 }
-main section#sixthSection div#formContainer form input:active, main section#sixthSection div#formContainer form select:active {
+main section#sixthSection div#formContainer form input:active,
+main section#sixthSection div#formContainer form select:active {
   border-bottom: 1px solid var(--secondary);
-  transition: .8s;
+  transition: 0.8s;
 }
 
 footer {
@@ -766,6 +773,7 @@ div#sub-container
     margin-top: 50px;
     align-items: center;
     flex-direction: column;
+    margin-bottom: 200px;
   }
   main section#secondSection div#slider {
     display: none;
@@ -796,7 +804,7 @@ div#sub-container
     flex-direction: row;
     align-items: flex-start;
     margin-top: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
     gap: 70px;
   }
   main section#thirdSection img#faqImgTxt {
@@ -833,7 +841,7 @@ div#sub-container
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
   }
   main section#fourthSection div.contentContainer {
     display: flex;
@@ -844,7 +852,7 @@ div#sub-container
     justify-content: center;
     padding: var(--defaultPadding);
     position: relative;
-    margin-bottom: 200px;
+    margin-bottom: 300px;
   }
   main section#fourthSection div.contentContainer:nth-child(2) {
     display: flex;
@@ -861,6 +869,9 @@ div#sub-container
     font-size: 2.4em;
     font-weight: 550;
     width: 50%;
+  }
+  main section#fourthSection div.contentContainer p {
+    width: 30%;
   }
 
   main
@@ -940,7 +951,7 @@ div#sub-container
     padding: var(--defaultPadding);
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
   }
 
   main section#fifthSection h3 {
@@ -952,6 +963,86 @@ div#sub-container
   main section#fifthSection a#ctaBtn {
     width: 270px;
     height: 50px;
+  }
+
+  /* Sixth section */
+  main section#sixthSection {
+    background-color: var(--white);
+    padding: var(--defaultPadding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main section#sixthSection div#formContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 50px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  main section#sixthSection div#formContainer div#writeUp {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    text-align: left;
+  }
+  
+
+  main section#sixthSection div#formContainer div#writeUp h2{
+    font-size: 35px;
+    font-weight: bold;
+  }
+
+  main section#sixthSection div#formContainer div#writeUp p{
+    font-size: 22px;
+    padding-right: 10px;
+    font-weight: 500;
+  }
+  
+  main section#sixthSection div#formContainer form {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+  }
+
+  main section#sixthSection div#formContainer form input {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--ash);
+    background: none;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  main section#sixthSection div#formContainer form select {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--ash);
+    background: none;
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+  main section#sixthSection div#formContainer form button {
+    border: none;
+    outline: none;
+    border: 1px solid var(--ash);
+    color: var(--ash);
+    border-radius: 10px;
+    background: none;
+    width: 150px;
+    align-self: flex-end;
+    height: 50px;
+    font-size: 21px;
+    text-transform: uppercase;
   }
 
   /* footer */
@@ -1212,6 +1303,7 @@ div#sub-container
     align-items: center;
     flex-direction: column;
     width: 100%;
+    margin-bottom: 200px;
   }
   main section#secondSection div#slider {
     display: none;
@@ -1242,7 +1334,7 @@ div#sub-container
     flex-direction: row;
     align-items: flex-start;
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 250px;
     gap: 70px;
   }
   main section#thirdSection img#faqImgTxt {
@@ -1280,7 +1372,7 @@ div#sub-container
     display: flex;
     flex-direction: column;
     gap: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
   }
   main section#fourthSection div.contentContainer {
     display: flex;
@@ -1387,7 +1479,7 @@ div#sub-container
     padding: var(--defaultPadding);
     align-items: center;
     justify-content: center;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
   }
 
   main section#fifthSection h3 {
@@ -1664,3 +1756,4 @@ div#sub-container
     position: relative;
   }
 }
+
