@@ -216,7 +216,7 @@ main section#secondSection div#imagesContainer {
   display: none;
 }
 main section#secondSection div#slider img.sliderImage {
-  width: 350px;
+  width: 280px;
   height: 630px;
   position: absolute;
   left: -50%;
