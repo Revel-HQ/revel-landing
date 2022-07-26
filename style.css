@@ -188,6 +188,7 @@ main section#firstSection h1#introText {
   margin-bottom: 70px;
   padding: var(--defaultPadding);
   line-height: 50px;
+  width: 350px;
 }
 
 main section#firstSection img {
@@ -473,7 +474,7 @@ main section#sixthSection div#formContainer form button {
   background: none;
   width: 150px;
   align-self: center;
-  height: 50px;
+  height: 35px;
   font-size: 21px;
   text-transform: uppercase;
 }
@@ -737,12 +738,16 @@ div#sub-container
     align-items: center;
   }
 
+  
+
   main section#firstSection h1#introText {
     text-align: center;
     font-size: 70px;
     font-weight: 550;
     margin-bottom: 120px;
     padding: 20px;
+    width: 100%;
+    line-height: 100px;
   }
 
   main section#firstSection img {
@@ -1040,7 +1045,7 @@ div#sub-container
     background: none;
     width: 150px;
     align-self: flex-end;
-    height: 50px;
+    height: 35px;
     font-size: 21px;
     text-transform: uppercase;
   }
