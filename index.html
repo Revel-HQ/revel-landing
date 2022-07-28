@@ -29,15 +29,20 @@
       href="./favicon-16x16.png"
     />
     <link rel="manifest" href="./site.webmanifest" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
     <script defer src="./app.js"></script>
-    <title>Revel</title>
+    <title>Revel.</title>
   </head>
-  <body>
+  <body class="no-scroll">
     <header>
       <div>
         <h1 id="brandName">Revel.</h1>
-        <a href="#sixthSection">Sign Up</a>
+        <a href="./contact.html">Speak to us</a>
       </div>
     </header>
     <main>
@@ -45,15 +50,17 @@
         <img src="./assets/desktopBackground.png" alt="circles" />
       </section>
       <section id="firstSection">
-        <h1 id="introText">
+        <h1 id="introText" class="animate__animated animate__fadeIn animate__delay-2s">
           Matching talented
           <span class="secondarySelectedText">people</span> with great
           <span class="secondarySelectedText">jobs</span> using short
           <span class="secondarySelectedText">videos.</span>
         </h1>
+        <a href="#sixthSection">Join our waiting list today</a>
         <img
           src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mainImage.png?alt=media&token=eb6d17e2-f89f-4e8a-b276-da1475dd6f53"
           alt="Icon"
+          class="animate__animated animate__slideInUp animate__delay-2s"
         />
       </section>
 
@@ -269,8 +276,14 @@
           </div>
           <form>
             <input placeholder="Email address" type="email" />
-            <select aria-placeholder="Select your job industry" name="industry" id="industryList">
-              <option selected="selected" class="holder">Select your job industry</option>
+            <select
+              aria-placeholder="Select your job industry"
+              name="industry"
+              id="industryList"
+            >
+              <option selected="selected" class="holder">
+                Select your job industry
+              </option>
               <option value="Artisan">Artisan</option>
               <option value="Marketing & Public relations">
                 Marketing & Public relations
@@ -378,5 +391,18 @@
         </div>
       </section>
     </footer>
+    <script type="text/javascript">
+      (function(){
+         function onReady() {
+           document.body.classList.remove('no-scroll');
+         }
+         
+         if ( document.readyState === 'interactive' ) {
+            onReady();
+         } else {
+            document.addEventListener('DOMContentLoaded', onReady);
+         }
+      })();
+      </script>
   </body>
 </html>

@@ -1,6 +1,15 @@
 
-// for the image sliders
+
+// iffe
 (function (document) {
+  var introText = document.querySelector("section#firstSection h1#introText"), introImage = document.querySelector("section#firstSection img")
+ 
+  // introText.classList.add("animate__fadeIn animate__delay-2s")
+
+
+
+
+  // image slider
   var startingX, movingX;
   var slider = document.querySelector("#slider");
   slider.addEventListener("touchstart", (e) => touchstart(e));
