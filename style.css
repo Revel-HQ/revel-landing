@@ -112,7 +112,6 @@ main {
   background-position: 50% 8%;
   width: auto;
   height: 100%;
-  z-index: -1;
 }
 
 main section#desktopBackground {
@@ -197,7 +196,7 @@ main section#firstSection h1#introText {
 }
 
 main section#firstSection a {
-  width: 300px;
+  width: 230px;
   height: 50px;
   background-color: var(--secondary);
   border-radius: 8px;
@@ -223,14 +222,15 @@ main section#secondSection {
   margin-bottom: 200px;
 }
 .swiper {
-  width: 85%;
+  width: 100%;
   height: 750px;
 }
 .swiper-wrapper {
   display: flex;
   margin-top: 50px;
   width: 100%;
-  gap: 50px;
+  gap: 90px;
+  padding-left: 50px;
 }
 
 .swiper-slide {
@@ -238,7 +238,11 @@ main section#secondSection {
   height: 630px;
   margin-bottom: 50px;
   z-index: -1 !important;
+  align-self: center;
 }
+/* .swiper-slide-active {
+  transform: translateX(-50%, 50%);
+} */
 
 
 .swiper-pagination-bullet {
@@ -285,12 +289,12 @@ main section#thirdSection div#faqsContainer div.faqsItem {
   align-items: center;
   gap: 20px;
   background-color: var(--white);
-  border-right: 1px solid var(--secondary);
-  height: 63px;
+  height: 67px;
   padding: 20px;
   width: auto;
   transition: background-color 0.5s;
   cursor: pointer;
+  border-radius: 10px;
 }
 main section#thirdSection div#faqsContainer div.faqsItem p {
   font-weight: 550;
@@ -306,13 +310,13 @@ main section#thirdSection div#faqsContainer div.faqsItem svg path {
   transition: 0.5s;
 }
 .rotatePath {
-  -webkit-transform: rotate(46deg);
-  -moz-transform: rotate(46deg);
-  -ms-transform: rotate(46deg);
-  -o-transform: rotate(46deg);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
   transition: 0.5s;
   transform-origin: center center;
-  transform: rotate(46deg);
+  transform: rotate(90deg);
   fill: white;
   transform-box: fill-box;
 }
@@ -863,7 +867,6 @@ main section#firstSection a {
     align-items: center;
     gap: 20px;
     background-color: var(--white);
-    border-right: 1px solid var(--secondary);
     height: 70px;
     padding: 20px;
     width: auto;
@@ -1407,7 +1410,6 @@ main section#firstSection a {
     align-items: center;
     gap: 20px;
     background-color: var(--white);
-    border-right: 1px solid var(--secondary);
     height: 70px;
     padding: 20px;
     width: auto;

@@ -3,7 +3,7 @@
 const swiper = new Swiper('.swiper', {
   // Optional parameters
   direction: 'horizontal',
-  loop: true,
+  loop: false,
 
   // If we need pagination
   pagination: {
@@ -20,6 +20,8 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
+  centeredSlides: true,
+  centeredSlidesBounds: true,
 });
 
 // video loop function
