@@ -353,14 +353,15 @@ main
 
 main section#fourthSection div.contentContainer div.videoContent {
   background-color: var(--white);
-  height: 600px;
-  width: auto;
+  height: 580px;
+  width: 330px;
   border-radius: 15px;
-  padding: 10px;
+  padding: 8px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+  box-shadow: 1px 0 5px -2px var(--ash);
 }
 
 main section#fourthSection div.contentContainer div.videoContent video {
@@ -371,8 +372,9 @@ main section#fourthSection div.contentContainer div.videoContent video {
 
 main section#fourthSection div.contentContainer p.contentFirstParagraph,
 p.contentSecondParagraph {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
+  line-height: 27px;
 }
 
 main section#fourthSection div.contentContainer div#contentImageGroup {
@@ -915,6 +917,9 @@ main section#firstSection a {
   main section#fourthSection div.contentContainer p {
     width: 30%;
   }
+  main section#fourthSection div.contentContainer p:nth-child(1) {
+    width: 30%;
+  }
 
   main
     section#fourthSection
@@ -926,10 +931,10 @@ main section#firstSection a {
 
   main section#fourthSection div.contentContainer div.videoContent {
     background-color: var(--white);
-    height: 650px;
-    width: auto;
+    height: 640px;
+    width: 370px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -942,9 +947,9 @@ main section#firstSection a {
     div.videoContent {
     background-color: var(--white);
     height: 650px;
-    width: 380px;
+    width: 370px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1468,9 +1473,9 @@ main section#firstSection a {
   main section#fourthSection div.contentContainer div.videoContent {
     background-color: var(--white);
     height: 650px;
-    width: auto;
+    width: 370px;
     border-radius: 15px;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
