@@ -133,6 +133,7 @@ main div.faqAnswers.showFaq {
   background-repeat: no-repeat;
   margin: 0 auto;
   margin-bottom: 200px;
+  margin-top: -150px;
   position: relative;
   gap: 30px;
   transition: 0.5s;
