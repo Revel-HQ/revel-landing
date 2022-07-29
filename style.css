@@ -178,7 +178,7 @@ main div.faqAnswers.showFaq::after {
 
 /* First Section */
 main section#firstSection {
-  margin-top: 220px;
+  margin-top: 170px;
   margin-bottom: 200px;
   display: flex;
   flex-direction: column;
@@ -189,23 +189,23 @@ main section#firstSection {
 main section#firstSection h1#introText {
   text-align: center;
   font-size: 24px;
-  font-weight: 550;
+  font-weight: 500;
   padding: var(--defaultPadding);
   line-height: 50px;
   width: 310px;
 }
 
 main section#firstSection a {
-  width: 330px;
-  height: 70px;
+  width: 300px;
+  height: 50px;
   background-color: var(--secondary);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--white);
-  font-weight: 550;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 main section#firstSection img {
@@ -775,11 +775,25 @@ div#sub-container
   main section#firstSection h1#introText {
     text-align: center;
     font-size: 70px;
-    font-weight: 550;
+    font-weight: 500;
     padding: 20px;
     width: 100%;
     line-height: 100px;
   }
+
+  
+main section#firstSection a {
+  width: 330px;
+  height: 70px;
+  background-color: var(--secondary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 550;
+  font-size: 20px;
+}
 
   main section#firstSection img {
     width: auto;
@@ -1319,9 +1333,23 @@ div#sub-container
   main section#firstSection h1#introText {
     text-align: center;
     font-size: 60px;
-    font-weight: 550;
+    font-weight: 500;
     padding: 20px;
   }
+
+  
+main section#firstSection a {
+  width: 330px;
+  height: 70px;
+  background-color: var(--secondary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-weight: 550;
+  font-size: 20px;
+}
 
   main section#firstSection img {
     width: auto;
