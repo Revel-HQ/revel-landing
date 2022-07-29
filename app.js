@@ -1,60 +1,26 @@
 
 
-// iffe
-(function (document) {
-  var introText = document.querySelector("section#firstSection h1#introText"), introImage = document.querySelector("section#firstSection img")
- 
-  // introText.classList.add("animate__fadeIn animate__delay-2s")
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
 
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-
-  // image slider
-  var startingX, movingX;
-  var slider = document.querySelector("#slider");
-  slider.addEventListener("touchstart", (e) => touchstart(e));
-  slider.addEventListener("touchend", (e) => touchend(e));
-  slider.addEventListener("touchmove", (e) => touchmove(e));
-  function touchstart(evt) {
-    startingX = evt.touches[0].clientX;
-  }
-  function touchmove(evt) {
-    movingX = evt.touches[0].clientX;
-  }
-  function touchend() {
-    if (startingX + 100 < movingX) {
-      if (initialValue === 0) return;
-      sliderImages[initialValue].classList.remove(className);
-      initialValue--;
-      sliderImages[initialValue].classList.add(className);
-      paginateDot(sliderImages);
-    } else if (startingX - 100 > movingX) {
-      if (initialValue >= sliderImages.length - 1) return;
-      initialValue++;
-      sliderImages[initialValue - 1].classList.remove(className);
-      sliderImages[initialValue].classList.add(className);
-      paginateDot(sliderImages);
-    }
-  }
-  var sliderImages = document.querySelectorAll(".sliderImage");
-  var initialValue = 0,
-    className = "activeImage";
-  sliderImages[initialValue].classList.add(className);
-
-  function paginateDot(sliderImages) {
-    var dots = document.querySelectorAll(".dots");
-
-    for (var i = 0; i < sliderImages.length; i++) {
-      if (sliderImages[i].classList.contains("activeImage")) {
-        dots[i].classList.add("activeDot");
-      } else {
-        dots[i].classList.remove("activeDot");
-      }
-    }
-  }
-
-  paginateDot(sliderImages);
-})(document);
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
 
 // video loop function
 window.addEventListener("load", videoScroll);

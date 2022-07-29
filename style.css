@@ -28,6 +28,7 @@ body {
 }
 
 /* Global styles */
+
 .no-scroll {
   overflow: hidden;
 }
@@ -73,7 +74,7 @@ header {
   box-shadow: 1px 0 5px -2px var(--ash);
   width: 100%;
   background-color: var(--inputBackground);
-  z-index: 1;
+  z-index: 100;
 }
 
 
@@ -221,52 +222,39 @@ main section#secondSection {
   flex-direction: column;
   margin-bottom: 200px;
 }
-main section#secondSection div#slider {
+.swiper {
+  width: 85%;
+  height: 750px;
+}
+.swiper-wrapper {
   display: flex;
   margin-top: 50px;
-  position: relative;
-  padding: var(--defaultPadding);
-  margin: 20px auto;
   width: 100%;
-  margin-bottom: 680px;
+  gap: 50px;
 }
-main section#secondSection div#imagesContainer {
-  display: none;
-}
-main section#secondSection div#slider img.sliderImage {
-  width: 300px;
+
+.swiper-slide {
+  width: 300px !important;
   height: 630px;
-  position: absolute;
-  left: -50%;
-  right: -50%;
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0;
   margin-bottom: 50px;
+  z-index: -1 !important;
 }
 
-main section#secondSection div#slider img.sliderImage.activeImage {
-  opacity: 1;
-  transition: 0.3s;
-}
 
-main section#secondSection div#dotsContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-}
-main section#secondSection div#dotsContainer div.dots {
+.swiper-pagination-bullet {
   border-radius: 50px;
   width: 22px;
   height: 8px;
-  background-color: var(--white);
+  background-color: var(--ash);
   margin-bottom: 80px;
 }
-main section#secondSection div#dotsContainer div.dots.activeDot {
+.swiper-pagination-bullet-active {
   transition: 1s;
   background-color: var(--secondary);
   width: 26px;
+}
+main section#secondSection div#imagesContainer {
+  display: none;
 }
 
 /* Third Section */
@@ -825,7 +813,7 @@ main section#firstSection a {
     flex-direction: column;
     margin-bottom: 200px;
   }
-  main section#secondSection div#slider {
+  .swiper {
     display: none;
   }
   main section#secondSection div#imagesContainer {

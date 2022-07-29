@@ -33,8 +33,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.css" integrity="sha512-phGxLIsvHFArdI7IyLjv14dchvbVkEDaH95efvAae/y2exeWBQCQDpNFbOTdV1p4/pIa/XtbuDCnfhDEIXhvGQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script defer src="./app.js"></script>
     <title>Revel.</title>
   </head>
@@ -50,7 +54,10 @@
         <img src="./assets/desktopBackground.png" alt="circles" />
       </section>
       <section id="firstSection">
-        <h1 id="introText" class="animate__animated animate__fadeIn animate__delay-2s">
+        <h1
+          id="introText"
+          class="animate__animated animate__fadeIn animate__delay-2s"
+        >
           Matching talented
           <span class="secondarySelectedText">people</span> with great
           <span class="secondarySelectedText">jobs</span> using short
@@ -65,22 +72,25 @@
       </section>
 
       <section id="secondSection">
-        <div id="slider">
-          <img
-            class="sliderImage"
-            src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mobile1.png?alt=media&token=a56bd80f-3ce1-40c1-a9cc-82d52cfaa77e"
-            alt="first screenshot"
-          />
-          <img
-            class="sliderImage"
-            src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mobile2.png?alt=media&token=dabc4c5e-a98c-44d1-80d1-be1e480a6673"
-            alt="second screenshot"
-          />
-          <img
-            class="sliderImage"
-            src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mobile3.png?alt=media&token=31eae599-1bff-4564-87f1-732ba2e5496a"
-            alt="third screenshot"
-          />
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <img
+              class="swiper-slide"
+              src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mobile1.png?alt=media&token=a56bd80f-3ce1-40c1-a9cc-82d52cfaa77e"
+              alt="first screenshot"
+            />
+            <img
+              class="swiper-slide"
+              src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mobile2.png?alt=media&token=dabc4c5e-a98c-44d1-80d1-be1e480a6673"
+              alt="second screenshot"
+            />
+            <img
+              class="swiper-slide"
+              src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mobile3.png?alt=media&token=31eae599-1bff-4564-87f1-732ba2e5496a"
+              alt="third screenshot"
+            />
+          </div>
+          <div class="swiper-pagination"></div>
         </div>
         <div id="imagesContainer">
           <img
@@ -99,11 +109,7 @@
             alt="third screenshot"
           />
         </div>
-        <div id="dotsContainer">
-          <div class="dots activeDot"></div>
-          <div class="dots"></div>
-          <div class="dots"></div>
-        </div>
+        
       </section>
       <section id="thirdSection">
         <img
@@ -392,17 +398,17 @@
       </section>
     </footer>
     <script type="text/javascript">
-      (function(){
-         function onReady() {
-           document.body.classList.remove('no-scroll');
-         }
-         
-         if ( document.readyState === 'interactive' ) {
-            onReady();
-         } else {
-            document.addEventListener('DOMContentLoaded', onReady);
-         }
+      (function () {
+        function onReady() {
+          document.body.classList.remove("no-scroll");
+        }
+
+        if (document.readyState === "interactive") {
+          onReady();
+        } else {
+          document.addEventListener("DOMContentLoaded", onReady);
+        }
       })();
-      </script>
+    </script>
   </body>
 </html>
