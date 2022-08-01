@@ -294,11 +294,12 @@ main section#thirdSection div#faqsContainer div.faqsItem {
   gap: 19px;
   background-color: var(--white);
   height: 100px;
-  padding: 30px;
+  padding: 20px;
   width: auto;
   transition: background-color 0.5s;
   cursor: pointer;
   border-radius: 8px;
+  justify-content: flex-start
 }
 main section#thirdSection div#faqsContainer div.faqsItem p {
   font-weight: 550;
@@ -311,7 +312,7 @@ main section#thirdSection div#faqsContainer div.faqsItem.active {
   color: var(--white);
 }
 main section#thirdSection div#faqsContainer div.faqsItem svg {
-  min-width: 7px;
+  min-width: 20px;
   min-height: 10px;
 }
 main section#thirdSection div#faqsContainer div.faqsItem svg path {
