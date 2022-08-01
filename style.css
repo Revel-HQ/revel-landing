@@ -446,7 +446,8 @@ main section#sixthSection {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
+  padding-top: 100px;
 }
 
 main section#sixthSection div#formContainer {
@@ -454,13 +455,13 @@ main section#sixthSection div#formContainer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 70px;
+  gap: 90px;
 }
 
 main section#sixthSection div#formContainer div#writeUp {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px;
   text-align: center;
   align-items: center;
 }
@@ -476,7 +477,7 @@ main section#sixthSection div#formContainer div#writeUp p {
 main section#sixthSection div#formContainer form {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   width: 100%;
 }
 
