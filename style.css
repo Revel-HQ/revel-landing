@@ -247,9 +247,6 @@ main section#secondSection {
   margin-bottom: 50px;
   align-self: center;
 }
-/* .swiper-slide-active {
-  transform: translateX(-50%, 50%);
-} */
 
 
 .swiper-pagination-bullet {
@@ -325,7 +322,6 @@ main section#thirdSection div#faqsContainer div.faqsItem svg path {
   transform-origin: center center;
   transform: rotate(90deg);
   fill: white;
-  transform-box: fill-box;
 }
 
 /* Fourth Section */
@@ -338,7 +334,7 @@ main section#fourthSection {
 main section#fourthSection div.contentContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 60px;
   text-align: center;
   align-items: center;
   justify-content: center;
@@ -346,7 +342,9 @@ main section#fourthSection div.contentContainer {
 }
 main section#fourthSection div.contentContainer h2.contentHeading {
   font-size: 1.6em;
-  font-weight: bold;
+  font-weight: 550;
+  width: 320px;
+  line-height: 30px;
 }
 
 main
@@ -366,7 +364,6 @@ main section#fourthSection div.contentContainer div.videoContent {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
   box-shadow: 1px 0 5px -2px var(--ash);
 }
 
