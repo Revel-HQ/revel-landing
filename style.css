@@ -291,10 +291,10 @@ main section#thirdSection img#faqImgTxt {
 main section#thirdSection div#faqsContainer div.faqsItem {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 19px;
   background-color: var(--white);
   height: 100px;
-  padding: 40px;
+  padding: 30px;
   width: auto;
   transition: background-color 0.5s;
   cursor: pointer;
