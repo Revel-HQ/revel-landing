@@ -425,7 +425,7 @@ main section#fifthSection {
 main section#fifthSection h3 {
   font-weight: 550;
   font-size: 1.6em;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 main section#fifthSection a#ctaBtn {
@@ -449,6 +449,7 @@ main section#sixthSection {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 80px;
 }
 
 main section#sixthSection div#formContainer {
@@ -456,14 +457,24 @@ main section#sixthSection div#formContainer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 70px;
 }
 
 main section#sixthSection div#formContainer div#writeUp {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   text-align: center;
+  align-items: center;
+}
+
+main section#sixthSection div#formContainer div#writeUp h2{
+  font-weight: 550;
+  font-size: 38px;
+}
+main section#sixthSection div#formContainer div#writeUp p{
+  font-size: 18px;
+  line-height: 30px;
 }
 main section#sixthSection div#formContainer form {
   display: flex;
@@ -498,11 +509,11 @@ main section#sixthSection div#formContainer form button {
   outline: none;
   border: 1px solid var(--ash);
   color: var(--ash);
-  border-radius: 10px;
+  border-radius: 8px;
   background: none;
-  width: 150px;
+  width: 155px;
   align-self: center;
-  height: 35px;
+  height: 45px;
   font-size: 21px;
   text-transform: uppercase;
 }
