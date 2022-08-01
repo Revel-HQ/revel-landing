@@ -273,14 +273,14 @@ main section#thirdSection {
   align-items: center;
   margin-top: 50px;
   margin-bottom: 200px;
-  gap: 20px;
+  gap: 90px;
   padding: var(--defaultPadding);
 }
 
 main section#thirdSection div#faqsContainer {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
 }
 
 main section#thirdSection img#faqImgTxt {
@@ -293,16 +293,16 @@ main section#thirdSection div#faqsContainer div.faqsItem {
   align-items: center;
   gap: 20px;
   background-color: var(--white);
-  height: 67px;
-  padding: 20px;
+  height: 100px;
+  padding: 40px;
   width: auto;
   transition: background-color 0.5s;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 main section#thirdSection div#faqsContainer div.faqsItem p {
   font-weight: 550;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 main section#thirdSection div#faqsContainer div.faqsItem.active {
@@ -310,8 +310,13 @@ main section#thirdSection div#faqsContainer div.faqsItem.active {
   background-color: var(--secondary);
   color: var(--white);
 }
+main section#thirdSection div#faqsContainer div.faqsItem svg {
+  min-width: 7px;
+  min-height: 10px;
+}
 main section#thirdSection div#faqsContainer div.faqsItem svg path {
   transition: 0.5s;
+  transform-origin: center;
 }
 .rotatePath {
   -webkit-transform: rotate(90deg);
@@ -319,7 +324,7 @@ main section#thirdSection div#faqsContainer div.faqsItem svg path {
   -ms-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transition: 0.5s;
-  transform-origin: center center;
+  transform-origin: center;
   transform: rotate(90deg);
   fill: white;
 }
