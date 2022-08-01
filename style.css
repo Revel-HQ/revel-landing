@@ -63,6 +63,25 @@ span.secondarySelectedText::before {
   background-color: var(--lightPink);
 }
 
+main section#thirdSection h2#faqImgTxt{
+  position: relative;
+  z-index: 6;
+}
+main section#thirdSection h2#faqImgTxt span.secondarySelectedText{
+  color: var(--black);
+}
+
+main section#thirdSection h2#faqImgTxt span.secondarySelectedText::before{
+  color: var(--black) !important;
+  width: 86%;
+  height: 15px;
+  left: 0;
+  right: 50%;
+  margin-left: 0;
+  margin-right: 0;
+  z-index: -1;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -280,9 +299,11 @@ main section#thirdSection div#faqsContainer {
   gap: 30px;
 }
 
-main section#thirdSection img#faqImgTxt {
-  width: auto;
-  height: 30px;
+main section#thirdSection h2#faqImgTxt {
+  font-size: 38px;
+  align-self: center;
+  flex: 1;
+  color: var(--black) !important;
 }
 
 main section#thirdSection div#faqsContainer div.faqsItem {
@@ -343,13 +364,8 @@ main section#fourthSection div.contentContainer {
   justify-content: center;
   padding: var(--defaultPadding);
 }
+
 main section#fourthSection div.contentContainer h2.contentHeading {
-  font-size: 1.6em;
-  font-weight: 550;
-  width: 320px;
-  line-height: 30px;
-}
-main section#fourthSection div.contentContainer h2.contentHeading:nth-child(1) {
   font-size: 1.6em;
   font-weight: 550;
   width: 324px;
@@ -871,13 +887,17 @@ div#sub-container
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-around;
     margin-top: 50px;
     margin-bottom: 250px;
     gap: 70px;
+    padding: 40px;
   }
-  main section#thirdSection img#faqImgTxt {
-    width: auto;
-    height: 50px;
+  main section#thirdSection h2#faqImgTxt {
+    font-size: 38px;
+    align-self: center;
+    flex: 1;
+    color: var(--black) !important;
   }
 
   main section#thirdSection div#faqsContainer {
@@ -903,112 +923,7 @@ div#sub-container
     font-weight: 550;
     font-size: 15px;
   }
-  /* Fourth Section */
-  main section#fourthSection {
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-    margin-bottom: 200px;
-  }
-  main section#fourthSection div.contentContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: left;
-    align-items: flex-start;
-    justify-content: center;
-    padding: var(--defaultPadding);
-    position: relative;
-    margin-bottom: 300px;
-  }
-  main section#fourthSection div.contentContainer:nth-child(2) {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-align: right;
-    align-items: flex-end;
-    justify-content: center;
-    padding: var(--defaultPadding);
-    position: relative;
-    margin-bottom: 100px;
-  }
-  main section#fourthSection div.contentContainer h2.contentHeading {
-    font-size: 2.4em;
-    font-weight: 550;
-    width: 50%;
-  }
-  main section#fourthSection div.contentContainer p {
-    width: 30%;
-  }
 
-  main
-    section#fourthSection
-    div.contentContainer
-    h2.contentHeading
-    span.lighterSelectedText {
-    color: var(--lighterSecondary);
-  }
-
-  main section#fourthSection div.contentContainer div.videoContent {
-    background-color: var(--white);
-    height: 640px;
-    width: 370px;
-    border-radius: 15px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: 60px;
-  }
-  main
-    section#fourthSection
-    div.contentContainer:nth-child(2)
-    div.videoContent {
-    background-color: var(--white);
-    height: 650px;
-    width: 370px;
-    border-radius: 15px;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 60px;
-  }
-
-  main section#fourthSection div.contentContainer div.videoContent video {
-    width: auto;
-    height: 620px;
-    border-radius: 15px;
-  }
-
-  main section#fourthSection div.contentContainer p.contentFirstParagraph,
-  p.contentSecondParagraph {
-    font-size: 21px;
-    font-weight: 550;
-    width: 50%;
-  }
-
-  main section#fourthSection div.contentContainer div#contentImageGroup {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  main section#fourthSection div.contentContainer > img {
-    width: auto;
-    height: 60px;
-  }
-
-  main
-    section#fourthSection
-    div.contentContainer
-    div#contentImageGroup
-    img:nth-child(2) {
-    width: auto;
-    height: 40px;
-  }
   /* fifth Section */
   main section#fifthSection {
     display: flex;
@@ -1408,9 +1323,11 @@ div#sub-container
     margin-bottom: 250px;
     gap: 70px;
   }
-  main section#thirdSection img#faqImgTxt {
-    width: auto;
-    height: 50px;
+  main section#thirdSection h2#faqImgTxt {
+    font-size: 38px;
+    align-self: center;
+    flex: 1;
+    color: var(--black) !important;
   }
 
   main section#thirdSection div#faqsContainer {
@@ -1793,6 +1710,117 @@ div#sub-container
 
   div#sub-container div#successContainer a {
     text-decoration: none;
+  }
+}
+
+
+
+
+/* Media query for all screens with the video section */
+
+@media screen and (min-width: 1021px) { 
+   /* Fourth Section */
+   main section#fourthSection {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 200px;
+  }
+  main section#fourthSection div.contentContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--defaultPadding);
+    position: relative;
+    margin-bottom: 300px;
+  }
+  main section#fourthSection div.contentContainer:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: right;
+    align-items: flex-end;
+    justify-content: center;
+    padding: var(--defaultPadding);
+    position: relative;
+    margin-bottom: 100px;
+  }
+  main section#fourthSection div.contentContainer h2.contentHeading {
+    font-size: 2.3em;
+    font-weight: bold;
+    width: 482px;
+  }
+
+  main
+    section#fourthSection
+    div.contentContainer
+    h2.contentHeading
+    span.lighterSelectedText {
+    color: var(--lighterSecondary);
+  }
+
+  main section#fourthSection div.contentContainer div.videoContent {
+    background-color: var(--white);
+    height: 640px;
+    width: 370px;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 60px;
+  }
+  main
+    section#fourthSection
+    div.contentContainer:nth-child(2)
+    div.videoContent {
+    background-color: var(--white);
+    height: 650px;
+    width: 370px;
+    border-radius: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 60px;
+  }
+
+  main section#fourthSection div.contentContainer div.videoContent video {
+    width: auto;
+    height: 620px;
+    border-radius: 15px;
+  }
+
+  main section#fourthSection div.contentContainer p.contentFirstParagraph,
+  p.contentSecondParagraph {
+    font-size: 21px;
+    font-weight: 500;
+    width: 420px;
+  }
+
+  main section#fourthSection div.contentContainer div#contentImageGroup {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  main section#fourthSection div.contentContainer > img {
+    width: auto;
+    height: 60px;
+  }
+
+  main
+    section#fourthSection
+    div.contentContainer
+    div#contentImageGroup
+    img:nth-child(2) {
+    width: auto;
+    height: 40px;
   }
 }
 
