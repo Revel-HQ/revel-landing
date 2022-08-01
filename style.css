@@ -77,8 +77,6 @@ header {
   z-index: 100;
 }
 
-
-
 header div {
   display: flex;
   justify-content: space-between;
@@ -248,7 +246,6 @@ main section#secondSection {
   align-self: center;
 }
 
-
 .swiper-pagination-bullet {
   border-radius: 50px;
   width: 22px;
@@ -299,7 +296,7 @@ main section#thirdSection div#faqsContainer div.faqsItem {
   transition: background-color 0.5s;
   cursor: pointer;
   border-radius: 8px;
-  justify-content: flex-start
+  justify-content: flex-start;
 }
 main section#thirdSection div#faqsContainer div.faqsItem p {
   font-weight: 550;
@@ -468,11 +465,11 @@ main section#sixthSection div#formContainer div#writeUp {
   align-items: center;
 }
 
-main section#sixthSection div#formContainer div#writeUp h2{
+main section#sixthSection div#formContainer div#writeUp h2 {
   font-weight: 550;
-  font-size: 38px;
+  font-size: 30px;
 }
-main section#sixthSection div#formContainer div#writeUp p{
+main section#sixthSection div#formContainer div#writeUp p {
   font-size: 18px;
   line-height: 30px;
 }
@@ -792,8 +789,6 @@ div#sub-container
     gap: 80px;
   }
 
-  
-
   main section#firstSection h1#introText {
     text-align: center;
     font-size: 70px;
@@ -803,19 +798,18 @@ div#sub-container
     line-height: 100px;
   }
 
-  
-main section#firstSection a {
-  width: 330px;
-  height: 70px;
-  background-color: var(--secondary);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-weight: 550;
-  font-size: 20px;
-}
+  main section#firstSection a {
+    width: 330px;
+    height: 70px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 550;
+    font-size: 20px;
+  }
 
   main section#firstSection img {
     width: auto;
@@ -1041,7 +1035,7 @@ main section#firstSection a {
     background-color: var(--white);
     padding: var(--defaultPadding);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
   }
 
@@ -1060,20 +1054,20 @@ main section#firstSection a {
     flex-direction: column;
     gap: 30px;
     text-align: left;
+    align-items: flex-start;
   }
-  
 
-  main section#sixthSection div#formContainer div#writeUp h2{
+  main section#sixthSection div#formContainer div#writeUp h2 {
     font-size: 35px;
     font-weight: bold;
   }
 
-  main section#sixthSection div#formContainer div#writeUp p{
-    font-size: 22px;
+  main section#sixthSection div#formContainer div#writeUp p {
+    font-size: 18px;
     padding-right: 10px;
     font-weight: 500;
   }
-  
+
   main section#sixthSection div#formContainer form {
     display: flex;
     flex-direction: column;
@@ -1103,17 +1097,8 @@ main section#firstSection a {
     padding-bottom: 20px;
   }
   main section#sixthSection div#formContainer form button {
-    border: none;
-    outline: none;
-    border: 1px solid var(--ash);
-    color: var(--ash);
-    border-radius: 10px;
-    background: none;
-    width: 150px;
     align-self: flex-end;
-    height: 35px;
     font-size: 21px;
-    text-transform: uppercase;
   }
 
   /* footer */
@@ -1358,19 +1343,18 @@ main section#firstSection a {
     padding: 20px;
   }
 
-  
-main section#firstSection a {
-  width: 330px;
-  height: 70px;
-  background-color: var(--secondary);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  font-weight: 550;
-  font-size: 20px;
-}
+  main section#firstSection a {
+    width: 330px;
+    height: 70px;
+    background-color: var(--secondary);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 550;
+    font-size: 20px;
+  }
 
   main section#firstSection img {
     width: auto;
@@ -1840,4 +1824,3 @@ main section#firstSection a {
     position: relative;
   }
 }
-
