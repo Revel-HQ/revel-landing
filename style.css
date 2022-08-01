@@ -346,6 +346,12 @@ main section#fourthSection div.contentContainer h2.contentHeading {
   width: 320px;
   line-height: 30px;
 }
+main section#fourthSection div.contentContainer h2.contentHeading:nth-child(1) {
+  font-size: 1.6em;
+  font-weight: 550;
+  width: 310px;
+  line-height: 40px;
+}
 
 main
   section#fourthSection
