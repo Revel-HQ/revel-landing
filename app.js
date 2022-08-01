@@ -20,8 +20,7 @@ const swiper = new Swiper('.swiper', {
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-  centeredSlides: true,
-  centeredSlidesBounds: true,
+
 });
 
 // video loop function
