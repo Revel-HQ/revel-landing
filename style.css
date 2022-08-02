@@ -250,7 +250,7 @@ main section#secondSection {
   display: flex;
   margin-top: 50px;
   gap: 29%;
-  padding-left: 50px;
+  padding-left: 12%;
 }
 
 .swiper-slide {
