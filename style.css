@@ -215,10 +215,13 @@ main section#firstSection h1#introText {
 }
 
 main section#firstSection a {
-  width: 230px;
-  height: 50px;
+  position: fixed;
+  bottom: 0px;
+  z-index: 100;
+  width: 100%;
+  height: 80px;
   background-color: var(--secondary);
-  border-radius: 8px;
+  border-radius: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -473,6 +476,44 @@ main section#sixthSection div#formContainer {
   align-items: center;
   justify-content: center;
   gap: 90px;
+}
+.hideForm {
+  display: none;
+}
+.showNewElement {
+  display: flex;
+}
+main section#sixthSection div#formContainer div#failedWaitlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary);
+  text-align: center;
+  display: none;
+}
+main section#sixthSection div#formContainer div#failedWaitlist h3{
+  font-weight: 550;
+  font-size: 18px;
+}
+main section#sixthSection div#formContainer div#failedWaitlist p{
+  font-size: 15px;
+}
+main section#sixthSection div#formContainer div#successWaitlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary);
+  text-align: center;
+  display: none;
+}
+main section#sixthSection div#formContainer div#successWaitlist h3{
+  font-weight: 550;
+  font-size: 18px;
+}
+main section#sixthSection div#formContainer div#successWaitlist p{
+  font-size: 15px;
 }
 
 main section#sixthSection div#formContainer div#writeUp {
@@ -819,6 +860,7 @@ div#sub-container
   }
 
   main section#firstSection a {
+    position: relative;
     width: 330px;
     height: 70px;
     background-color: var(--secondary);
@@ -1018,6 +1060,16 @@ div#sub-container
   main section#sixthSection div#formContainer form button {
     align-self: flex-end;
     font-size: 21px;
+  }
+  main section#sixthSection div#formContainer div#failedWaitlist {
+    align-items: flex-start;
+    text-align: left;
+    display: none;
+  }
+  main section#sixthSection div#formContainer div#successWaitlist {
+    align-items: flex-start;
+    text-align: left;
+    display: none;
   }
 
   /* footer */
@@ -1263,6 +1315,7 @@ div#sub-container
   }
 
   main section#firstSection a {
+    position: relative;
     width: 330px;
     height: 70px;
     background-color: var(--secondary);

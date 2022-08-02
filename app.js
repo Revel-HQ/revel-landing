@@ -1,51 +1,71 @@
-
-
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   // Optional parameters
-  direction: 'horizontal',
+  direction: "horizontal",
   loop: false,
 
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: ".swiper-scrollbar",
   },
-
 });
 
+const base = "http://waitlist.revelhq.co";
+const industryList = document.querySelector("#industryList");
 
-window.smoothScroll = function(target) {
+async function getIndustries() {
+  const response = await fetch(`${base}/api/industries`);
+  const { data, status } = await response.json();
+  if (status) {
+    data?.map((item) => {
+      const option = document.createElement("option");
+      const text = document.createTextNode(item?.name);
+      option.appendChild(text);
+      option.setAttribute("value", item?.id);
+      option.appendChild(text);
+      industryList.appendChild(option);
+    });
+  }
+}
+getIndustries();
+
+window.smoothScroll = function (target) {
   var scrollContainer = target;
-  do { //find scroll container
-      scrollContainer = scrollContainer.parentNode;
-      if (!scrollContainer) return;
-      scrollContainer.scrollTop += 1;
+  do {
+    //find scroll container
+    scrollContainer = scrollContainer.parentNode;
+    if (!scrollContainer) return;
+    scrollContainer.scrollTop += 1;
   } while (scrollContainer.scrollTop == 0);
 
   var targetY = 0;
-  do { //find the top of target relatively to the container
-      if (target == scrollContainer) break;
-      targetY += target.offsetTop;
-  } while (target = target.offsetParent);
+  do {
+    //find the top of target relatively to the container
+    if (target == scrollContainer) break;
+    targetY += target.offsetTop;
+  } while ((target = target.offsetParent));
 
-  scroll = function(c, a, b, i) {
-      i++; if (i > 30) return;
-      c.scrollTop = a + (b - a) / 30 * i;
-      setTimeout(function(){ scroll(c, a, b, i); }, 20);
-  }
+  scroll = function (c, a, b, i) {
+    i++;
+    if (i > 30) return;
+    c.scrollTop = a + ((b - a) / 30) * i;
+    setTimeout(function () {
+      scroll(c, a, b, i);
+    }, 20);
+  };
   // start scrolling
   scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
+};
 
 var faqsItem = document.querySelectorAll(".faqsItem");
 
@@ -64,7 +84,7 @@ faqsItem.forEach((faqItem, i) => {
     faqItem.classList.add("active");
     path.classList.add("rotatePath");
     showFaqs(faqsItem);
-    smoothScroll(document.getElementById('faqsContainer'))
+    smoothScroll(document.getElementById("faqsContainer"));
 
     // remove active class from active element on second click
     if (faqsItemActive === null) return;
