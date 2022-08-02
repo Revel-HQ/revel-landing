@@ -73,13 +73,14 @@ main section#thirdSection h2#faqImgTxt span.secondarySelectedText{
 
 main section#thirdSection h2#faqImgTxt span.secondarySelectedText::before{
   color: var(--black) !important;
-  width: 86%;
+  width: 88%;
   height: 15px;
-  left: 0;
+  left: 5px;
   right: 50%;
   margin-left: 0;
   margin-right: 0;
   z-index: -1;
+  bottom: 5px;
 }
 
 header {
@@ -1749,9 +1750,10 @@ div#sub-container
     margin-bottom: 100px;
   }
   main section#fourthSection div.contentContainer h2.contentHeading {
-    font-size: 2.3em;
+    font-size: 2.6em;
     font-weight: bold;
     width: 482px;
+    line-height: 50px;
   }
 
   main
