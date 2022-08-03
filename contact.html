@@ -34,15 +34,22 @@
     <title>Subscribe</title>
   </head>
   <body>
+    <div id="loader" class="center"></div>
+    <div id="headContainer">
+      <a href="./index.html">
+        <img id="backArrow" src="./assets/whiteArrow.png" alt="back icon" />
+      </a>
+      <img
+        id="logoIcon"
+        src="./assets/whiteIcon.png"
+        alt="logo icon"
+      />
+      <h3>Speak to us</h3>
+    </div>
     <div id="sub-container">
       <aside>
         <img
-          id="asideIcon"
-          src="./assets/transparentIcon.png"
-          alt="transparent icon"
-        />
-        <img
-          id="asideImg"
+        id="asideImg"
           src="./assets/circlesWP.png"
           alt="circles with photo"
         />
@@ -54,14 +61,9 @@
           </p>
         </div>
       </aside>
-      
+
       <div id="successContainer">
-        <div id="headContainer">
-          <a href="./index.html">
-            <img src="./assets/back.png" alt="back icon" />
-          </a>
-          <h3>Speak to us</h3>
-        </div>
+        
         <img src="./assets/welcomeImg.png" alt="welcome image" />
         <div id="welcomeText">
           <p>
@@ -85,5 +87,19 @@
         </div>
       </div>
     </div>
+    <script>
+      document.onreadystatechange = function () {
+        document.querySelector("body").style.visibility = "hidden";
+        if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+
+          document.querySelector("#loader").style.visibility = "visible";
+        } else {
+          document.querySelector("#loader").style.display = "none";
+
+          document.querySelector("body").style.visibility = "visible";
+        }
+      };
+    </script>
   </body>
 </html>

@@ -163,16 +163,17 @@ async function handleSubmit(e) {
       waitListForm.classList.add("hideForm");
       failedWaitlist.classList.add("showNewElement");
       setTimeout(() => {
-        submitBtn.setAttribute("disabled", false)
         handleChange();
         waitListForm.reset();
         waitListForm.classList.remove("hideForm");
         failedWaitlist.classList.remove("showNewElement");
+        submitBtn.removeAttribute("disabled")
         submitBtn.children[0].classList.add("hideForm");
       }, 10000);
-
+      
       console.log(err.message);
     }
+    submitBtn.removeAttribute("disabled")
     submitBtn.children[0].classList.add("hideForm");
   }
 }
