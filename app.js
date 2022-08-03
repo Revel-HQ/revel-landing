@@ -20,26 +20,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-const base = "http://waitlist.revelhq.co";
-const industryList = document.querySelector("#industryList");
-
-async function getIndustries() {
-  const response = await fetch(`${base}/api/industries`);
-  const { data, status } = await response.json();
-  if (status) {
-    data?.map((item) => {
-      const option = document.createElement("option");
-      const text = document.createTextNode(item?.name);
-      option.appendChild(text);
-      option.setAttribute("value", item?.id);
-      option.appendChild(text);
-      industryList.appendChild(option);
-    });
-  }
-}
-getIndustries();
-
-window.smoothScroll = function (target) {
+window.smoothScroll = function (target, val=1) {
   var scrollContainer = target;
   do {
     //find scroll container
@@ -64,7 +45,8 @@ window.smoothScroll = function (target) {
     }, 20);
   };
   // start scrolling
-  scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+  let newTargetY = val > 1 ? targetY + val : targetY
+  scroll(scrollContainer, scrollContainer.scrollTop, newTargetY, 0);
 };
 
 var faqsItem = document.querySelectorAll(".faqsItem");
@@ -84,7 +66,7 @@ faqsItem.forEach((faqItem, i) => {
     faqItem.classList.add("active");
     path.classList.add("rotatePath");
     showFaqs(faqsItem);
-    smoothScroll(document.getElementById("faqsContainer"));
+    smoothScroll(document.getElementById("faqsContainer"), 160);
 
     // remove active class from active element on second click
     if (faqsItemActive === null) return;
@@ -118,3 +100,81 @@ function showFaqs(faqsItem) {
     faqAnswerEl[2].classList.remove("showFaq");
   }
 }
+
+// form
+var baseUrl = "http://waitlist.revelhq.co";
+var industryList = document.querySelector("#industryList"),
+  submitBtn = document.querySelector("#submitBtn"),
+  waitListEmail = document.querySelector("#waitListEmail"),
+  waitListForm = document.querySelector("#waitListForm"),
+  failedWaitlist = document.querySelector("#failedWaitlist"),
+  successWaitlist = document.querySelector("#successWaitlist");
+async function getIndustries() {
+  try {
+    const { data } = await axios.get(`${baseUrl}/api/industries`);
+    if (data?.status) {
+      data?.data?.map((item) => {
+        const option = document.createElement("option");
+        const text = document.createTextNode(item?.name);
+        option.appendChild(text);
+        option.setAttribute("value", item?.id);
+        option.appendChild(text);
+        industryList.appendChild(option);
+      });
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
+getIndustries();
+
+function handleChange() {
+  submitBtn.classList.remove("formComplete");
+  if (waitListEmail.value === "") return;
+  if (industryList.value === "Select your job industry") return;
+  submitBtn.classList.add("formComplete");
+}
+async function handleSubmit(e) {
+  e.preventDefault();
+  if (waitListEmail.value === "") return;
+  if (industryList.value === "Select your job industry") return;
+  submitBtn.children[0].classList.remove("hideForm");
+  submitBtn.setAttribute("disabled", true)
+  try {
+    const { data } = await axios.post(`${baseUrl}/api/waitlist/join`, {
+      industry_id: industryList.value,
+      email: waitListEmail.value,
+    });
+    console.log(data);
+    if (data?.status) {
+      waitListForm.classList.add("hideForm");
+      successWaitlist.classList.add("showNewElement");
+      setTimeout(() => {
+        waitListForm.classList.remove("hideForm");
+        submitBtn.setAttribute("disabled", false)
+        waitListForm.reset();
+        successWaitlist.classList.remove("showNewElement");
+        submitBtn.children[0].classList.add("hideForm");
+        handleChange();
+      }, 10000);
+    }
+  } catch (err) {
+    if (err.message === "Request failed with status code 400") {
+      waitListForm.classList.add("hideForm");
+      failedWaitlist.classList.add("showNewElement");
+      setTimeout(() => {
+        submitBtn.setAttribute("disabled", false)
+        handleChange();
+        waitListForm.reset();
+        waitListForm.classList.remove("hideForm");
+        failedWaitlist.classList.remove("showNewElement");
+        submitBtn.children[0].classList.add("hideForm");
+      }, 10000);
+
+      console.log(err.message);
+    }
+    submitBtn.children[0].classList.add("hideForm");
+  }
+}
+
+submitBtn.addEventListener("click", (e) => handleSubmit(e));

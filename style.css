@@ -28,9 +28,38 @@ body {
 }
 
 /* Global styles */
+#loader {
+  border: 12px solid var(--lighterSecondary);
 
-.no-scroll {
-  overflow: hidden;
+  border-radius: 50%;
+
+  border-top: 12px solid var(--secondary);
+
+  width: 70px;
+
+  height: 70px;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.center {
+  position: absolute;
+
+  top: 0;
+
+  bottom: 0;
+
+  left: 0;
+
+  right: 0;
+
+  margin: auto;
 }
 a,
 a:active,
@@ -63,15 +92,15 @@ span.secondarySelectedText::before {
   background-color: var(--lightPink);
 }
 
-main section#thirdSection h2#faqImgTxt{
+main section#thirdSection h2#faqImgTxt {
   position: relative;
   z-index: 6;
 }
-main section#thirdSection h2#faqImgTxt span.secondarySelectedText{
+main section#thirdSection h2#faqImgTxt span.secondarySelectedText {
   color: var(--black);
 }
 
-main section#thirdSection h2#faqImgTxt span.secondarySelectedText::before{
+main section#thirdSection h2#faqImgTxt span.secondarySelectedText::before {
   color: var(--black) !important;
   width: 88%;
   height: 15px;
@@ -478,10 +507,10 @@ main section#sixthSection div#formContainer {
   gap: 90px;
 }
 .hideForm {
-  display: none;
+  display: none !important;
 }
 .showNewElement {
-  display: flex;
+  display: flex !important;
 }
 main section#sixthSection div#formContainer div#failedWaitlist {
   display: flex;
@@ -492,11 +521,11 @@ main section#sixthSection div#formContainer div#failedWaitlist {
   text-align: center;
   display: none;
 }
-main section#sixthSection div#formContainer div#failedWaitlist h3{
+main section#sixthSection div#formContainer div#failedWaitlist h3 {
   font-weight: 550;
   font-size: 18px;
 }
-main section#sixthSection div#formContainer div#failedWaitlist p{
+main section#sixthSection div#formContainer div#failedWaitlist p {
   font-size: 15px;
 }
 main section#sixthSection div#formContainer div#successWaitlist {
@@ -508,11 +537,11 @@ main section#sixthSection div#formContainer div#successWaitlist {
   text-align: center;
   display: none;
 }
-main section#sixthSection div#formContainer div#successWaitlist h3{
+main section#sixthSection div#formContainer div#successWaitlist h3 {
   font-weight: 550;
   font-size: 18px;
 }
-main section#sixthSection div#formContainer div#successWaitlist p{
+main section#sixthSection div#formContainer div#successWaitlist p {
   font-size: 15px;
 }
 
@@ -596,7 +625,7 @@ main section#sixthSection div#formContainer form select:active {
 }
 
 footer {
-  height: auto;
+  height: 90vh;
   width: auto;
   background-color: var(--secondary);
   padding: var(--defaultPadding);
@@ -825,7 +854,6 @@ div#sub-container
   }
 }
 @media screen and (min-width: 1021px) {
-
   span.secondarySelectedText::before {
     content: "";
     display: block;
@@ -1005,9 +1033,10 @@ div#sub-container
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 50px;
+    gap: 80px;
     margin: 0 auto;
     padding: 20px;
+    width: 80%;
   }
 
   main section#sixthSection div#formContainer div#writeUp {
@@ -1016,6 +1045,7 @@ div#sub-container
     gap: 30px;
     text-align: left;
     align-items: flex-start;
+    width: 70%;
   }
 
   main section#sixthSection div#formContainer div#writeUp h2 {
@@ -1033,7 +1063,7 @@ div#sub-container
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 100%;
+    width: 60%;
   }
 
   main section#sixthSection div#formContainer form input {
@@ -1065,11 +1095,13 @@ div#sub-container
     align-items: flex-start;
     text-align: left;
     display: none;
+    width: 60%;
   }
   main section#sixthSection div#formContainer div#successWaitlist {
     align-items: flex-start;
     text-align: left;
     display: none;
+    width: 60%;
   }
 
   /* footer */
@@ -1771,14 +1803,11 @@ div#sub-container
   }
 }
 
-
-
-
 /* Media query for all screens with the video section */
 
-@media screen and (min-width: 1021px) { 
-   /* Fourth Section */
-   main section#fourthSection {
+@media screen and (min-width: 1021px) {
+  /* Fourth Section */
+  main section#fourthSection {
     display: flex;
     flex-direction: column;
     gap: 100px;

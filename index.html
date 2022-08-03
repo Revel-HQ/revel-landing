@@ -33,16 +33,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script defer src="./app.js"></script>
     <title>Revel.</title>
   </head>
   <body>
+    <div id="loader" class="center"></div>
     <header>
       <div>
         <h1 id="brandName">Revel.</h1>
@@ -54,20 +57,19 @@
         <img src="./assets/desktopBackground.png" alt="circles" />
       </section>
       <section id="firstSection">
-        <h1
-          id="introText"
-          class="animate__animated animate__fadeIn animate__delay-2s"
-        >
+        <h1 id="introText">
           Matching talented
           <span class="secondarySelectedText">people</span> with great
           <span class="secondarySelectedText">jobs</span> using short
           <span class="secondarySelectedText">videos.</span>
         </h1>
-        <a onclick="smoothScroll(document.getElementById('sixthSection'))">Join our waiting list today</a>
+        <a onclick="smoothScroll(document.getElementById('sixthSection'))"
+          >Join our waiting list today</a
+        >
         <img
+          id="logoImg"
           src="https://firebasestorage.googleapis.com/v0/b/revel-5bba7.appspot.com/o/mainImage.png?alt=media&token=eb6d17e2-f89f-4e8a-b276-da1475dd6f53"
           alt="Icon"
-          class="animate__animated animate__slideInUp animate__delay-2s"
         />
       </section>
 
@@ -170,13 +172,11 @@
           </div>
         </div>
       </section>
-      <section  id="thirdSection">
-        
+      <section id="thirdSection">
         <h2 id="faqImgTxt">
           <span class="secondarySelectedText">REVEL FAQ's</span>
         </h2>
         <div id="faqsContainer">
-          
           <div class="faqsItem">
             <svg
               width="20"
@@ -190,7 +190,10 @@
                 fill="#692A91"
               />
             </svg>
-            <p>How is Revel different compared to every other job platform out there?</p>
+            <p>
+              How is Revel different compared to every other job platform out
+              there?
+            </p>
           </div>
           <div class="faqsItem">
             <svg
@@ -273,23 +276,28 @@
               sign up here
             </p>
           </div>
-          <form>
-            <input placeholder="Email address" type="email" />
+          <form id="waitListForm">
+            <input onchange="handleChange()" id="waitListEmail" placeholder="Email address" type="email" required />
             <select
               aria-placeholder="Select your job industry"
               name="industry"
-              id="industryList"
+              id="industryList" onchange="handleChange()"
             >
               <option selected="selected" class="holder" disabled>
                 Select your job industry
               </option>
             </select>
-            <button>Submit</button>
+            <button type="submit" id="submitBtn">
+              Submit
+              <i class="fa fa-spinner fa-spin hideForm"></i>
+            </button>
           </form>
           <div id="successWaitlist">
             <h3>Thank you!!!</h3>
-            <p>You will be notified the moment our public beta
-              is available on the android and apple stores.</p>
+            <p>
+              You will be notified the moment our public beta is available on
+              the android and apple stores.
+            </p>
           </div>
           <div id="failedWaitlist">
             <h3>Oops!!!</h3>
@@ -342,5 +350,34 @@
         </div>
       </section>
     </footer>
+    <script>
+      document.onreadystatechange = function () {
+        document.querySelector("body").style.visibility = "hidden";
+        if (document.readyState !== "complete") {
+          document.querySelector("body").style.visibility = "hidden";
+
+          document.querySelector("#loader").style.visibility = "visible";
+        } else {
+          document.querySelector("#loader").style.display = "none";
+
+          document.querySelector("body").style.visibility = "visible";
+          document
+            .querySelector("#introText")
+            .classList.add(
+              "animate__animated",
+              "animate__fadeIn",
+              "animate__delay-2s"
+            );
+          document
+            .querySelector("#logoImg")
+            .classList.add(
+              "animate__animated",
+              "animate__fadeIn",
+              "animate__slideInUp",
+              "animate__delay-2s"
+            );
+        }
+      };
+    </script>
   </body>
 </html>
