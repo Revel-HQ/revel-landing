@@ -745,9 +745,14 @@ div#sub-container {
   display: flex;
   flex-direction: column;
   margin-top: 200px;
+  align-items: center;
+  justify-content: center;
 }
 
 div#sub-container aside {
+  display: none;
+}
+section#desktopBackground {
   display: none;
 }
 
@@ -756,7 +761,7 @@ div#sub-container aside {
   top: 0;
   width: 100%;
   background-color: var(--secondary);
-  height: 100px;
+  height: 80px;
   display: flex;
   gap: 20px;
   align-items: center;
@@ -1241,10 +1246,23 @@ div#sub-container
     font-size: 18px;
   }
   /* subscribe page styles */
+  section#desktopBackground {
+    display: block;
+    position: absolute;
+    width: auto;
+    z-index: -1;
+    left: 0;
+    right: 0;
+  }
+ section#desktopBackground img {
+    width: 100%;
+    height: 50%;
+  }
   div#sub-container {
     display: flex;
     flex-direction: row;
     gap: 30px;
+
   }
 
   div#sub-container aside {
