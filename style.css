@@ -29,15 +29,15 @@ body {
 
 /* Global styles */
 #loader {
-  border: 12px solid var(--lighterSecondary);
+  border: 4px solid var(--lighterSecondary);
 
   border-radius: 50%;
 
-  border-top: 12px solid var(--secondary);
+  border-top: 4px solid var(--secondary);
 
-  width: 70px;
+  width: 40px;
 
-  height: 70px;
+  height: 40px;
 
   animation: spin 1s linear infinite;
 }
@@ -966,7 +966,7 @@ div#sub-container
     padding: 40px;
   }
   main section#thirdSection h2#faqImgTxt {
-    font-size: 38px;
+    font-size: 50px;
     align-self: center;
     flex: 1;
     color: var(--black) !important;
@@ -985,7 +985,7 @@ div#sub-container
     align-items: center;
     gap: 20px;
     background-color: var(--white);
-    height: 70px;
+    height: 90px;
     padding: 20px;
     width: auto;
     align-self: flex-end;
@@ -993,7 +993,7 @@ div#sub-container
 
   main section#thirdSection div#faqsContainer div.faqsItem p {
     font-weight: 550;
-    font-size: 15px;
+    font-size: 19px;
   }
 
   /* fifth Section */
@@ -1024,8 +1024,9 @@ div#sub-container
     background-color: var(--white);
     padding: var(--defaultPadding);
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
+    height: 500px;
   }
 
   main section#sixthSection div#formContainer {
