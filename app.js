@@ -102,7 +102,7 @@ function showFaqs(faqsItem) {
 }
 
 // form
-var baseUrl = "http://waitlist.revelhq.co";
+var baseUrl = "https://waitlist.revelhq.co";
 var industryList = document.querySelector("#industryList"),
   submitBtn = document.querySelector("#submitBtn"),
   waitListEmail = document.querySelector("#waitListEmail"),
