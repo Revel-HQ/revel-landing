@@ -1291,6 +1291,7 @@ div#sub-container
   div#headContainer h3 {
     font-weight: 550;
     font-size: 20px;
+    margin: 0 auto;
   }
 
   div#sub-container div#successContainer {
