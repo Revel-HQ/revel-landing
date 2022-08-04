@@ -132,7 +132,6 @@ var filter =
 
 function handleChange() {
   submitBtn.classList.remove("formComplete");
-  if (!filter.test(waitListEmail.value)) return;
   if (waitListEmail.value === "") return;
   if (industryList.value === "Select your job industry") return;
   submitBtn.classList.add("formComplete");
