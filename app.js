@@ -20,7 +20,7 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
-window.smoothScroll = function (target, val=1) {
+window.smoothScroll = function (target, val = 1) {
   var scrollContainer = target;
   do {
     //find scroll container
@@ -45,7 +45,7 @@ window.smoothScroll = function (target, val=1) {
     }, 20);
   };
   // start scrolling
-  let newTargetY = val > 1 ? targetY + val : targetY
+  let newTargetY = val > 1 ? targetY + val : targetY;
   scroll(scrollContainer, scrollContainer.scrollTop, newTargetY, 0);
 };
 
@@ -123,35 +123,40 @@ async function getIndustries() {
       });
     }
   } catch (err) {
-    console.log(err);
+    return err.message;
   }
 }
 getIndustries();
+var filter =
+  /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.) +([a-zA-Z0-9]{2,4})+$/;
 
 function handleChange() {
   submitBtn.classList.remove("formComplete");
+  if (!filter.test(waitListEmail.value)) return;
   if (waitListEmail.value === "") return;
   if (industryList.value === "Select your job industry") return;
   submitBtn.classList.add("formComplete");
 }
 async function handleSubmit(e) {
   e.preventDefault();
+
+
   if (waitListEmail.value === "") return;
   if (industryList.value === "Select your job industry") return;
   submitBtn.children[0].classList.remove("hideForm");
-  submitBtn.setAttribute("disabled", true)
+  submitBtn.setAttribute("disabled", true);
   try {
     const { data } = await axios.post(`${baseUrl}/api/waitlist/join`, {
       industry_id: industryList.value,
       email: waitListEmail.value,
     });
-    console.log(data);
+  
     if (data?.status) {
       waitListForm.classList.add("hideForm");
       successWaitlist.classList.add("showNewElement");
       setTimeout(() => {
         waitListForm.classList.remove("hideForm");
-        submitBtn.setAttribute("disabled", false)
+        submitBtn.setAttribute("disabled", false);
         waitListForm.reset();
         successWaitlist.classList.remove("showNewElement");
         submitBtn.children[0].classList.add("hideForm");
@@ -167,15 +172,62 @@ async function handleSubmit(e) {
         waitListForm.reset();
         waitListForm.classList.remove("hideForm");
         failedWaitlist.classList.remove("showNewElement");
-        submitBtn.removeAttribute("disabled")
+        submitBtn.removeAttribute("disabled");
         submitBtn.children[0].classList.add("hideForm");
       }, 10000);
-      
-      console.log(err.message);
+
     }
-    submitBtn.removeAttribute("disabled")
+    submitBtn.removeAttribute("disabled");
     submitBtn.children[0].classList.add("hideForm");
   }
 }
 
 submitBtn.addEventListener("click", (e) => handleSubmit(e));
+
+var subscribeBtn = document.querySelector("#subscribeBtn"),
+  subscribeEmail = document.querySelector("#subscribeEmail"),
+  subscribeForm = document.querySelector("#subscribeForm"), messageTag = document.querySelector("#messageTag");
+async function handleSubmit(e) {
+  e.preventDefault();
+  if (subscribeEmail.value === "") return;
+  subscribeBtn.children[0].classList.remove("hideForm");
+  subscribeBtn.setAttribute("disabled", true);
+  try {
+    const { data } = await axios.post(`${baseUrl}/api/newsletter/subscribe`, {
+      email: subscribeEmail.value,
+    });
+
+    if (data?.status) {
+      subscribeForm.reset();
+      subscribeBtn.removeAttribute("disabled");
+      subscribeBtn.children[0].classList.add("hideForm");
+      messageTag.classList.remove("hideForm");
+      messageTag.style.color = "lime";
+      messageTag.innerHTML = data?.message;
+      setTimeout(()=>{
+        messageTag.classList.add("hideForm");
+        messageTag.innerHTML = "";
+      },3000)
+    }
+  } catch (err) {
+    if (err.message === "Request failed with status code 400") {
+      subscribeEmail.classList.add("failedSubmit")
+      messageTag.classList.remove("hideForm");
+      messageTag.style.color = "red";
+      messageTag.innerHTML = err?.response?.data?.message;
+      
+      setTimeout(()=>{
+        subscribeEmail.classList.remove("failedSubmit")
+        messageTag.classList.add("hideForm");
+        messageTag.innerHTML = "";
+      },3000)
+      subscribeForm.reset();
+      subscribeBtn.removeAttribute("disabled");
+      subscribeBtn.children[0].classList.add("hideForm")
+    }
+    subscribeBtn.removeAttribute("disabled");
+    subscribeBtn.children[0].classList.add("hideForm");
+  }
+}
+
+subscribeBtn.addEventListener("click", (e) => handleSubmit(e));

@@ -25,6 +25,7 @@ body {
   --pink: #be8dd6;
   --inputBackground: #f8f9ff;
   --lightPink: #f3d8ff;
+  --red: red;
 }
 
 /* Global styles */
@@ -257,6 +258,7 @@ main section#firstSection a {
   color: var(--white);
   font-weight: 500;
   font-size: 18px;
+  cursor: pointer;
 }
 
 main section#firstSection img {
@@ -625,7 +627,7 @@ main section#sixthSection div#formContainer form select:active {
 }
 
 footer {
-  height: 90vh;
+  height: 900px;
   width: auto;
   background-color: var(--secondary);
   padding: var(--defaultPadding);
@@ -726,6 +728,13 @@ footer div#t-footer-group form input {
   background: var(--white);
   font-size: 15px;
 }
+footer div#t-footer-group form input.failedSubmit {
+  border: 1px solid var(--red)
+}
+footer div#t-footer-group form input.failedSubmit::before {
+  content: "Failed to do it";
+  
+}
 footer div#t-footer-group form input::placeholder {
   color: var(--ash);
 }
@@ -739,6 +748,7 @@ footer div#t-footer-group form button {
   text-transform: uppercase;
   color: var(--white);
   font-size: 15px;
+  cursor: pointer;
 }
 
 /* subscribe page styles */
@@ -1122,7 +1132,7 @@ div#sub-container
 
   /* footer */
   footer {
-    height: auto;
+    height: 1000px;
     width: auto;
     background-color: var(--secondary);
     padding: var(--defaultPadding);
@@ -1589,7 +1599,7 @@ div#sub-container
 
   /* footer */
   footer {
-    height: auto;
+    height: 1000px;
     width: auto;
     background-color: var(--secondary);
     padding: var(--defaultPadding);

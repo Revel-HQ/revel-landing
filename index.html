@@ -33,14 +33,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js" integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script defer src="./app.js"></script>
     <title>Revel.</title>
   </head>
@@ -277,11 +285,18 @@
             </p>
           </div>
           <form id="waitListForm">
-            <input onchange="handleChange()" id="waitListEmail" placeholder="Email address" type="email" required />
+            <input
+              onchange="handleChange()"
+              id="waitListEmail"
+              placeholder="Email address"
+              type="email"
+              required
+            />
             <select
               aria-placeholder="Select your job industry"
               name="industry"
-              id="industryList" onchange="handleChange()"
+              id="industryList"
+              onchange="handleChange()"
             >
               <option selected="selected" class="holder" disabled>
                 Select your job industry
@@ -320,7 +335,9 @@
           <div id="s-footer-group-f">
             <h2>Revel.</h2>
             <div id="socials">
-              <a href="https://mobile.twitter.com/revel_hq?t=ipQCOdCiWu2IdiwIs0LTFQ&s=09">
+              <a
+                href="https://mobile.twitter.com/revel_hq?t=ipQCOdCiWu2IdiwIs0LTFQ&s=09"
+              >
                 <img src="./assets/twitter.png" alt="twitter" />
               </a>
               <a href="#">
@@ -343,10 +360,21 @@
             <h3>Subscribe to our newsletter</h3>
             <p>The latest news, articles and resources and release news</p>
           </div>
-          <form>
-            <input placeholder="Enter your email" type="email" />
-            <button>Subscribe</button>
+          <form id="subscribeForm">
+
+              <input
+                id="subscribeEmail"
+                placeholder="Enter your email"
+                type="email"
+                required
+              />
+              <button type="submit" id="subscribeBtn">
+                Subscribe
+                <i class="fa fa-spinner fa-spin hideForm"></i>
+              </button>
+           
           </form>
+          <p id="messageTag" class="hideForm"></p>
         </div>
       </section>
     </footer>
