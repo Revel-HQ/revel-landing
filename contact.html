@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="theme-color" content="#692a90"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -35,49 +36,50 @@
   </head>
   <body>
     <div id="loader" class="center"></div>
-    <div id="headContainer">
-      <a style="padding-left: 10px; padding-right: 10px;" href="./index.html">
-        <img id="backArrow" src="./assets/whiteArrow.png" alt="back icon" />
-      </a>
-      <img
-        id="logoIcon"
-        src="./assets/whiteIcon.png"
-        alt="logo icon"
-      />
-      <h3>Speak to us</h3>
-    </div>
-    <section id="desktopBackground">
-      <img src="./assets/desktopBackground.png" alt="circles" />
-    </section>
-    <div id="sub-container">
-     
-
-      <div id="successContainer">
-        
-        <img src="./assets/welcomeImg.png" alt="welcome image" />
-        <div id="welcomeText">
-          <p>
-            For any enquiries, you can reach us through the contact information
-            listed below
-          </p>
+      <header>
+        <div>
+          <h1 id="brandName">Revel.</h1>
+          <a href="./index.html">Home </a>
+          <a href="./about.html">About Us</a>
+          <a href="./contact.html">Contact Us</a>
         </div>
-        <div id="contact-container">
-          <div class="contact-details-container">
-            <img src="./assets/phone.png" alt="phone icon" class="icon" />
-            <a class="contact-details">+234 817 972 1534</a>
-          </div>
-          <div class="contact-details-container">
-            <img src="./assets/message.png" alt="phone icon" class="icon" />
-            <a class="contact-details">admin@revelhq.co</a>
-          </div>
-          <div class="contact-details-container">
-            <img src="./assets/twitterDark.png" alt="phone icon" class="icon" />
-            <a class="contact-details">@revel_hq</a>
-          </div>
+        <div id="nav-bar" onclick="openMenu()">
+          <div></div>
+          <div></div>
         </div>
+        <div id="nav-barx" onclick="closeMenu()">
+          <div class="x1"></div>
+          <div class="x2"></div>
+        </div>
+      
+      </header>
+      
+    <div id="menu">
+      <div>
+        <a href="./index.html">Home </a>
+        <a href="./about.html">About Us</a>
+        <a href="./contact.html">Contact Us</a>
       </div>
     </div>
+  <main id="contact">
+    <div id="contact-firstdiv" >
+      <h1>Contact Us</h1>
+    </div>
+    <div id="contact-seconddiv">
+      <p>If you have questions or need any general
+        information, please reach out to us 
+        through one of our social channels </p>
+      <hr>
+      <h3>GENERAL ENQUIRES</h3>
+      <P>Email</P>
+      <a href="admin@revelhq.co">admin@revelhq.co</a>
+    </br>
+      <a href="kingston@revelhq.co">kingston@revelhq.co</a>
+    </div>
+  </main>
+  <Footer id="contact-footer" ></Footer>
     <script>
+            document.querySelector("#nav-barx").style.display="none";
       document.onreadystatechange = function () {
         document.querySelector("body").style.visibility = "hidden";
         if (document.readyState !== "complete") {
@@ -90,6 +92,18 @@
           document.querySelector("body").style.visibility = "visible";
         }
       };
+      function openMenu(){
+         document.querySelector("#brandName").style.visibility="hidden";
+        document.querySelector("#nav-barx").style.display="block";
+        document.querySelector("#menu").style.left="0%";
+        document.querySelector("#nav-bar").style.display="none";
+        }
+        function closeMenu(){
+          document.querySelector("#menu").style.left="100%";
+         document.querySelector("#brandName").style.visibility="visible";
+        document.querySelector("#nav-barx").style.display="none";
+        document.querySelector("#nav-bar").style.display="block";
+        }
     </script>
   </body>
 </html>

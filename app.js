@@ -230,3 +230,33 @@ async function handleSubmit(e) {
 }
 
 subscribeBtn.addEventListener("click", (e) => handleSubmit(e));
+
+
+// Loader section
+document.onreadystatechange = function () {
+  document.querySelector("body").style.visibility = "none";
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "none";
+
+    document.querySelector("#loader").style.visibility = "visible";
+  } else {
+    document.querySelector("#loader").style.display = "none";
+
+    document.querySelector("body").style.visibility = "visible";
+    document
+      .querySelector("#introText")
+      .classList.add(
+        "animate__animated",
+        "animate__fadeIn",
+        "animate__delay-2s"
+      );
+    document
+      .querySelector("#logoImg")
+      .classList.add(
+        "animate__animated",
+        "animate__fadeIn",
+        "animate__slideInUp",
+        "animate__delay-2s"
+      );
+  }
+};
