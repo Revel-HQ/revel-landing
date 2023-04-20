@@ -251,9 +251,6 @@ header a {
 }
 
 main {
-  background-image: url(./assets/mobileBackground.png);
-  background-repeat: no-repeat;
-  background-position: 50% 8%;
   width: auto;
   height: 100%;
 }
@@ -411,7 +408,7 @@ flex-direction: column;
 margin:50px 0px 0px 0px ;
 background-size: cover;
 background-position: top;
-background: url(/img/second\ section\ gradient.png);
+background: url(./img/second/section/gradient.png);
 border-radius: 16px;
 }
 .div2sect2 > img{
@@ -596,7 +593,7 @@ border-radius: 16px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background: url(/img/custom-gradient-12.png);
+  background: url(./img/custom-gradient-12.png);
   background-size: cover;
   border-radius: 16px;
 }
