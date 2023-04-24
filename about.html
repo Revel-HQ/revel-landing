@@ -1,79 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="theme-color" content="#692a90"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon-16x16.png"
-    />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
-   
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
-      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script defer src="./app.js"></script>
-    <link rel="stylesheet" href="./about.css"/>
-    <title>Revel.</title>
-  </head>
-  <body style="height:fit-content;">
-    <div id="loader" class="center"></div>
-    <header>
-      <div>
-        <h1 id="brandName">Revel.</h1>
-        <a href="./index.html">Home </a>
-        <a href="./about.html">About Us</a>
-        <a href="./contact.html">Contact Us</a>
-      </div>
-      <div id="nav-bar" onclick="openMenu()">
-        <div></div>
-        <div></div>
-      </div> 
-      <div id="nav-barx" onclick="closeMenu()">
-        <div class="x1"></div>
-        <div class="x2"></div>
-      </div>
-    
-    </header>
-    
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#692a90" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+    integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="./app.js"></script>
+  <link rel="stylesheet" href="./about.css" />
+  <title>Revel.</title>
+</head>
+
+<body style="height:fit-content;">
+  <div id="loader" class="center"></div>
+  <header>
+    <div>
+      <h1 id="brandName">Revel.</h1>
+      <a href="./index.html">Home </a>
+      <a href="./about.html">About Us</a>
+      <a href="./contact.html">Contact Us</a>
+    </div>
+    <div id="nav-bar" onclick="openMenu()">
+      <div></div>
+      <div></div>
+    </div>
+    <div id="nav-barx" onclick="closeMenu()">
+      <div class="x1"></div>
+      <div class="x2"></div>
+    </div>
+
+  </header>
+
   <div id="menu">
     <div>
       <a href="./index.html">Home </a>
@@ -81,85 +55,120 @@
       <a href="./contact.html">Contact Us</a>
     </div>
   </div>
-    <main>
-      <section id="desktopBackground">
-        <img src="./assets/desktopBackground.png" alt="circles" />
-      </section>
-      <section id="aboutSection">
+  <main>
+    <section id="desktopBackground">
+      <img src="./assets/desktopBackground.png" alt="circles" />
+    </section>
+    <section id="aboutSection">
       <h2>Revel Terms of Use</h2>
-        1. Introduction 
+      1. Introduction
       </br>
-      </br>Welcome to Revel! This Terms of Use (“Terms”) is entered into by and between you and Revel lab Inc. This sets out the legally binding terms and conditions for your use of Revel's products, services, and websites (collectively, the “Services”).
-    </br>
-    </br>2. Acceptance of Terms 
-  </br>
-  </br> You agree to be bound by these Terms and all applicable laws and regulations governing the Services. If you do not agree to these Terms, then you must not use the Services. We may revise these Terms from time to time, and we will post any changes on our website. Your continued use of the Services will signify your acceptance of the revised Terms.
-</br>
-</br>3. Registration and Account Security 
-</br>
-</br>In order to access and use certain features of the Services, you may be required to register for an account. You are responsible for maintaining the security of your account and any activity under it. We will not be liable for any losses caused by any unauthorized use of your account.
-</br>
-</br>4. User Content 
-</br>
-</br>You are solely responsible for the content you post on our Services. You must not upload, post, or otherwise distribute any content that:• Is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, libelous, invasive of another’s privacy, hateful, or racially, ethnically, or otherwise objectionable;• Infringes any patent, trademark, trade secret, copyright or other proprietary rights of any party;• Contains software viruses, worms, or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications equipment;• Contains unsolicited or unauthorized advertising, promotional materials, “junk mail,” “spam,” “chain letters,” “pyramid schemes,” or any other form of solicitation;• Impersonates any person or entity, including without limitation any of our employees or representatives.
-</br>
-</br>5. Privacy Policy 
-</br>
-</br>By using our Services, you acknowledge and agree that we may collect, use, store and disclose your personal information in accordance with our Privacy Policy.
-</br>
-</br>6. Disclaimer of Warranties 
-</br>
-</br>You expressly understand and agree that your use of our Services is at your sole risk and that the Services are provided on an “as is” and “as available” basis. We make no representations or warranties of any kind, express or implied, as to the operation of our Services or the information, content, materials, or products included on our Services.
-</br>
-</br>7. Limitation of Liability 
-</br>
-</br>You expressly understand and agree that we shall not be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data or other intangible losses (even if we have been advised of the possibility of such damages), resulting from:• The use or the inability to use our Services;• The cost of procurement of substitute goods and services resulting from any goods, data, information or services purchased or obtained or messages received or transactions entered into through or from our Services;• Unauthorized access to or alteration of your transmissions or data;• Statements or conduct of any third party on our Services;• Any other matter relating to our Services.
-</br>
-</br>8. Indemnity 
-</br>
-</br>You agree to indemnify and hold us harmless from and against any claims, losses, liabilities, damages, costs and expenses (including reasonable attorney’s fees) arising out of or in connection with your use of our Services, your violation of these Terms, or your violation of any rights of another.
-</br>
-</br>9. Termination 
-</br>
-</br>We may terminate your access to our Services at any time without notice for any reason, including if you breach these Terms. Upon termination, all rights and licenses granted to you under these Terms will immediately cease.
-</br>
-</br>10. General 
-</br>
-</br>These Terms constitute the entire agreement between you and us with respect to the Services. Our failure to exercise or enforce any right or provision of these Terms shall not constitute a waiver of such right or provision. If any provision of these Terms is found to be invalid, the parties nevertheless agree that the court should endeavor to give effect to the parties’ intentions as reflected in the provision, and the other provisions of these Terms remain in full force and effect.
-</br>
-</br>11. Contact Us 
+      </br>Welcome to Revel! This Terms of Use (“Terms”) is entered into by and between you and Revel lab Inc. This sets
+      out the legally binding terms and conditions for your use of Revel's products, services, and websites
+      (collectively, the “Services”).
+      </br>
+      </br>2. Acceptance of Terms
+      </br>
+      </br> You agree to be bound by these Terms and all applicable laws and regulations governing the Services. If you
+      do not agree to these Terms, then you must not use the Services. We may revise these Terms from time to time, and
+      we will post any changes on our website. Your continued use of the Services will signify your acceptance of the
+      revised Terms.
+      </br>
+      </br>3. Registration and Account Security
+      </br>
+      </br>In order to access and use certain features of the Services, you may be required to register for an account.
+      You are responsible for maintaining the security of your account and any activity under it. We will not be liable
+      for any losses caused by any unauthorized use of your account.
+      </br>
+      </br>4. User Content
+      </br>
+      </br>You are solely responsible for the content you post on our Services. You must not upload, post, or otherwise
+      distribute any content that:• Is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene,
+      libelous, invasive of another’s privacy, hateful, or racially, ethnically, or otherwise objectionable;• Infringes
+      any patent, trademark, trade secret, copyright or other proprietary rights of any party;• Contains software
+      viruses, worms, or any other computer code, files or programs designed to interrupt, destroy or limit the
+      functionality of any computer software or hardware or telecommunications equipment;• Contains unsolicited or
+      unauthorized advertising, promotional materials, “junk mail,” “spam,” “chain letters,” “pyramid schemes,” or any
+      other form of solicitation;• Impersonates any person or entity, including without limitation any of our employees
+      or representatives.
+      </br>
+      </br>5. Privacy Policy
+      </br>
+      </br>By using our Services, you acknowledge and agree that we may collect, use, store and disclose your personal
+      information in accordance with our Privacy Policy.
+      </br>
+      </br>6. Disclaimer of Warranties
+      </br>
+      </br>You expressly understand and agree that your use of our Services is at your sole risk and that the Services
+      are provided on an “as is” and “as available” basis. We make no representations or warranties of any kind, express
+      or implied, as to the operation of our Services or the information, content, materials, or products included on
+      our Services.
+      </br>
+      </br>7. Limitation of Liability
+      </br>
+      </br>You expressly understand and agree that we shall not be liable for any direct, indirect, incidental, special,
+      consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data
+      or other intangible losses (even if we have been advised of the possibility of such damages), resulting from:• The
+      use or the inability to use our Services;• The cost of procurement of substitute goods and services resulting from
+      any goods, data, information or services purchased or obtained or messages received or transactions entered into
+      through or from our Services;• Unauthorized access to or alteration of your transmissions or data;• Statements or
+      conduct of any third party on our Services;• Any other matter relating to our Services.
+      </br>
+      </br>8. Indemnity
+      </br>
+      </br>You agree to indemnify and hold us harmless from and against any claims, losses, liabilities, damages, costs
+      and expenses (including reasonable attorney’s fees) arising out of or in connection with your use of our Services,
+      your violation of these Terms, or your violation of any rights of another.
+      </br>
+      </br>9. Termination
+      </br>
+      </br>We may terminate your access to our Services at any time without notice for any reason, including if you
+      breach these Terms. Upon termination, all rights and licenses granted to you under these Terms will immediately
+      cease.
+      </br>
+      </br>10. General
+      </br>
+      </br>These Terms constitute the entire agreement between you and us with respect to the Services. Our failure to
+      exercise or enforce any right or provision of these Terms shall not constitute a waiver of such right or
+      provision. If any provision of these Terms is found to be invalid, the parties nevertheless agree that the court
+      should endeavor to give effect to the parties’ intentions as reflected in the provision, and the other provisions
+      of these Terms remain in full force and effect.
+      </br>
+      </br>11. Contact Us
 
-</br>If you have any questions or concerns about these Terms, please contact us at <a href="admin@revelhq.co.">admin@revelhq.co.</a>
-  </section>
-    </main>
-    <footer>
-      
-    </footer>
-    <script>
-      document.onreadystatechange = function () {
+      </br>If you have any questions or concerns about these Terms, please contact us at <a
+        href="admin@revelhq.co.">admin@revelhq.co.</a>
+    </section>
+  </main>
+  <footer>
+
+  </footer>
+  <script>
+    document.onreadystatechange = function () {
+      document.querySelector("body").style.visibility = "hidden";
+      if (document.readyState !== "complete") {
         document.querySelector("body").style.visibility = "hidden";
-        if (document.readyState !== "complete") {
-          document.querySelector("body").style.visibility = "hidden";
 
-          document.querySelector("#loader").style.visibility = "visible";
-        } else {
-          document.querySelector("#loader").style.display = "none";
+        document.querySelector("#loader").style.visibility = "visible";
+      } else {
+        document.querySelector("#loader").style.display = "none";
 
-          document.querySelector("body").style.visibility = "visible";
-        }
-      };
-      function openMenu(){
-         document.querySelector("#brandName").style.visibility="hidden";
-        document.querySelector("#nav-barx").style.display="block";
-        document.querySelector("#menu").style.left="0%";
-        document.querySelector("#nav-bar").style.display="none";
-        }
-        function closeMenu(){
-          document.querySelector("#menu").style.left="100%";
-         document.querySelector("#brandName").style.visibility="visible";
-        document.querySelector("#nav-barx").style.display="none";
-        document.querySelector("#nav-bar").style.display="block";
-        }
-    </script>
-  </body>
+        document.querySelector("body").style.visibility = "visible";
+      }
+    };
+    function openMenu() {
+      document.querySelector("#brandName").style.visibility = "hidden";
+      document.querySelector("#nav-barx").style.display = "block";
+      document.querySelector("#menu").style.left = "0%";
+      document.querySelector("#nav-bar").style.display = "none";
+    }
+    function closeMenu() {
+      document.querySelector("#menu").style.left = "100%";
+      document.querySelector("#brandName").style.visibility = "visible";
+      document.querySelector("#nav-barx").style.display = "none";
+      document.querySelector("#nav-bar").style.display = "block";
+    }
+  </script>
+</body>
+
 </html>
