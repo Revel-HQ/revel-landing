@@ -260,3 +260,48 @@ document.onreadystatechange = function () {
       );
   }
 };
+
+
+
+// let hiddenDivs = new Array();
+
+// hiddenDivs[0] = document.getElementsByClassName("secondSectionSecondDiv")[0];
+// hiddenDivs[1] = document.getElementsByClassName("fourthSectionSecondDiv")[0];
+// hiddenDivs[2] = document.getElementsByClassName("fifthSectionSecondDiv")[0];
+
+function firstPlus(){
+  document.getElementsByClassName("secondSectionSecondDiv")[0].style.display="flex";
+  document.getElementsByClassName("secondSectionFirstDiv")[0].style.visibility="hidden";
+}
+
+
+function secondPlus(){
+  document.getElementsByClassName("fourthSectionSecondDiv")[0].style.display="flex";
+  document.getElementsByClassName("fourthSectionFirstDiv")[0].style.visibility="hidden";
+}
+
+function thirdPlus(){
+  document.getElementsByClassName("fifthSectionSecondDiv")[0].style.display="flex";
+  document.getElementsByClassName("fifthSectionFirstDiv")[0].style.visibility="hidden";
+}
+
+
+
+
+
+
+function firstX(){
+  document.getElementsByClassName("secondSectionSecondDiv")[0].style.display="none";
+  document.getElementsByClassName("secondSectionFirstDiv")[0].style.visibility="visible";
+}
+
+
+function secondX(){
+  document.getElementsByClassName("fourthSectionSecondDiv")[0].style.display="none";
+  document.getElementsByClassName("fourthSectionFirstDiv")[0].style.visibility="visible";
+}
+
+function thirdX(){
+  document.getElementsByClassName("fifthSectionSecondDiv")[0].style.display="none";
+  document.getElementsByClassName("fifthSectionFirstDiv")[0].style.visibility="visible";
+}
