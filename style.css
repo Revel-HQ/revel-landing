@@ -13,7 +13,7 @@ body {
   overflow-x: hidden;
   font-family: "Source Sans Pro", sans-serif;
   box-sizing: border-box;
-  background-color: var(--inputBackground);
+  background-color: var(--white);
 }
 
 :root {
@@ -95,7 +95,7 @@ transform: rotateZ(-45deg);
   transition: 0.5s;
   padding:0%;
   top: 0;
-  background-color:var(--inputBackground);
+  background-color:var(--white);
   margin: 0%;
   left: 100%;
   z-index: 200;
@@ -257,9 +257,6 @@ header a {
 }
 
 main {
-  background-image: url(./assets/mobileBackground.png);
-  background-repeat: no-repeat;
-  background-position: 50% 8%;
   width: auto;
   height: 100%;
 }
