@@ -41,40 +41,51 @@ header {
   padding: var(--defaultPadding);
   box-shadow: 1px 0 5px -2px var(--ash);
   width: 100%;
-  background-color: var(--inputBackground);
-  z-index: 50;
+  background-color: var(--white);
+  z-index: 100;
 }
 
 header div {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 100%;
+  width: 90%;
 }
 
 header #brandName {
   color: var(--secondary);
   font-size: 40px;
-  width:30%;
+  width: 30%;
   text-align: left;
+  margin: 0;
   letter-spacing: 0.1px;
   font-weight: bold;
 }
-a{
-  text-decoration: none;
-}
+
 header a {
-  border:none;
+  border: none;
   border-radius: 5px;
   width: 20%;
-
+  margin: 0;
+  text-align: left;
   height: 40px;
   color: black;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 20px;
+  font-weight: 400;
+}
+
+header a:hover,
+a:focus,
+a:active {
+  color: var(--lighterSecondary);
   font-weight: bold;
+  transition: all .5s ease;
+}
+a{
+  text-decoration: none;
 }
 #nav-bar{
   width: 50px;
@@ -136,21 +147,21 @@ transform: rotateZ(-45deg);
 
 
 
-#menu{
+#menu {
   position: fixed;
   width: 80%;
   transition: 0.5s;
-  padding:0%;
+  padding: 0%;
   top: 0;
-  background-color:var(--inputBackground);
+  background-color: var(--white);
   margin: 0%;
   left: 100%;
   z-index: 200;
-  height:90px;
+  height: 90px;
 }
-#menu > div{
+#menu > div {
   width: 90%;
-  font-weight: bold;
+  font-weight: 400;
   height: 90%;
   display: flex;
   margin: 0 auto;
@@ -161,8 +172,18 @@ transform: rotateZ(-45deg);
   color: #000000;
   justify-content: center;
 }
-#menu{
+#menu {
   display: none;
+}
+#menu a {
+  color: var(--black);
+}
+#menu a:hover,
+a:focus,
+a:active {
+  color: var(--lighterSecondary);
+  font-weight: bold;
+  transition: all .5s ease;
 }
 main {
   width: 90%;
