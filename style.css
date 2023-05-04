@@ -14,6 +14,7 @@ body {
   font-family: "Source Sans Pro", sans-serif;
   box-sizing: border-box;
   background-color: var(--white);
+  background-color: red;
 }
 
 :root {
@@ -259,25 +260,23 @@ main section#secondSection {
 main section#secondSection .img-con {
   display: flex;
   width: 70%;
-  position: relative;
   height: fit-content;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
   background: #f8f9ff;
   padding: 0 auto;
-  gap: 50px;
+  gap: 60px;
 }
 main section#secondSection .secondSectionFirstDivContainer {
-  width: 50%;
   position: relative;
+  width: auto;
 }
 
 main #secondSection .secondSectionFirstDiv {
-  margin: 0;
-  width: 400px;
+  width: 100%;
   height: 700px;
-  padding: 0%;
+  padding-left: 10px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -290,9 +289,8 @@ main #secondSection .secondSectionFirstDiv p {
   width: 80%;
   margin: 10px 0px 10px 0px;
   height: auto;
-  font-family: "Source Sans Pro";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 30px;
   line-height: 50px;
   color: #000000;
@@ -303,12 +301,16 @@ main #secondSection .secondSectionFirstDiv img {
   text-align: center;
   margin: 0;
 }
+main #secondSection .secondSectionFirstDiv img {
+  height: 581px;
+  width: 300px;
+  text-align: center;
+  margin: 0;
+}
 main #secondSection .img-con .secondSectionFirstDiv .plus {
   width: 50px;
   height: auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  
 }
 main #secondSection .img-con .secondSectionSecondDiv > img {
   width: 70px;
@@ -319,7 +321,7 @@ main #secondSection .img-con .secondSectionSecondDiv > img {
 }
 main #secondSection .secondSectionSecondDiv {
   height: 700px;
-  width: 361px;
+  width: 100%;
   padding: 20px 10px 20px 10px;
   display: flex;
   align-items: center;
@@ -349,7 +351,6 @@ main #secondSection .secondSectionSecondDiv p {
   width: 80%;
   margin: 20px 0px 20px 0px;
   height: auto;
-  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 30px;
@@ -493,7 +494,7 @@ main section#thirdSection {
 
 main section#thirdSection .borderLeftDiv{
   padding-left: 50px;
-  border-left: 6px solid var(--inputBackground);
+  border-left: 4px solid var(--inputBackground);
   display: flex;
   flex-direction: row;
   width: 98%;
@@ -543,8 +544,9 @@ main #fourthSection {
   width: 100%;
   height: fit-content;
   margin: 0 auto;
-  background: #f8f9ff;
+  background: var(--inputBackground);
   padding: 50px 0px 50px 0px;
+  margin-bottom: 40px;
 }
 
 main #fourthSection #contentContainer {
@@ -553,23 +555,20 @@ main #fourthSection #contentContainer {
   display: flex;
   flex-wrap: wrap;
   background: #f8f9ff;
-  justify-content: space-around;
+  justify-content: center;
   gap: 50px;
   padding: 0;
-  position: relative;
   margin: 0 auto;
 }
 
 main #fourthSection #contentContainer .fourthSectionFirstDivContainer{
-  width: 50%;
   position: relative;
+  width: auto;
 }
 
 main #fourthSection #contentContainer .fourthSectionFirstDiv {
-  width: 360px;
+  width: 100%;
   height: 780px;
-  margin: 0;
-  padding: 0%;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -581,32 +580,26 @@ main #fourthSection .fourthSectionFirstDiv p {
   width: 271px;
   height: 180px;
   margin: 10px 0px 10px 0px;
-  height: auto;
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 30px;
   line-height: 50px;
   color: #000000;
 }
 main #fourthSection .fourthSectionFirstDiv img {
-  height: 577.7777709960938px;
+  height: 577px;
   width: 280px;
   border-radius: 0px;
   text-align: center;
-  margin: 0;
+  padding-left:  10px;
 }
 main #fourthSection .fourthSectionFirstDiv .plus {
   width: 50px;
   height: auto;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 main #fourthSection .fourthSectionSecondDiv {
   height: fit-content;
-  width: 361px;
+  width: 100%;
   padding: 0;
   display: flex;
   align-items: center;
@@ -650,7 +643,7 @@ main #fourthSection .fourthSectionThirdDiv {
   align-items: center;
   flex-direction: column;
   margin: 0;
-  background: linear-gradient(180deg, var(--secondary) 0%, #8d645c);
+  background: linear-gradient(180deg, #393276 0%, #8d645c);
   border-radius: 16px;
 }
 main #fourthSection .fourthSectionThirdDiv p {
@@ -722,24 +715,28 @@ main #fifthSection {
   padding: 50px 0px 50px 0px;
 }
 
-main #fifthSection #contentContainer {
-  width: 70%;
+main #fifthSection #contentContainerTwo {
   height: fit-content;
   display: flex;
   align-items: center;
   background: #f8f9ff;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  gap: 50px;
+  justify-content: center;
+  gap: 60px;
   position: relative;
   padding: 0;
 }
 
-main #fifthSection #contentContainer .fifthSectionFirstDiv {
-  width: 360px;
+main #fifthSection #contentContainerTwo .fifthSectionFirstDivContainer{
+  position: relative;
+  width: auto;
+}
+
+main #fifthSection #contentContainerTwo .fifthSectionFirstDiv {
+  width: 100%;
   height: 570px;
   margin: 0;
-  padding: 0%;
+  padding: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -753,14 +750,14 @@ main #fifthSection .fifthSectionFirstDiv p {
   margin: 10px 0px 10px 0px;
   font-family: "Source Sans Pro";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 30px;
   line-height: 50px;
   color: #000000;
 }
 main #fifthSection .fifthSectionFirstDiv img {
-  height: auto;
-  width: 70%;
+  height: 250px;
+  width: auto;
   border-radius: 0px;
   text-align: center;
   margin: 0;
@@ -773,17 +770,18 @@ main #fifthSection .fifthSectionFirstDiv .plus {
   right: 0;
 }
 main #fifthSection .fifthSectionSecondDiv {
-  width: 360px;
+  width: 100%;
   height: 570px;
   border-radius: 16px;
   position: absolute;
-  top: 1%;
+  top: 0%;
   animation: fadeInAnimation ease 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   display: none;
-  left: 1%;
+  left: 2%;
   background: #2f184b;
+  padding: 20px;
 }
 main #fifthSection .fifthSectionSecondDiv img {
   width: 70px;
@@ -798,15 +796,13 @@ main #fifthSection .fifthSectionSecondDiv p {
   height: fit-content;
   margin-top: 15px;
   padding: 20px 0px 20px 0px;
-  font-family: "Source Sans Pro";
-  font-style: normal;
   font-weight: 400;
   font-size: 35px;
   line-height: 50px;
   color: #ffffff;
 }
 main #fifthSection .fifthSectionThirdDiv {
-  width: 360px;
+  padding: 20px;
   height: 570px;
   border-radius: 16px;
   background: linear-gradient(180deg, #3e2d3f 0%, #8d645c 100%);
@@ -947,27 +943,8 @@ footer #footer-group .second-footer-group p {
   height: 50px;
 }
 
-@media screen and (min-width: 419px) {
-  main {
-    background-image: none;
-    height: auto;
-    width: auto;
-    position: relative;
-  }
-  main section#desktopBackground {
-    display: block;
-    position: absolute;
-    width: auto;
-    z-index: -1;
-    left: 0;
-    right: 0;
-  }
-  main section#desktopBackground img {
-    width: 100%;
-    height: 50%;
-  }
-}
-@media screen and (min-width: 1021px) {
+
+@media screen and (min-width: 1020px) {
   span.secondarySelectedText::before {
     content: "";
     display: block;
@@ -1073,10 +1050,10 @@ footer #footer-group .second-footer-group p {
     gap: 20px;
   }
   main #firstSection h1 {
-    width: 650px;
+    width: 100%;
     height: auto;
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 400;
     line-height: 70px;
     padding: 0px 60px;
@@ -1105,7 +1082,7 @@ footer #footer-group .second-footer-group p {
     display: block;
     margin: 0;
     height: fit-content;
-    padding: 20px 0px 20px 0px;
+    padding: 20px 20px;
     position: static;
     background: #f8f9ff;
   }
@@ -1126,15 +1103,13 @@ footer #footer-group .second-footer-group p {
 
   main #secondSection .secondSectionFirstDiv {
     margin: 0 auto;
-    width: 380px;
+    width: 100%;
     height: 700px;
-    padding: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     background: #ffffff;
     border-radius: 16px;
-    position: relative;
   }
 
   main #secondSection .secondSectionFirstDiv p {
@@ -1150,21 +1125,18 @@ footer #footer-group .second-footer-group p {
   }
   main #secondSection .secondSectionFirstDiv img {
     height: 581px;
-    width: 300px;
+    width: auto;
     text-align: center;
     margin: 0;
-    float: left;
+   
   }
   main #secondSection .img-con .secondSectionFirstDiv .plus {
     width: 50px;
     height: auto;
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
   main #secondSection .secondSectionSecondDiv {
     height: 670px;
-    width: 350px;
+    width: 100%;
     padding: 20px 0px 10px 0px;
     display: flex;
     align-items: center;
@@ -1172,8 +1144,8 @@ footer #footer-group .second-footer-group p {
     margin: 0 auto;
     display: none;
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 3%;
+    left: 1%;
     background: #2f184b;
     border-radius: 16px;
   }
@@ -1192,7 +1164,7 @@ footer #footer-group .second-footer-group p {
 
   main #secondSection .secondSectionThirdDiv {
     height: 859px;
-    width: 361px;
+    width: 100%;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1220,7 +1192,7 @@ footer #footer-group .second-footer-group p {
     text-align: center;
   }
   main #secondSection .secondSectionFourthDiv {
-    width: 360px;
+    width: 100%;
     height: 350px;
     margin: 0 auto;
     background: #000000;
@@ -1319,10 +1291,10 @@ footer #footer-group .second-footer-group p {
   
   main section#thirdSection .borderLeftDiv{
     padding-left: 50px;
-    border-left: 6px solid var(--inputBackground);
+    border-left: 4px solid var(--inputBackground);
     display: flex;
     flex-direction: column;
-    width: 96%;
+    width: 90%;
     align-items: center;
     padding-top: 50px;
   }
@@ -1330,7 +1302,7 @@ footer #footer-group .second-footer-group p {
   main section#thirdSection .borderLeftDiv .borderLeftDivContent{
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 96%;
   }
   
   main section#thirdSection .borderLeftDiv .borderLeftDivContent p {
@@ -1369,7 +1341,7 @@ footer #footer-group .second-footer-group p {
     height: fit-content;
     margin: 0 auto;
     background: #f8f9ff;
-    padding: 50px 0px 50px 0px;
+    padding: 50px 20px;
   }
 
   main #fourthSection #contentContainer {
@@ -1381,12 +1353,10 @@ footer #footer-group .second-footer-group p {
     background: #f8f9ff;
     justify-content: space-evenly;
     gap: 50px;
-    padding: 0;
-    position: relative;
   }
 
   main #fourthSection #contentContainer .fourthSectionFirstDiv {
-    width: 360px;
+    width: 100%;
     height: 780px;
     margin: 0;
     padding: 0%;
@@ -1395,7 +1365,7 @@ footer #footer-group .second-footer-group p {
     flex-direction: column;
     background: #ffffff;
     border-radius: 16px;
-    position: relative;
+
   }
   main #fourthSection .fourthSectionFirstDiv p {
     width: 271px;
@@ -1410,23 +1380,18 @@ footer #footer-group .second-footer-group p {
     color: #000000;
   }
   main #fourthSection .fourthSectionFirstDiv img {
-    height: 577.7777709960938px;
-    width: 280px;
+    height: 577px;
+    width: 80%;
     border-radius: 0px;
-    text-align: center;
-    margin: 0;
   }
   main #fourthSection .fourthSectionFirstDiv .plus {
     width: 50px;
     height: auto;
-    position: absolute;
-    bottom: 0;
-    right: 0;
   }
 
   main #fourthSection .fourthSectionSecondDiv {
     height: fit-content;
-    width: 361px;
+    width: 100%;
     padding: 0;
     display: flex;
     align-items: center;
@@ -1434,8 +1399,8 @@ footer #footer-group .second-footer-group p {
     margin: 0;
     display: none;
     position: absolute;
-    top: 0;
-    left: 6%;
+    top: -3%;
+    left: 1%;
 
     background: #2f184b;
     border-radius: 16px;
@@ -1455,13 +1420,12 @@ footer #footer-group .second-footer-group p {
 
   main #fourthSection .fourthSectionThirdDiv {
     height: 859px;
-    width: 350px;
+    width: 100%;
     padding: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     margin: 0;
-    background: linear-gradient(180deg, var(--secondary) 0%, #8d645c 100%);
     border-radius: 16px;
   }
   main #fourthSection .fourthSectionThirdDiv p {
@@ -1502,8 +1466,6 @@ footer #footer-group .second-footer-group p {
     width: 80%;
     height: auto;
     margin: 0px 0px 0px 0px;
-    font-family: "Source Sans Pro";
-    font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
@@ -1516,11 +1478,11 @@ footer #footer-group .second-footer-group p {
     width: 100%;
     height: fit-content;
     margin: 0 auto;
-    padding: 50px 0px 50px 0px;
+    padding: 50px  20px;
     background: #f8f9ff;
   }
 
-  main #fifthSection #contentContainer {
+  main #fifthSection #contentContainerTwo {
     width: 100%;
     height: fit-content;
     display: flex;
@@ -1529,11 +1491,11 @@ footer #footer-group .second-footer-group p {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 50px;
-    position: relative;
+
     padding: 0;
   }
 
-  main #fifthSection #contentContainer .fifthSectionFirstDiv {
+  main #fifthSection #contentContainerTwo .fifthSectionFirstDiv {
     width: 360px;
     height: 570px;
     margin: 0;
@@ -1571,12 +1533,12 @@ footer #footer-group .second-footer-group p {
     right: 0;
   }
   main #fifthSection .fifthSectionSecondDiv {
-    width: 360px;
+    width: 100%;
     height: 570px;
     border-radius: 16px;
     position: absolute;
     top: 0;
-    left: 6%;
+    left: 2%;
     display: none;
     background: #2f184b;
   }
@@ -1602,7 +1564,6 @@ footer #footer-group .second-footer-group p {
   main #fifthSection .fifthSectionThirdDiv img {
     width: 70px;
     height: auto;
-    float: left;
     margin: 20px 0px 20px 10px;
   }
 
