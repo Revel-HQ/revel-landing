@@ -53,31 +53,55 @@ const imageSourcesList = [
 
 
 // Create an array of image sources
-const imageSources = Array.from(document.querySelectorAll("img.showcaseimg")).map(
-  (img) => img.getAttribute("src")
-);
+// const imageSources = Array.from(document.querySelectorAll("img.showcaseimg")).map(
+//   (img) => img.getAttribute("src")
+// );
 const images = Array.from(document.querySelectorAll(".showcaseimg"))
-// Keep track of which images have been shown
-const usedImages = new Set();
+// // Keep track of which images have been shown
+// const usedImages = new Set();
 
-function getRandomImageSrc() {
-  let imageSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
-  while (usedImages.has(imageSrc)) {
-    imageSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
-  }
-  usedImages.add(imageSrc);
-  return imageSrc;
-}
+// function getRandomImageSrc() {
+//   let imageSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
+//   while (usedImages.has(imageSrc)) {
+//     imageSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
+//   }
+//   usedImages.add(imageSrc);
+//   return imageSrc;
+// }
 
-function showRandomImage() {
-  const randomIndex = Math.floor(Math.random() * images.length);
-  // choose a random image
+// function showRandomImage() {
+//   const randomIndex = Math.floor(Math.random() * images.length);
+//   // choose a random image
 
-  const randomImage = images[randomIndex];
-  addAnimation(randomImage);
+//   const randomImage = images[randomIndex];
+//   addAnimation(randomImage);
   
-  const imageSrc = getRandomImageSrc();
-  randomImage.setAttribute("src", imageSrc);
+//   const imageSrc = getRandomImageSrc();
+//   randomImage.setAttribute("src", imageSrc);
+// }
+function showRandomImage() {
+  // Check if all images have been used
+  if (usedImages.length === images.length) {
+    // Reset the usedImages array
+    usedImages.length = 0;
+  }
+  
+  let randomImage;
+  let imageSrc;
+  
+  do {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    randomImage = images[randomIndex];
+    imageSrc = randomImage.getAttribute("src");
+  } while (usedImages.includes(imageSrc));
+
+  addAnimation(randomImage);
+
+  // Add the used image to the usedImages array
+  usedImages.push(imageSrc);
+
+  const newImageSrc = images[Math.floor(Math.random() * images.length)].getAttribute("src");
+  randomImage.setAttribute("src", newImageSrc);
 }
 
 setInterval(showRandomImage, 1000);
