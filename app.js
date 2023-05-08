@@ -27,7 +27,6 @@ document.onreadystatechange = function () {
   }
 };
 
-
 const imageSourcesArray = [
   "./img/showcaseimages/desk1.png",
   "./img/showcaseimages/desk2.png",
@@ -73,19 +72,20 @@ const images = Array.from(document.querySelectorAll(".showcaseimg"));
 const usedImages = [];
 
 function getRandomImageSrc() {
-  let imageSrc = imageSourcesArray[Math.floor(Math.random() * imageSourcesArray.length)];
+  let imageSrc =
+    imageSourcesArray[Math.floor(Math.random() * imageSourcesArray.length)];
   while (usedImages.includes(imageSrc)) {
-    imageSrc = imageSources[Math.floor(Math.random() * imageSourcesArray.length)];
+    imageSrc =
+      imageSourcesArray[Math.floor(Math.random() * imageSourcesArray.length)];
   }
   usedImages.push(imageSrc);
   return imageSrc;
 }
 
 function showRandomImage() {
-  if (usedImages.length === imageSourcesArray.length) {
+  if (usedImages.length === images.length) {
     // Reset the usedImages array
     usedImages.length = 0;
-
   }
   const randomIndex = Math.floor(Math.random() * images.length);
   // choose a random image
@@ -97,12 +97,7 @@ function showRandomImage() {
   randomImage.setAttribute("src", imageSrc);
 }
 
-
-
-
 setInterval(showRandomImage, 1000);
-
-
 
 function addAnimation(element) {
   setTimeout(() => {
@@ -121,7 +116,6 @@ function addAnimation(element) {
     );
   }, 3000);
 }
-
 
 function firstPlus() {
   document.getElementsByClassName("secondSectionSecondDiv")[0].style.display =
