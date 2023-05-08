@@ -37,7 +37,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--defaultPadding);
-  box-shadow: 1px 0 5px -2px var(--ash);
   width: 100%;
   background-color: var(--white);
   z-index: 100;
