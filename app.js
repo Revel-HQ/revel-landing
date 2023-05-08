@@ -27,6 +27,33 @@ document.onreadystatechange = function () {
   }
 };
 
+document.querySelector("#nav-barx").style.display = "none";
+    document.onreadystatechange = function () {
+      document.querySelector("body").style.visibility = "hidden";
+      if (document.readyState !== "complete") {
+        document.querySelector("body").style.visibility = "hidden";
+
+        document.querySelector("#loader").style.visibility = "visible";
+      } else {
+        document.querySelector("#loader").style.display = "none";
+
+        document.querySelector("body").style.visibility = "visible";
+      }
+    };
+
+    function openMenu() {
+      document.querySelector("#brandName").style.visibility = "hidden";
+      document.querySelector("#nav-barx").style.display = "block";
+      document.querySelector("#menu").style.left = "0%";
+      document.querySelector("#nav-bar").style.display = "none";
+    }
+    function closeMenu() {
+      document.querySelector("#menu").style.left = "100%";
+      document.querySelector("#brandName").style.visibility = "visible";
+      document.querySelector("#nav-barx").style.display = "none";
+      document.querySelector("#nav-bar").style.display = "block";
+    }
+
 const imageSourcesArray = [
   "./img/showcaseimages/desk1.png",
   "./img/showcaseimages/desk2.png",
