@@ -28,6 +28,41 @@ document.onreadystatechange = function () {
 };
 
 
+const imageSourcesArray = [
+  "./img/showcaseimages/desk1.png",
+  "./img/showcaseimages/desk2.png",
+  "./img/showcaseimages/desk3.png",
+  "./img/showcaseimages/desk4.png",
+  "./img/showcaseimages/desk5mob1.png",
+  "./img/showcaseimages/desk6.png",
+  "./img/showcaseimages/desk7mob2.png",
+  "./img/showcaseimages/desk8mob3.png",
+  "./img/showcaseimages/desk9mob4.png",
+  "./img/showcaseimages/desk10.png",
+  "./img/showcaseimages/desk11mob5.png",
+  "./img/showcaseimages/desk12mob6.png",
+  "./img/showcaseimages/desk13.png",
+  "./img/showcaseimages/desk14mob7.png",
+  "./img/showcaseimages/desk15mob8.png",
+  "./img/showcaseimages/desk16mob9.png",
+  "./img/showcaseimages/desk17.png",
+  "./img/showcaseimages/desk18mob10.png",
+  "./img/showcaseimages/desk19.png",
+  "./img/showcaseimages/desk20.png",
+  "./img/showcaseimages/desk21.png",
+  "./img/showcaseimages/hero22.png",
+  "./img/showcaseimages/hero23.png",
+  "./img/showcaseimages/hero24.png",
+  "./img/showcaseimages/hero25.png",
+  "./img/showcaseimages/hero26.png",
+  "./img/showcaseimages/hero27.png",
+  "./img/showcaseimages/hero28.png",
+  "./img/showcaseimages/hero29.png",
+  "./img/showcaseimages/hero30.png",
+  "./img/showcaseimages/hero31.png",
+  "./img/showcaseimages/hero32.png",
+  "./img/showcaseimages/hero33.png",
+];
 
 // Create an array of image sources
 const imageSources = Array.from(
@@ -38,16 +73,16 @@ const images = Array.from(document.querySelectorAll(".showcaseimg"));
 const usedImages = [];
 
 function getRandomImageSrc() {
-  let imageSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
+  let imageSrc = imageSourcesArray[Math.floor(Math.random() * imageSourcesArray.length)];
   while (usedImages.includes(imageSrc)) {
-    imageSrc = imageSources[Math.floor(Math.random() * imageSources.length)];
+    imageSrc = imageSources[Math.floor(Math.random() * imageSourcesArray.length)];
   }
   usedImages.push(imageSrc);
   return imageSrc;
 }
 
 function showRandomImage() {
-  if (usedImages.length === images.length) {
+  if (usedImages.length === imageSourcesArray.length) {
     // Reset the usedImages array
     usedImages.length = 0;
 
@@ -77,6 +112,7 @@ function addAnimation(element) {
       "animate__delay-10s"
     );
   }, 900);
+
   setTimeout(() => {
     element.classList.remove(
       "animate__animated",
@@ -85,6 +121,8 @@ function addAnimation(element) {
     );
   }, 3000);
 }
+
+
 function firstPlus() {
   document.getElementsByClassName("secondSectionSecondDiv")[0].style.display =
     "flex";
