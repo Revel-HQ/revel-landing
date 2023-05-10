@@ -31,6 +31,7 @@ a:hover, a:focus, a:active{
   color: var(--lighterSecondary);
 }
 
+
 header {
   position: fixed;
   top: 0;
@@ -54,10 +55,14 @@ header nav {
 
 header nav div.navItems {
   display: flex;
-  margin-left: auto;
   flex-direction: row;
-  gap: 20px;
-  width: 70%;
+  gap: 50px;
+  width: 61%;
+}
+
+header nav div.navItems a {
+  font-size: 18px;
+  padding: 0px;
 }
 
 header #brandName {
@@ -74,7 +79,6 @@ header #brandName {
 header a {
   border: none;
   border-radius: 5px;
-  width: 20%;
   margin: 0;
   text-align: left;
   height: 40px;
@@ -125,44 +129,20 @@ a:active {
   position: relative;
   place-items: center;
 }
-#nav-bar{
-  display: none;
+#nav-barx div {
+  width: 90%;
+  height: 8%;
+  position: absolute;
+  bottom: 50%;
+  background-color: var(--secondary);
 }
 
-
-
-#nav-barx
-{
-width: 40px;
-height: 40px;
-display: grid;
-position: relative;
-place-items: center;
+#nav-barx div:nth-of-type(1) {
+  transform: rotateZ(45deg);
 }
-#nav-barx div
-{
-width: 90%;
-height: 8%;
-position: absolute;
-bottom: 50%;
-background-color: var(--secondary);
+#nav-barx div:nth-of-type(2) {
+  transform: rotateZ(-45deg);
 }
-
-#nav-barx div:nth-of-type(1)
-{
-transform: rotateZ(45deg);
-}
-#nav-barx div:nth-of-type(2)
-{
-transform: rotateZ(-45deg);
-}
-
-
-#nav-barx{
-  display: none;
-}
-
-
 
 #menu {
   position: fixed;
@@ -200,7 +180,7 @@ a:focus,
 a:active {
   color: var(--lighterSecondary);
   font-weight: bold;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 main {
   width: 90%;

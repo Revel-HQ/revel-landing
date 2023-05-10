@@ -1,113 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="theme-color" content="#692a90"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="./apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="./favicon-16x16.png"
-    />
-    <link rel="manifest" href="./site.webmanifest" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Speak to us</title>
-  </head>
-  <body>
-    <div id="loader" class="center"></div>
-    <header>
-      <nav>
-  
-        <h1 id="brandName">Revel.</h1>
-      
-          <div class="navItems">
-            <a href="./index.html">HOME</a>
-            <a href="./about.html">TERMS OF USE</a>
-            <a href="./contact.html">CONTACT US</a>
-          </div>
-  
-        <div id="nav-bar" onclick="openMenu()">
-          <div class="x1"></div>
-          <div class="x2"></div>
-        </div>
-        <div id="nav-barx" onclick="closeMenu()">
-          <div class="x1"></div>
-          <div class="x2"></div>
-        </div>
-      </nav>
-    </header>
-      
-    <div id="menu">
-      <div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="theme-color" content="#692a90" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" href="./favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png" />
+  <link rel="manifest" href="./site.webmanifest" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="./app.js"></script>
+  <title>Speak to us</title>
+</head>
+
+<body>
+  <div id="loader" class="center"></div>
+  <header>
+    <nav>
+
+      <h1 id="brandName">Revel.</h1>
+
+      <div class="navItems">
         <a href="./index.html">HOME</a>
-            <a href="./about.html">TERMS OF USE</a>
-            <a href="./contact.html">CONTACT US</a>
+        <a href="./about.html">TERMS OF USE</a>
+        <a href="./contact.html">CONTACT US</a>
       </div>
+
+      <div id="nav-bar" onclick="openMenu()">
+        <div class="x1"></div>
+        <div class="x2"></div>
+      </div>
+      <div id="nav-barx" onclick="closeMenu()">
+        <div class="x1"></div>
+        <div class="x2"></div>
+      </div>
+    </nav>
+  </header>
+  <div id="menu">
+    <div>
+      <a href="./index.html">HOME</a>
+      <a href="./about.html">TERMS OF USE</a>
+      <a href="./contact.html">CONTACT US</a>
     </div>
+  </div>
   <main id="contact">
-    <div id="contact-firstdiv" >
-      <h1>Contact Us</h1>
-    </div>
-    <div id="contact-seconddiv">
-      <p>If you have questions or need any general
-        information, please reach out to us 
-        through one of our social channels </p>
-      <hr>
-      <h3>GENERAL ENQUIRES</h3>
-      <P>Email</P>
-      <a href="admin@revelhq.co">admin@revelhq.co</a>
-    </br>
-      <a href="kingston@revelhq.co">kingston@revelhq.co</a>
-    </div>
+    <section class="contactUsContainer">
+
+      <div id="contact-firstdiv">
+        <h1>Contact Us</h1>
+      </div>
+      <div id="contact-seconddiv">
+        <p>If you have questions or need any general
+          information, please reach out to us
+          through one of our social channels </p>
+        <hr>
+        <h3>GENERAL ENQUIRES</h3>
+        <P>Email</P>
+        <a href="mailto:admin@revelhq.co">admin@revelhq.co</a>
+        </br>
+        <a href="mailto:kingston@revelhq.co">kingston@revelhq.co</a>
+      </div>
+    </section>
   </main>
-  <Footer id="contact-footer" ></Footer>
-    <script>
-            document.querySelector("#nav-barx").style.display="none";
-      document.onreadystatechange = function () {
-        document.querySelector("body").style.visibility = "hidden";
-        if (document.readyState !== "complete") {
-          document.querySelector("body").style.visibility = "hidden";
+  <footer id="contact-footer"></footer>
+</body>
 
-          document.querySelector("#loader").style.visibility = "visible";
-        } else {
-          document.querySelector("#loader").style.display = "none";
-
-          document.querySelector("body").style.visibility = "visible";
-        }
-      };
-      function openMenu(){
-         document.querySelector("#brandName").style.visibility="hidden";
-        document.querySelector("#nav-barx").style.display="block";
-        document.querySelector("#menu").style.left="0%";
-        document.querySelector("#nav-bar").style.display="none";
-        }
-        function closeMenu(){
-          document.querySelector("#menu").style.left="100%";
-         document.querySelector("#brandName").style.visibility="visible";
-        document.querySelector("#nav-barx").style.display="none";
-        document.querySelector("#nav-bar").style.display="block";
-        }
-    </script>
-  </body>
 </html>

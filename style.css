@@ -52,10 +52,14 @@ header nav {
 
 header nav div.navItems {
   display: flex;
-  margin-left: auto;
   flex-direction: row;
-  gap: 20px;
-  width: 70%;
+  gap: 50px;
+  width: 61%;
+}
+
+header nav div.navItems a {
+  font-size: 18px;
+  padding: 0px;
 }
 
 header #brandName {
@@ -72,7 +76,6 @@ header #brandName {
 header a {
   border: none;
   border-radius: 5px;
-  width: 20%;
   margin: 0;
   text-align: left;
   height: 40px;
@@ -249,7 +252,7 @@ span.secondarySelectedText::before {
 
 main {
   width: auto;
-  height: 100%;
+  margin-top: 0px;
 }
 
 /* first section */
@@ -301,6 +304,7 @@ main section#secondSection {
   display: block;
   background: var(--inputBackground);
   padding: 30px 0;
+  padding-bottom: 70px;
 }
 
 main section#secondSection .img-con {
@@ -328,46 +332,42 @@ main #secondSection .secondSectionFirstDiv {
   background: #ffffff;
   border-radius: 16px;
   position: relative;
-  padding: 35px 25px 0px 25px;
+  padding: 35px 45px 0px 45px;
 }
+
 
 main #secondSection .secondSectionFirstDiv p {
   width: 80%;
-  margin: 10px 0px 10px 0px;
   height: auto;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 50px;
+  font-size: 40px;
   color: #000000;
 }
+
 main #secondSection .secondSectionFirstDiv img {
-  height: 581px;
-  width: 300px;
-  text-align: center;
-  margin: 0;
-}
-main #secondSection .secondSectionFirstDiv img {
-  height: 581px;
-  width: 300px;
-  text-align: center;
-  margin: 0;
+  height: 598px;
+  width: 290px;
 }
 main #secondSection .img-con .secondSectionFirstDiv .plus {
   width: 50px;
   height: auto;
   padding-bottom: 8px;
+  position: absolute;
+  bottom: 0;
 }
 main #secondSection .img-con .secondSectionSecondDiv > img {
   width: 70px;
   height: auto;
   margin-top: auto;
   margin-left: auto;
+  position: absolute;
+  bottom: 0;
 }
 main #secondSection .secondSectionSecondDiv {
   height: 735px;
   width: 404px;
-  padding: 35px 25px 0px 25px;
+  padding: 35px 25px 0px 45px;
   display: flex;
   flex-direction: column;
   animation: fadeInAnimation ease 1s;
@@ -396,19 +396,20 @@ main #secondSection .secondSectionSecondDiv p {
   height: auto;
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 33px;
   line-height: 50px;
   color: #ffffff;
+  justify-self: center;
 }
 
 main #secondSection .secondSectionThirdDiv {
   height: 850px;
-  width: 361px;
+  width: 404px;
   display: flex;
   flex-direction: column;
   background: url("./img/secondSectionGradient.png") center no-repeat;
   border-radius: 16px;
-  padding: 35px 25px 0px 25px;
+  padding: 35px 25px 0px 45px;
   gap: 30px;
 }
 main #secondSection .secondSectionThirdDiv p {
@@ -418,13 +419,13 @@ main #secondSection .secondSectionThirdDiv p {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 50px;
   color: #ffffff;
 }
 main #secondSection .secondSectionThirdDiv img {
   margin: 0;
-  width: 100%;
+  width: 95%;
   height: 615px;
   align-self: center;
 }
@@ -434,7 +435,7 @@ main #secondSection .img-con .secondSectionFourthDiv {
   background: #000000;
   border-radius: 16px;
   display: flex;
-  padding: 35px 25px 0px 25px;
+  padding: 25px 25px 0px 45px;
   position: relative;
   width: 404px;
   gap: 20px;
@@ -450,7 +451,6 @@ main #secondSection .img-con .secondSectionFourthDiv img {
 main #secondSection .img-con .secondSectionFourthDiv p {
   width: 80%;
   height: auto;
-  margin: 10px 0px 0px 20px;
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
@@ -466,9 +466,8 @@ main section#thirdSection {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1440px;
+  
 }
-
-
 
 #thirdSection .contentContainer {
   display: flex;
@@ -491,11 +490,11 @@ main section#thirdSection {
 #thirdSection .contentContainer p {
   font-style: normal;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 27px;
   text-align: left;
   line-height: 35px;
   color: #000000;
-  width: 70%;
+  width: 80%;
 }
 #thirdSection .sectionDetails {
   width: 100%;
@@ -540,6 +539,7 @@ main section#thirdSection .borderLeftDiv {
   flex-direction: row;
   width: 98%;
   align-items: center;
+  padding-bottom: 70px;
 }
 
 main section#thirdSection .borderLeftDiv .borderLeftDivContent {
@@ -550,7 +550,7 @@ main section#thirdSection .borderLeftDiv .borderLeftDivContent {
 
 main section#thirdSection .borderLeftDiv .borderLeftDivContent p {
   width: 60%;
-  font-size: 25px;
+  font-size: 27px;
 }
 
 #thirdSection .vectorDiv {
@@ -586,7 +586,7 @@ main #fourthSection {
   height: fit-content;
   margin: 0 auto;
   background: var(--inputBackground);
-  padding: 50px 0px 50px 0px;
+  padding: 70px 0px 70px 0px;
   margin-bottom: 40px;
 }
 
@@ -608,39 +608,43 @@ main #fourthSection #contentContainer .fourthSectionFirstDivContainer {
 }
 
 main #fourthSection #contentContainer .fourthSectionFirstDiv {
-  width: 100%;
-  height: 780px;
+  width: 404px;
+  height: 735px;
   display: flex;
   align-items: center;
   flex-direction: column;
   background: #ffffff;
   border-radius: 16px;
   position: relative;
+  padding: 35px 45px 0px 45px;
+  gap: 30px;
 }
+main #fourthSection #contentContainer .fourthSectionFirstDiv div{
+  width: 100%;
+}
+
 main #fourthSection .fourthSectionFirstDiv p {
-  width: 271px;
-  height: 180px;
-  margin: 10px 0px 10px 0px;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 50px;
   color: #000000;
 }
 main #fourthSection .fourthSectionFirstDiv img {
-  height: 577px;
-  width: 280px;
-  border-radius: 0px;
-  text-align: center;
-  padding-left: 10px;
+  height: 470px;
+  width: 290px;
+  align-self: flex-start;
 }
 main #fourthSection .fourthSectionFirstDiv .plus {
   width: 50px;
   height: auto;
+  position: absolute;
+  bottom: 4px;
+  right: 3px;
 }
 
 main #fourthSection .fourthSectionSecondDiv {
-  height: fit-content;
-  width: 100%;
+  height: 735px;
+  width: 404px;
   padding: 0;
   display: flex;
   align-items: center;
@@ -652,7 +656,7 @@ main #fourthSection .fourthSectionSecondDiv {
   display: none;
   position: absolute;
   top: 0%;
-  left: 2%;
+  left: 1%;
   background: #2f184b;
   border-radius: 16px;
 }
@@ -678,23 +682,24 @@ main #fourthSection .fourthSectionSecondDiv p {
 
 main #fourthSection .fourthSectionThirdDiv {
   height: 859px;
-  width: 361px;
+  width: 404px;
   padding: 0;
   display: flex;
-  align-items: center;
+  padding: 35px 25px 0px 45px;
+  gap: 30px;
   flex-direction: column;
   margin: 0;
   background: linear-gradient(180deg, #393276 0%, #8d645c);
   border-radius: 16px;
 }
 main #fourthSection .fourthSectionThirdDiv p {
-  width: 80%;
-  margin: 10px 0px 10px 0px;
+  width: 90%;
+  padding-top: 30px;
   height: fit-content;
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 40px;
   line-height: 50px;
   color: #ffffff;
 }
@@ -704,47 +709,43 @@ main #fourthSection .fourthSectionThirdDiv img {
   height: 530px;
   padding: 0;
   text-align: center;
+  margin-top: auto;
 }
 
 main #fourthSection .fourthSectionFourthDiv {
-  width: 360px;
+  width: 404px;
   height: 280px;
   background: #000000;
   border-radius: 16px;
   position: relative;
-  align-items: center;
-  justify-content: center;
   display: flex;
+  padding: 25px 25px 0px 45px;
   margin-top: 40px;
+  flex-direction: column;
+}
+
+main #fourthSection .fourthSectionFourthDiv div{
+  display: flex;
+  margin-left: auto;
+  gap: 10px;
 }
 
 main #fourthSection .fourthSectionFourthDiv img:nth-of-type(1) {
-  width: 20px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px 10px 10px 0px;
+  width: auto;
+  height: 20px;
 }
 main #fourthSection .fourthSectionFourthDiv img:nth-of-type(2) {
-  width: 20px;
-  height: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 10px 40px 10px 0px;
+  width: auto;
+  height: 20px;
 }
 
 main #fourthSection .fourthSectionFourthDiv p {
   width: 80%;
-  height: auto;
-  margin: 0px 0px 0px 0px;
-  font-family: "Source Sans Pro";
-  font-style: normal;
   font-weight: 400;
-  font-size: 36px;
+  font-size: 40px;
   line-height: 45px;
   color: #ffffff;
+  padding-top: 50px;
 }
 
 /* fifth Section */
@@ -753,7 +754,7 @@ main #fifthSection {
   height: fit-content;
   margin: 0 auto;
   background: #f8f9ff;
-  padding: 50px 0px 50px 0px;
+  padding: 70px 0px 70px 0px;
 }
 
 main #fifthSection #contentContainerTwo {
@@ -774,7 +775,7 @@ main #fifthSection #contentContainerTwo .fifthSectionFirstDivContainer {
 }
 
 main #fifthSection #contentContainerTwo .fifthSectionFirstDiv {
-  width: 100%;
+  width: 404px;
   height: 570px;
   margin: 0;
   padding: 20px;
@@ -784,17 +785,11 @@ main #fifthSection #contentContainerTwo .fifthSectionFirstDiv {
   background: #ffffff;
   border-radius: 16px;
   position: relative;
+  padding: 35px 45px 0px 45px;
 }
 main #fifthSection .fifthSectionFirstDiv p {
-  width: 290px;
-  height: 250px;
-  margin: 10px 0px 10px 0px;
-  font-family: "Source Sans Pro";
-  font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 50px;
-  color: #000000;
+  font-size: 40px;
 }
 main #fifthSection .fifthSectionFirstDiv img {
   height: 250px;
@@ -807,8 +802,8 @@ main #fifthSection .fifthSectionFirstDiv .plus {
   width: 50px;
   height: auto;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 2px;
 }
 main #fifthSection .fifthSectionSecondDiv {
   width: 100%;
@@ -838,7 +833,7 @@ main #fifthSection .fifthSectionSecondDiv p {
   margin-top: 15px;
   padding: 20px 0px 20px 0px;
   font-weight: 400;
-  font-size: 35px;
+  font-size: 33px;
   line-height: 50px;
   color: #ffffff;
 }
@@ -847,18 +842,20 @@ main #fifthSection .fifthSectionThirdDiv {
   height: 570px;
   border-radius: 16px;
   background: linear-gradient(180deg, #3e2d3f 0%, #8d645c 100%);
+  padding: 35px 45px 0px 45px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
 }
 main #fifthSection .fifthSectionThirdDiv img {
   width: 70px;
   height: auto;
-  float: left;
-  margin: 20px 0px 20px 10px;
 }
 
 main #fifthSection .fifthSectionThirdDiv p {
   width: 297px;
   height: 350px;
-  padding: 40% 0px 20px 0px;
+ 
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
@@ -870,10 +867,11 @@ main #fifthSection .fifthSectionThirdDiv p {
 /* footer section */
 footer {
   width: 100%;
-  height: 400px;
+  height: 300px;
   background-color: var(--secondary);
   padding: 20px 20px 20px 20px;
   margin: 0 auto;
+  display: flex;
 }
 footer section {
   max-width: 1440px;
@@ -883,21 +881,19 @@ footer section {
   flex-direction: column;
   gap: 20px;
   padding-top: 20px;
+  align-self: center;
 }
 footer .footer-heading {
   display: flex;
   gap: 10px;
 }
 footer .footer-heading img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
 }
 footer .footer-heading h2 {
-  width: 90%;
-  text-align: left;
   color: var(--white);
-
-  padding: 0.5%;
+  align-self: center;
   font-size: 36px;
 }
 footer #footer-group {
@@ -964,8 +960,12 @@ footer #footer-group .second-footer-group p {
   height: 93.3vh;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  padding: 20% 10% 0% 10%;
+}
+#contact .contactUsContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
 }
 #contact #contact-firstdiv {
   width: 40%;
@@ -993,6 +993,8 @@ footer #footer-group .second-footer-group p {
   height: 50px;
 }
 
+
+
 @media screen and (min-width: 901px) {
   span.secondarySelectedText::before {
     content: "";
@@ -1010,8 +1012,8 @@ footer #footer-group .second-footer-group p {
   }
   /* First Section */
   main section#firstSection {
-    margin-top: 140px;
-    margin-bottom: 200px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1020,26 +1022,56 @@ footer #footer-group .second-footer-group p {
 
   main section#firstSection h1#introText {
     text-align: center;
-    font-size: 60px;
+    font-size: 50px;
     font-weight: 400;
     padding: 20px;
-    width: 100%;
-    line-height: 100px;
+    width: 90%;
     padding: 0px 80px;
   }
 
-  main section#firstSection a {
+  main section#firstSection div.btnGroup {
+    display: flex;
+    gap: 50px;
+  }
+
+  main section#firstSection button {
     position: relative;
-    width: 330px;
+    background: none;
+    width: 300px;
     height: 70px;
-    background-color: var(--secondary);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--white);
     font-weight: 550;
-    font-size: 20px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+  }
+
+  main section#firstSection button.downloadBtn {
+    position: relative;
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  main section#firstSection button.playBtn {
+    position: relative;
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  main section#firstSection button.playBtn p{
+    width: 100%;
+  }
+
+  main section#firstSection button.playBtn img {
+    width: 30px;
+    height: 30px;
+    margin-right: auto;
   }
 
   main section#firstSection img {
@@ -1059,6 +1091,7 @@ footer #footer-group .second-footer-group p {
     margin-top: 50px;
     align-items: center;
     flex-direction: column;
+    padding-top: 80px;
   }
 }
 
@@ -1110,7 +1143,7 @@ footer #footer-group .second-footer-group p {
   }
   main #firstSection {
     width: 100%;
-    height: 95vh;
+    height: 80vh;
     margin: 0 auto;
     display: flex;
     position: relative;
@@ -1121,39 +1154,64 @@ footer #footer-group .second-footer-group p {
     gap: 20px;
   }
   main #firstSection h1 {
-    width: 100%;
+    width: 80%;
     height: auto;
     text-align: center;
     font-size: 30px;
     font-weight: 400;
-    line-height: 70px;
   }
   main #firstSection img {
     width: 70px;
     height: auto;
   }
-  main #firstSection a {
-    background: var(--secondary);
+  main #firstSection button {
     width: 100%;
     height: 100px;
     padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
     z-index: 10;
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
   }
 
+  main section#firstSection button.downloadBtn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--secondary);
+    color: var(--white);
+  }
+
+  main section#firstSection button.playBtn {
+    position: fixed;
+    bottom: 100px;
+    left: 0;
+    border: none;
+    border-top: 2px solid var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    color: var(--secondary);
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    background: var(--white);
+  }
+
+  main section#firstSection button.playBtn p{
+    width: auto;
+  }
+
+  main section#firstSection button.playBtn img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0;
+  }
+
   main section#secondSection {
     display: block;
     margin: 0 auto;
     height: fit-content;
-    padding: 20px 20px;
-    position: static;
+    padding: 40px 20px;
     background: #f8f9ff;
   }
 
@@ -1167,29 +1225,23 @@ footer #footer-group .second-footer-group p {
     margin: 0 auto;
   }
 
+  main section#secondSection .img-con .secondSectionFirstDivContainer{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+
   main #secondSection .secondSectionFirstDiv {
     width: 100%;
-    height: 700px;
+    height: 730px;
     display: flex;
-    align-items: center;
     flex-direction: column;
     background: #ffffff;
     border-radius: 16px;
   }
 
-  main #secondSection .secondSectionFirstDiv p {
-    width: 80%;
-    margin: 10px 0px 10px 0px;
-    height: auto;
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 50px;
-    color: #000000;
-  }
   main #secondSection .secondSectionFirstDiv img {
-    height: 581px;
+    height: 540px;
     width: auto;
     text-align: center;
     margin: 0;
@@ -1208,10 +1260,14 @@ footer #footer-group .second-footer-group p {
     margin: 0 auto;
     display: none;
     position: absolute;
-    top: 3%;
-    left: 1%;
+    top: 5%;
+    left: 0%;
     background: #2f184b;
     border-radius: 16px;
+  }
+  main #secondSection .secondSectionSecondDiv img{
+    position: absolute;
+    right: 0;
   }
 
   main #secondSection .secondSectionSecondDiv p {
@@ -1226,6 +1282,11 @@ footer #footer-group .second-footer-group p {
     color: #ffffff;
   }
 
+  main #secondSection .secondSectionThirdDiv {
+    width: 100%;
+    padding: 35px 45px 0px 45px;
+  }
+
   main #secondSection .secondSectionThirdDiv p {
     width: 262px;
     margin: 10px 0px 10px 0px;
@@ -1233,43 +1294,33 @@ footer #footer-group .second-footer-group p {
     font-family: "Source Sans Pro";
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
+    font-size: 40px;
     line-height: 50px;
     color: #ffffff;
   }
   main #secondSection .secondSectionThirdDiv img {
-    margin: 0;
-    width: 300px;
+    width: 100%;
     height: 615px;
-    padding: 0;
-    text-align: center;
+    
   }
-  main #secondSection .secondSectionFourthDiv {
+  main #secondSection .img-con .secondSectionFourthDiv {
     width: 100%;
     height: 350px;
-    margin: 0 auto;
     background: #000000;
     border-radius: 16px;
     position: relative;
+    padding: 35px 45px 0px 45px;
   }
 
-  main #secondSection .secondSectionFourthDiv img {
+  main #secondSection .img-con .secondSectionFourthDiv img {
     width: 40px;
     height: 40px;
-    position: absolute;
-    top: 0;
-    margin: 10px 10px 10px 0px;
-    right: 0;
   }
 
-  main #secondSection .secondSectionFourthDiv p {
+  main #secondSection .img-con .secondSectionFourthDiv p {
     width: 80%;
-    height: auto;
-    margin: 70px 0px 0px 20px;
-    font-family: "Source Sans Pro";
-    font-style: normal;
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 50px;
     color: #ffffff;
   }
@@ -1392,7 +1443,6 @@ footer #footer-group .second-footer-group p {
   /* fourth section  */
   main #fourthSection {
     width: 100%;
-    height: fit-content;
     margin: 0 auto;
     background: #f8f9ff;
     padding: 50px 20px;
@@ -1413,24 +1463,23 @@ footer #footer-group .second-footer-group p {
     width: 100%;
     height: 780px;
     margin: 0;
-    padding: 0%;
+    padding: 35px 45px 0px 45px;
     display: flex;
     flex-direction: column;
     background: #ffffff;
     border-radius: 16px;
   }
+
   main #fourthSection .fourthSectionFirstDiv p {
-    margin: 10px 0px 10px 0px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 50px;
-    color: #000000;
+    font-size: 38px;
   }
+
   main #fourthSection .fourthSectionFirstDiv img {
-    height: 577px;
-    width: 80%;
+    height: 510px;
+    width: 90%;
     border-radius: 0px;
   }
+
   main #fourthSection .fourthSectionFirstDiv .plus {
     width: 50px;
     height: auto;
@@ -1447,10 +1496,10 @@ footer #footer-group .second-footer-group p {
     display: none;
     position: absolute;
     top: 1%;
-    left: 1%;
-
+    left: 0%;
     background: #2f184b;
     border-radius: 16px;
+    display: none;
   }
 
   main #fourthSection .fourthSectionSecondDiv p {
@@ -1475,41 +1524,31 @@ footer #footer-group .second-footer-group p {
     margin: 0;
     border-radius: 16px;
   }
+
   main #fourthSection .fourthSectionThirdDiv p {
     width: 80%;
-    margin: 10px 0px 10px 0px;
-    height: fit-content;
-    font-family: "Source Sans Pro";
-    font-style: normal;
     font-weight: 400;
     font-size: 30px;
     line-height: 50px;
     color: #ffffff;
   }
   main #fourthSection .fourthSectionThirdDiv img {
-    margin: 0;
-    padding: 0;
+    height: 490px;
   }
 
   main #fourthSection .fourthSectionFourthDiv {
-    width: 340px;
+    width: 100%;
     height: 280px;
     background: #000000;
     border-radius: 16px;
     position: relative;
+    padding: 35px 45px 0px 45px;
   }
 
-  main #fourthSection .fourthSectionFourthDiv img {
-    width: 20px;
-    height: auto;
-    float: right;
-    margin: 10px 10px 10px 0px;
-  }
 
   main #fourthSection .fourthSectionFourthDiv p {
     width: 80%;
     height: auto;
-    margin: 0px 0px 0px 0px;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
@@ -1535,7 +1574,6 @@ footer #footer-group .second-footer-group p {
     flex-wrap: wrap;
     justify-content: space-evenly;
     gap: 50px;
-
     padding: 0;
   }
 
@@ -1582,7 +1620,7 @@ footer #footer-group .second-footer-group p {
     border-radius: 16px;
     position: absolute;
     top: 0;
-    left: 2%;
+    left: 0%;
     display: none;
     background: #2f184b;
   }
@@ -1600,7 +1638,7 @@ footer #footer-group .second-footer-group p {
     color: #ffffff;
   }
   main #fifthSection .fifthSectionThirdDiv {
-    width: 360px;
+    width: 100%;
     height: 570px;
     border-radius: 16px;
     background: linear-gradient(180deg, #3e2d3f 0%, #8d645c 100%);
@@ -1608,25 +1646,22 @@ footer #footer-group .second-footer-group p {
   main #fifthSection .fifthSectionThirdDiv img {
     width: 70px;
     height: auto;
-    margin: 20px 0px 20px 10px;
   }
 
   main #fifthSection .fifthSectionThirdDiv p {
-    width: 297px;
-    height: 350px;
-    padding: 40% 0px 20px 0px;
-    font-family: "Source Sans Pro";
-    font-style: normal;
-    font-weight: 400;
+
     font-size: 40px;
-    line-height: 50px;
     color: #ffffff;
   }
 
   footer {
-    height: 450px;
+    height: 600px;
     padding: 20px;
     width: 100%;
+  }
+
+  footer section{
+    align-self: flex-start;
   }
   footer #footer-group {
     display: flex;
@@ -1634,6 +1669,7 @@ footer #footer-group .second-footer-group p {
   }
   footer #footer-group section {
     gap: 20px;
+    
   }
   footer #footer-group .first-footer-group {
     display: flex;
