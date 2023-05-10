@@ -221,9 +221,7 @@ footer{
   header {
     display: flex;
     align-items: left;
-    margin: 0%;
     width: 100%;
-    padding-left:0% ;
     justify-content: space-evenly;
   }
   header a{
