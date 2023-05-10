@@ -69,8 +69,6 @@ header #brandName {
   color: var(--secondary);
   font-size: 40px;
   flex: 1;
-  text-align: left;
-  margin: 0;
   letter-spacing: 0.1px;
   font-weight: bold;
   width: 70%;
@@ -221,30 +219,33 @@ footer{
   header {
     display: flex;
     align-items: left;
-    width: 100%;
     justify-content: space-evenly;
+    padding: var(--defaultPadding);
+    align-items: center;
+    width: 100%;
   }
-  header a{
+  header a {
     display: none;
   }
-  header #brandName{
+  header #brandName {
     text-align: left;
-    width: 80%;
-    margin: 0%;
-    padding: 0%;
+    width: 90%;
   }
-  #nav-bar{
+  #nav-bar {
     display: flex;
-    margin-left: -25%;
   }
-  #nav-barx{
+  #nav-barx {
     display: none;
-    margin-left: -20%;
   }
-  #menu{
+  #menu {
     display: block;
-    
+  }
+  #menu a{
+    font-size: 13px;
   }
 
-
+  #menu a{
+    font-size: 13px;
+    text-decoration: none;
+  }
 }

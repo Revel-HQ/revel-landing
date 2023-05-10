@@ -66,8 +66,6 @@ header #brandName {
   color: var(--secondary);
   font-size: 40px;
   flex: 1;
-  text-align: left;
-  margin: 0;
   letter-spacing: 0.1px;
   font-weight: bold;
   width: 70%;
@@ -85,6 +83,7 @@ header a {
   justify-content: flex-start;
   font-size: 20px;
   font-weight: 400;
+  text-decoration: none;
 }
 
 header a:hover,
@@ -1116,6 +1115,9 @@ footer #footer-group .second-footer-group p {
   }
   #menu {
     display: block;
+  }
+  #menu a{
+    font-size: 13px;
   }
   /* first section */
 
