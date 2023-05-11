@@ -149,12 +149,13 @@ a:active {
   margin: 0%;
   left: 100%;
   z-index: 200;
-  height: 90px;
+  height: 80px;
+ 
 }
 #menu > div {
   width: 90%;
   font-weight: 400;
-  height: 90%;
+
   display: flex;
   margin: 0 auto;
   padding: 0%;
@@ -1136,7 +1137,7 @@ footer #footer-group .second-footer-group p {
   /* first section */
 
   main section#firstSection #deskShowCaseImages {
-    margin-top: 100px;
+    margin-top: 0px;
   }
   main section#firstSection #deskShowCaseImages .showCase2,
   .showCase8 {
