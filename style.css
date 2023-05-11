@@ -1571,6 +1571,7 @@ footer #footer-group .second-footer-group p {
   }
   main #fourthSection .fourthSectionThirdDiv img {
     height: 490px;
+    width: auto;
   }
 
   main #fourthSection .fourthSectionFourthDiv {
