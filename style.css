@@ -358,10 +358,9 @@ main #secondSection .img-con .secondSectionFirstDiv .plus {
 main #secondSection .img-con .secondSectionSecondDiv > img {
   width: 70px;
   height: auto;
-  margin-top: auto;
-  margin-left: auto;
   position: absolute;
   bottom: 0;
+  right: 8px;
 }
 main #secondSection .secondSectionSecondDiv {
   height: 735px;
@@ -390,12 +389,11 @@ main #secondSection .secondSectionSecondDiv {
 }
 
 main #secondSection .secondSectionSecondDiv p {
-  width: 80%;
-  margin: 20px 0px 20px 0px;
+  width: 90%;
   height: auto;
   font-style: normal;
   font-weight: 400;
-  font-size: 33px;
+  font-size: 35px;
   line-height: 50px;
   color: #ffffff;
   justify-self: center;
@@ -985,7 +983,7 @@ footer #footer-group .second-footer-group p {
   transform: rotate(180deg);
 }
 #contact #contact-seconddiv a {
-  color: var(--secondary);
+  color: var(--black);
 }
 #contact-footer {
   width: 100%;
@@ -1725,13 +1723,14 @@ footer #footer-group .second-footer-group p {
     font-size: 15px;
     margin-left: 0;
   }
-  /* Contact us media quaries */
+  /* Contact us media queries */
   #contact {
     width: 100%;
-    padding: 5%;
-    height: 90%;
-    display: block;
-    padding: 20% 10% 0% 10%;
+    padding: 20px;
+  }
+  .contactUsContainer {
+    display: flex;
+    flex-direction: column;
   }
   #contact #contact-firstdiv {
     width: 100%;
