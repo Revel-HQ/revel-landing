@@ -250,6 +250,10 @@ span.secondarySelectedText::before {
   background-color: var(--lightPink);
 }
 
+p {
+  margin-bottom: 0;
+}
+
 main {
   width: auto;
   margin-top: 0px;
@@ -1137,7 +1141,7 @@ footer #footer-group .second-footer-group p {
   /* first section */
 
   main section#firstSection #deskShowCaseImages {
-    margin-top: 0px;
+    margin-top: 90px;
   }
   main section#firstSection #deskShowCaseImages .showCase2,
   .showCase8 {
@@ -1166,9 +1170,9 @@ footer #footer-group .second-footer-group p {
     position: relative;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     padding: 0 20px;
     gap: 60px;
+    
   }
   main #firstSection h1 {
     width: 295px;
@@ -1192,6 +1196,8 @@ footer #footer-group .second-footer-group p {
     align-items: center;
     text-align: center;
     font-size: 18px;
+    outline: none;
+    border: none;
   }
 
   main section#firstSection button.downloadBtn {
@@ -1200,6 +1206,7 @@ footer #footer-group .second-footer-group p {
     left: 0;
     background-color: var(--secondary);
     color: var(--white);
+    width: 100%;
   }
 
   main section#firstSection button.playBtn {
@@ -1267,7 +1274,7 @@ footer #footer-group .second-footer-group p {
   }
 
   main #secondSection .secondSectionFirstDiv img {
-    height: 500px;
+    height: 516px;
     width: auto;
     text-align: center;
     margin: 0;
@@ -1335,6 +1342,7 @@ footer #footer-group .second-footer-group p {
     border-radius: 16px;
     position: relative;
     padding: 35px 45px 0px 45px;
+    gap: 30px;
   }
 
   main #secondSection .img-con .secondSectionFourthDiv img {
@@ -1343,7 +1351,7 @@ footer #footer-group .second-footer-group p {
   }
 
   main #secondSection .img-con .secondSectionFourthDiv p {
-    width: 80%;
+    width: 90%;
     font-weight: 400;
     font-size: 30px;
     line-height: 50px;
@@ -1356,17 +1364,20 @@ footer #footer-group .second-footer-group p {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    
   }
 
   #thirdSection .contentContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 300px;
+    height: 400px;
     padding-left: 50px;
     border-left: 4px solid var(--inputBackground);
     gap: 50px;
     margin-left: 15px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
   #thirdSection .contentContainer h2 {
     width: 100%;
@@ -1384,7 +1395,7 @@ footer #footer-group .second-footer-group p {
     text-align: left;
     line-height: 35px;
     color: #000000;
-    width: 80%;
+    width: 90%;
     padding-bottom: 30px;
   }
   #thirdSection .sectionDetails {
@@ -1500,7 +1511,7 @@ footer #footer-group .second-footer-group p {
   }
 
   main #fourthSection .fourthSectionFirstDiv img {
-    height: 500px;
+    height: 516px;
     width: 90%;
     border-radius: 0px;
   }
@@ -1568,15 +1579,16 @@ footer #footer-group .second-footer-group p {
     border-radius: 16px;
     position: relative;
     padding: 35px 45px 0px 45px;
+    gap: 20px;
   }
 
   main #fourthSection .fourthSectionFourthDiv p {
     width: 80%;
-    height: auto;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
     color: #ffffff;
+    margin-top: -30px;
   }
 
   /* fifth section */
@@ -1666,10 +1678,12 @@ footer #footer-group .second-footer-group p {
     height: 570px;
     border-radius: 16px;
     background: linear-gradient(180deg, #3e2d3f 0%, #8d645c 100%);
+    padding-left: 30px;
   }
   main #fifthSection .fifthSectionThirdDiv img {
     width: 70px;
     height: auto;
+    margin-left: -10px;
   }
 
   main #fifthSection .fifthSectionThirdDiv p {
