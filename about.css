@@ -97,89 +97,7 @@ a:active {
   transition: all 0.5s ease;
 }
 
-#nav-bar {
-  display: flex;
-  flex-direction: column;
-}
-#nav-bar :first-child {
-  width: 50px;
-  height: 3px;
-  background-color: var(--secondary);
-  margin-bottom: 10px;
-}
-#nav-bar :nth-child(2) {
-  width: 30px;
-  height: 3px;
-  background-color: var(--secondary);
-  margin-left: auto;
-}
-#nav-bar {
-  display: none;
-}
-#nav-barx {
-  display: none;
-}
 
-#nav-barx {
-  width: 40px;
-  height: 40px;
-  display: grid;
-  position: relative;
-  place-items: center;
-}
-#nav-barx div {
-  width: 90%;
-  height: 8%;
-  position: absolute;
-  bottom: 50%;
-  background-color: var(--secondary);
-}
-
-#nav-barx div:nth-of-type(1) {
-  transform: rotateZ(45deg);
-}
-#nav-barx div:nth-of-type(2) {
-  transform: rotateZ(-45deg);
-}
-
-#menu {
-  position: fixed;
-  width: 80%;
-  transition: 0.5s;
-  padding: 0%;
-  top: 0;
-  background-color: var(--white);
-  margin: 0%;
-  left: 100%;
-  z-index: 200;
-  height: 90px;
-}
-#menu > div {
-  width: 90%;
-  font-weight: 400;
-  height: 90%;
-  display: flex;
-  margin: 0 auto;
-  padding: 0%;
-  align-items: center;
-  gap: 15%;
-  font-size: 15px;
-  color: #000000;
-  justify-content: center;
-}
-#menu {
-  display: none;
-}
-#menu a {
-  color: var(--black);
-}
-#menu a:hover,
-a:focus,
-a:active {
-  color: var(--lighterSecondary);
-  font-weight: bold;
-  transition: all 0.5s ease;
-}
 main {
   width: 90%;
   margin: 0 auto;
@@ -208,6 +126,10 @@ main section#desktopBackground {
   gap: 50px;
 
 }
+#aboutSection a{
+ align-self: flex-start;
+ color: #692a90;
+}
 footer{
   width: 100%;
   height: 100px;
@@ -215,37 +137,4 @@ footer{
 }
 
 
-@media screen and (max-width: 900px){
-  header {
-    display: flex;
-    align-items: left;
-    justify-content: space-evenly;
-    padding: var(--defaultPadding);
-    align-items: center;
-    width: 100%;
-  }
-  header a {
-    display: none;
-  }
-  header #brandName {
-    text-align: left;
-    width: 90%;
-  }
-  #nav-bar {
-    display: flex;
-  }
-  #nav-barx {
-    display: none;
-  }
-  #menu {
-    display: block;
-  }
-  #menu a{
-    font-size: 13px;
-  }
 
-  #menu a{
-    font-size: 13px;
-    text-decoration: none;
-  }
-}

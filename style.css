@@ -97,15 +97,15 @@ a:active {
 #nav-bar {
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 #nav-bar :first-child {
-  width: 50px;
+  width: 30px;
   height: 3px;
   background-color: var(--secondary);
-  margin-bottom: 10px;
 }
 #nav-bar :nth-child(2) {
-  width: 30px;
+  width: 15px;
   height: 3px;
   background-color: var(--secondary);
   margin-left: auto;
@@ -118,8 +118,8 @@ a:active {
 }
 
 #nav-barx {
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   display: grid;
   position: relative;
   place-items: center;
@@ -298,6 +298,17 @@ main section#firstSection #deskShowCaseImages .showCase5 {
   align-self: center;
 }
 
+.modal-dialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal-body {
+  position: relative;
+  padding: 0px;
+}
+
+
 /* second section */
 main section#secondSection {
   display: block;
@@ -334,7 +345,6 @@ main #secondSection .secondSectionFirstDiv {
   padding: 35px 45px 0px 45px;
 }
 
-
 main #secondSection .secondSectionFirstDiv p {
   width: 80%;
   height: auto;
@@ -345,7 +355,7 @@ main #secondSection .secondSectionFirstDiv p {
 }
 
 main #secondSection .secondSectionFirstDiv img {
-  height: 598px;
+  height: 565px;
   width: 290px;
 }
 main #secondSection .img-con .secondSectionFirstDiv .plus {
@@ -463,7 +473,6 @@ main section#thirdSection {
   flex-direction: column;
   margin: 0 auto;
   max-width: 1440px;
-  
 }
 
 #thirdSection .contentContainer {
@@ -616,7 +625,7 @@ main #fourthSection #contentContainer .fourthSectionFirstDiv {
   padding: 35px 45px 0px 45px;
   gap: 30px;
 }
-main #fourthSection #contentContainer .fourthSectionFirstDiv div{
+main #fourthSection #contentContainer .fourthSectionFirstDiv div {
   width: 100%;
 }
 
@@ -721,7 +730,7 @@ main #fourthSection .fourthSectionFourthDiv {
   flex-direction: column;
 }
 
-main #fourthSection .fourthSectionFourthDiv div{
+main #fourthSection .fourthSectionFourthDiv div {
   display: flex;
   margin-left: auto;
   gap: 10px;
@@ -852,7 +861,7 @@ main #fifthSection .fifthSectionThirdDiv img {
 main #fifthSection .fifthSectionThirdDiv p {
   width: 297px;
   height: 350px;
- 
+
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
@@ -882,7 +891,7 @@ footer section {
 }
 footer .footer-heading {
   display: flex;
-  gap: 10px;
+  gap: 40px;
 }
 footer .footer-heading img {
   width: 70px;
@@ -892,6 +901,7 @@ footer .footer-heading h2 {
   color: var(--white);
   align-self: center;
   font-size: 36px;
+  font-weight: bold;
 }
 footer #footer-group {
   display: flex;
@@ -990,8 +1000,6 @@ footer #footer-group .second-footer-group p {
   height: 50px;
 }
 
-
-
 @media screen and (min-width: 901px) {
   span.secondarySelectedText::before {
     content: "";
@@ -1034,14 +1042,14 @@ footer #footer-group .second-footer-group p {
   main section#firstSection button {
     position: relative;
     background: none;
-    width: 300px;
-    height: 70px;
+    width: 250px;
+    height: 58px;
     border-radius: 8px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: center !important;
+    justify-content: center !important;
     font-weight: 550;
-    font-size: 17px;
+    font-size: 15px;
     outline: none;
     border: none;
   }
@@ -1061,14 +1069,21 @@ footer #footer-group .second-footer-group p {
     padding: 20px;
   }
 
-  main section#firstSection button.playBtn p{
+  main section#firstSection button.playBtn p {
+   
     width: 100%;
+    margin-left: -20px;
+  }
+
+  main section#firstSection button p {
+    margin-bottom: 0;
   }
 
   main section#firstSection button.playBtn img {
     width: 30px;
     height: 30px;
     margin-right: auto;
+    margin-left: 20px;
   }
 
   main section#firstSection img {
@@ -1104,6 +1119,7 @@ footer #footer-group .second-footer-group p {
   header #brandName {
     text-align: left;
     width: 90%;
+    font-size: 32px;
   }
   #nav-bar {
     display: flex;
@@ -1112,15 +1128,15 @@ footer #footer-group .second-footer-group p {
     display: none;
   }
   #menu {
-    display: block;
+    display: flex;
   }
-  #menu a{
+  #menu a {
     font-size: 13px;
   }
   /* first section */
 
   main section#firstSection #deskShowCaseImages {
-    margin-top: 20px;
+    margin-top: 100px;
   }
   main section#firstSection #deskShowCaseImages .showCase2,
   .showCase8 {
@@ -1143,7 +1159,7 @@ footer #footer-group .second-footer-group p {
   }
   main #firstSection {
     width: 100%;
-    height: 80vh;
+    height: 900px;
     margin: 0 auto;
     display: flex;
     position: relative;
@@ -1151,14 +1167,15 @@ footer #footer-group .second-footer-group p {
     align-items: center;
     justify-content: center;
     padding: 0 20px;
-    gap: 20px;
+    gap: 60px;
   }
   main #firstSection h1 {
-    width: 80%;
+    width: 295px;
     height: auto;
     text-align: center;
     font-size: 30px;
     font-weight: 400;
+    line-height: 40px;
   }
   main #firstSection img {
     width: 70px;
@@ -1166,13 +1183,14 @@ footer #footer-group .second-footer-group p {
   }
   main #firstSection button {
     width: 100%;
-    height: 100px;
+    height: 80px;
     padding: 10px;
     z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-size: 18px;
   }
 
   main section#firstSection button.downloadBtn {
@@ -1184,27 +1202,34 @@ footer #footer-group .second-footer-group p {
   }
 
   main section#firstSection button.playBtn {
-    position: fixed;
-    bottom: 100px;
+    position: absolute;
     left: 0;
     border: none;
-    border-top: 2px solid var(--secondary);
+    bottom: 0;
+    border-top: 1px solid var(--secondary);
     border-bottom: 2px solid var(--secondary);
     color: var(--secondary);
     display: flex;
     gap: 40px;
     padding: 20px;
     background: var(--white);
+    z-index: 1;
   }
 
-  main section#firstSection button.playBtn p{
+  main section#firstSection button.playBtn p {
     width: auto;
+    margin-left: -10px;
+  }
+
+  main section#firstSection button p {
+    margin-bottom: 0;
   }
 
   main section#firstSection button.playBtn img {
     width: 30px;
     height: 30px;
     margin-right: 0;
+    margin-left: -40px;
   }
 
   main section#secondSection {
@@ -1225,7 +1250,7 @@ footer #footer-group .second-footer-group p {
     margin: 0 auto;
   }
 
-  main section#secondSection .img-con .secondSectionFirstDivContainer{
+  main section#secondSection .img-con .secondSectionFirstDivContainer {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -1265,7 +1290,7 @@ footer #footer-group .second-footer-group p {
     background: #2f184b;
     border-radius: 16px;
   }
-  main #secondSection .secondSectionSecondDiv img{
+  main #secondSection .secondSectionSecondDiv img {
     position: absolute;
     right: 0;
   }
@@ -1301,7 +1326,6 @@ footer #footer-group .second-footer-group p {
   main #secondSection .secondSectionThirdDiv img {
     width: 100%;
     height: 615px;
-    
   }
   main #secondSection .img-con .secondSectionFourthDiv {
     width: 100%;
@@ -1545,7 +1569,6 @@ footer #footer-group .second-footer-group p {
     padding: 35px 45px 0px 45px;
   }
 
-
   main #fourthSection .fourthSectionFourthDiv p {
     width: 80%;
     height: auto;
@@ -1649,18 +1672,21 @@ footer #footer-group .second-footer-group p {
   }
 
   main #fifthSection .fifthSectionThirdDiv p {
-
     font-size: 40px;
     color: #ffffff;
   }
 
   footer {
-    height: 600px;
+    height: 450px;
     padding: 20px;
     width: 100%;
   }
 
-  footer section{
+  footer .footer-heading{
+    gap: 20px;
+  }
+
+  footer section {
     align-self: flex-start;
   }
   footer #footer-group {
@@ -1669,7 +1695,6 @@ footer #footer-group .second-footer-group p {
   }
   footer #footer-group section {
     gap: 20px;
-    
   }
   footer #footer-group .first-footer-group {
     display: flex;
@@ -1682,6 +1707,7 @@ footer #footer-group .second-footer-group p {
     display: flex;
     width: 100%;
     color: var(--white);
+    padding: 0;
   }
   footer #footer-group .first-footer-group #art1 {
     font-size: 15px;
@@ -1712,7 +1738,7 @@ footer #footer-group .second-footer-group p {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    top: -18px;
+
   }
   footer #footer-group .second-footer-group div#socials {
     display: flex;

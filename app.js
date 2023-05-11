@@ -43,7 +43,7 @@ document.onreadystatechange = function () {
 
 function openMenu() {
   document.querySelector("#brandName").style.visibility = "hidden";
-  document.querySelector("#nav-barx").style.display = "block";
+  document.querySelector("#nav-barx").style.display = "flex";
   document.querySelector("#menu").style.left = "0%";
   document.querySelector("#nav-bar").style.display = "none";
 }
@@ -51,7 +51,7 @@ function closeMenu() {
   document.querySelector("#menu").style.left = "100%";
   document.querySelector("#brandName").style.visibility = "visible";
   document.querySelector("#nav-barx").style.display = "none";
-  document.querySelector("#nav-bar").style.display = "block";
+  document.querySelector("#nav-bar").style.display = "flex";
 }
 
 
