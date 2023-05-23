@@ -1181,12 +1181,13 @@ footer #footer-group .second-footer-group p {
     
   }
   main #firstSection h1 {
-    width: 295px;
+    width: 350px;
     height: auto;
     text-align: center;
     font-size: 30px;
     font-weight: 400;
     line-height: 40px;
+    line-height: 50px;
   }
   main #firstSection img {
     width: 70px;
