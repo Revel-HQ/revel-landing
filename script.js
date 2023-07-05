@@ -112,3 +112,19 @@ $(document).ready(function () {
 
   // document ready
 });
+
+// app download
+document.getElementById("downloadApp").addEventListener("click", function () {
+  // Check if the user is using an iOS device (iPhone, iPad)
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  if (iOS) {
+    // Redirect to the Apple App Store URL
+    window.location.href =
+      "https://apps.apple.com/app/revel-jobs-and-interviews/id6443517454";
+  } else {
+    // Redirect to the Google Play Store URL
+    window.location.href =
+      "https://play.google.com/store/apps/details?id=com.lab.revel";
+  }
+});
